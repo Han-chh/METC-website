@@ -142,8 +142,23 @@ button{font:inherit}
   letter-spacing:.08em;
 }
 .hero-kicker{color:rgba(37,87,69,.78)}
-.logo-stage{width:min(589px,96%);margin:0 0 16px;filter:drop-shadow(0 0 12px rgba(255,250,221,.26)) drop-shadow(0 10px 18px rgba(42,61,45,.08))}
-.script-logo-image{display:block;width:100%;height:auto}
+.logo-stage{width:min(640px,96%);margin:0 0 16px;filter:drop-shadow(0 0 12px rgba(255,250,221,.26)) drop-shadow(0 10px 18px rgba(42,61,45,.08))}
+.script-logo-svg{display:block;width:100%;height:auto;overflow:visible}
+.logo-guide{
+  fill:none;stroke:rgba(255,253,241,.13);stroke-width:19;stroke-linecap:round;stroke-linejoin:round;
+}
+.logo-draw{
+  fill:none;stroke:url(#logoSolarInk);stroke-width:15.5;stroke-linecap:round;stroke-linejoin:round;
+  filter:url(#logoHandTexture) drop-shadow(0 1px 0 rgba(255,253,241,.56)) drop-shadow(0 0 12px rgba(255,244,193,.32));
+}
+.logo-sun-glow{fill:url(#logoSunGlow);opacity:.38;mix-blend-mode:screen}
+.logo-sun-laser{transform-box:fill-box;transform-origin:center;filter:drop-shadow(0 0 7px rgba(255,238,153,.72))}
+.logo-sun-halo{fill:#ffe58f;opacity:.66}
+.logo-sun-core{fill:#fffef4;filter:drop-shadow(0 0 7px rgba(255,255,246,.8))}
+.logo-spark{fill:#fff7c9;filter:drop-shadow(0 0 4px rgba(255,230,135,.64))}
+.logo-stage.is-settled .logo-sun-laser,
+.logo-stage.is-settled .logo-sun-glow,
+.logo-stage.is-settled .logo-spark{opacity:0}
 .club-fullname{
   margin:4px 0 16px;color:rgba(31,36,29,.74);font-weight:850;text-transform:uppercase;
   letter-spacing:.1em;font-size:.84rem;line-height:1.6;
@@ -451,7 +466,7 @@ button{font:inherit}
   .hero-rule{display:none}
   .hero-wash-a{left:-32%;top:-4%}
   .hero-wash-b{right:-30%;bottom:18%}
-  .logo-stage{width:min(92%,589px);margin-bottom:12px}
+  .logo-stage{width:min(92%,640px);margin-bottom:12px}
   .hero h1{font-size:2.18rem;line-height:1.28}
   .hero-lead{font-size:.94rem;line-height:1.78;margin-top:16px}
   .club-fullname{font-size:.7rem;letter-spacing:.04em;line-height:1.6;max-width:300px;margin-bottom:12px}
