@@ -9,7 +9,7 @@ type HeroSectionProps = {
 };
 
 const LOGO_PATH =
-  "M6 74 C24 28,48 2,76 4 C98 6,98 48,110 70 C122 92,150 89,164 64 C183 30,195 5,222 5 C251 5,252 49,265 72 C279 96,303 88,318 64 C329 47,339 26,360 17 L446 17 L360 17 L360 45 L430 45 L360 45 L360 74 L454 74 C477 74,489 59,482 43 C477 31,469 21,458 17 L596 17 L526 17 L526 75 C526 92,544 97,558 80 C571 64,579 40,599 24 C626 3,665 7,688 31 C662 17,624 18,601 43 C576 70,597 94,633 92 C662 90,684 75,690 55 C694 67,685 82,669 90";
+  "M15 79 C35 48,53 27,76 23 C95 20,99 45,107 64 C116 85,141 87,157 71 C171 57,181 33,196 27 C213 20,222 30,226 51 C229 66,231 80,241 86 C252 93,272 91,288 84 L382 84 C391 84,398 78,400 67 C403 52,406 37,419 29 L296 29 L419 29 L296 29 L296 53 L367 53 L296 53 L296 84 L396 84 C414 84,421 74,426 62 C437 42,452 34,472 29 C497 23,534 22,556 34 C574 44,570 64,552 69 C536 73,525 65,524 55 C523 45,514 39,498 38 C475 37,456 47,452 62 C447 79,468 91,501 91 C534 91,565 79,592 66 C603 61,611 52,607 50 C601 51,590 61,579 64 C580 54,578 44,572 37 C561 25,539 21,516 21 C484 21,459 31,441 47 C426 60,418 82,403 87";
 
 function WritingLogo() {
   const pathRef = useRef<SVGPathElement | null>(null);
@@ -96,7 +96,7 @@ function WritingLogo() {
 
   return (
     <div className={`logo-stage ${phase === "settled" ? "is-settled" : ""}`} aria-label="METC">
-      <svg className="script-logo-svg" viewBox="0 -8 680 110" role="img" aria-labelledby="logoTitle">
+      <svg className="script-logo-svg" viewBox="0 0 708 116" role="img" aria-labelledby="logoTitle">
         <title id="logoTitle">METC handwritten logo</title>
         <defs>
           <radialGradient id="logoSunGlow" cx="50%" cy="50%" r="50%">
@@ -117,9 +117,9 @@ function WritingLogo() {
 
         <path className="logo-guide" d={LOGO_PATH} />
         <path ref={pathRef} className="logo-draw" d={LOGO_PATH} />
-        <circle ref={glowRef} className="logo-sun-glow" cx="2" cy="70" r="24" />
+        <circle ref={glowRef} className="logo-sun-glow" cx="15" cy="79" r="24" />
 
-        <g ref={beamRef} className="logo-sun-laser" transform="translate(2 70)">
+        <g ref={beamRef} className="logo-sun-laser" transform="translate(15 79)">
           <circle className="logo-sun-halo" cx="0" cy="0" r="13" />
           <circle className="logo-sun-core" cx="0" cy="0" r="5.5" />
         </g>
@@ -134,8 +134,8 @@ function WritingLogo() {
                 }
               }}
               className="logo-spark"
-              cx="2"
-              cy="70"
+              cx="15"
+              cy="79"
               r="2"
             />
           ))}
