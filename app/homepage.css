@@ -142,28 +142,8 @@ button{font:inherit}
   letter-spacing:.08em;
 }
 .hero-kicker{color:rgba(37,87,69,.78)}
-.logo-stage{width:min(1120px,96%);margin:0 0 6px;filter:drop-shadow(0 16px 28px rgba(42,61,45,.1))}
-.line-logo{width:100%;overflow:visible}
-.logo-guide{fill:none;stroke:rgba(255,253,241,.12);stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
-.logo-draw{
-  fill:none;stroke:url(#logoChalkInk);stroke-width:16.5;stroke-linecap:round;stroke-linejoin:round;
-  filter:url(#chalkTexture);
-}
-.logo-stage .logo-draw{
-  filter:
-    url(#chalkTexture)
-    drop-shadow(0 1px 0 rgba(255,253,241,.6))
-    drop-shadow(0 0 12px rgba(255,250,221,.32))
-    drop-shadow(0 7px 14px rgba(42,61,45,.08));
-}
-.logo-stage.is-settled .logo-laser,
-.logo-stage.is-settled .logo-laser-glow,
-.logo-stage.is-settled .logo-particle{opacity:0}
-.logo-laser{transform-box:fill-box;transform-origin:center;filter:drop-shadow(0 0 5px rgba(255,249,219,.55))}
-.logo-laser-glow{fill:url(#laserGlow);opacity:.16;mix-blend-mode:screen}
-.sun-laser-shell{fill:#fffdf1;opacity:.64}
-.laser-point-core{fill:#fffdf0;filter:drop-shadow(0 0 5px rgba(255,249,219,.64))}
-.logo-particle{fill:#fffdf1;filter:drop-shadow(0 0 3px rgba(255,249,219,.4))}
+.logo-stage{width:min(589px,96%);margin:0 0 16px;filter:drop-shadow(0 0 12px rgba(255,250,221,.26)) drop-shadow(0 10px 18px rgba(42,61,45,.08))}
+.script-logo-image{display:block;width:100%;height:auto}
 .club-fullname{
   margin:4px 0 16px;color:rgba(31,36,29,.74);font-weight:850;text-transform:uppercase;
   letter-spacing:.1em;font-size:.84rem;line-height:1.6;
@@ -471,7 +451,7 @@ button{font:inherit}
   .hero-rule{display:none}
   .hero-wash-a{left:-32%;top:-4%}
   .hero-wash-b{right:-30%;bottom:18%}
-  .logo-stage{width:min(92%,760px);margin-bottom:4px}
+  .logo-stage{width:min(92%,589px);margin-bottom:12px}
   .hero h1{font-size:2.18rem;line-height:1.28}
   .hero-lead{font-size:.94rem;line-height:1.78;margin-top:16px}
   .club-fullname{font-size:.7rem;letter-spacing:.04em;line-height:1.6;max-width:300px;margin-bottom:12px}
