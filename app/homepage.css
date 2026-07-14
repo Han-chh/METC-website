@@ -144,16 +144,16 @@ button{font:inherit}
 .hero-kicker{color:rgba(37,87,69,.78)}
 .logo-stage{width:min(1120px,96%);margin:0 0 6px;filter:drop-shadow(0 16px 28px rgba(42,61,45,.1))}
 .line-logo{width:100%;overflow:visible}
-.logo-guide{fill:none;stroke:rgba(255,253,241,.16);stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
+.logo-guide{fill:none;stroke:rgba(255,253,241,.12);stroke-width:24;stroke-linecap:round;stroke-linejoin:round}
 .logo-draw{
-  fill:none;stroke:url(#logoChalkInk);stroke-width:15.5;stroke-linecap:round;stroke-linejoin:round;
+  fill:none;stroke:url(#logoChalkInk);stroke-width:16.5;stroke-linecap:round;stroke-linejoin:round;
   filter:url(#chalkTexture);
 }
 .logo-stage .logo-draw{
   filter:
     url(#chalkTexture)
-    drop-shadow(0 1px 0 rgba(255,253,241,.48))
-    drop-shadow(0 0 10px rgba(255,250,221,.28))
+    drop-shadow(0 1px 0 rgba(255,253,241,.6))
+    drop-shadow(0 0 12px rgba(255,250,221,.32))
     drop-shadow(0 7px 14px rgba(42,61,45,.08));
 }
 .logo-stage.is-settled .logo-laser,
