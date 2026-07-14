@@ -1,0 +1,6 @@
+@import "./homepage.css";
+
+html,
+body {
+  min-height: 100%;
+}
