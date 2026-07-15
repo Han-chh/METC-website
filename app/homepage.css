@@ -165,7 +165,10 @@ button{font:inherit}
 .metc-script-logo__shadow{
   opacity:1;
 }
-.metc-script-logo__one-stroke{
+.metc-script-logo__drawn-ink .metc-script-logo__one-stroke{
+  filter:none;
+}
+.metc-script-logo__final-ink .metc-script-logo__one-stroke{
   filter:drop-shadow(0 0 14px rgba(255,246,167,.64)) drop-shadow(0 0 28px rgba(255,202,72,.32));
 }
 .metc-script-logo__laser-line{
