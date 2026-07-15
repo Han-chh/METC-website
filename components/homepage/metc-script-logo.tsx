@@ -96,15 +96,6 @@ export function MetcScriptLogo() {
       </defs>
 
       <g className="metc-script-logo__drawn-ink" mask="url(#metc-logo-write-mask)">
-        <path
-          className="metc-script-logo__shadow"
-          d={METC_LOGO_PATH}
-          fill="#715A46"
-          fillOpacity="0.16"
-          fillRule="evenodd"
-          transform="translate(1.5 2)"
-          aria-hidden="true"
-        />
         <path className="metc-script-logo__one-stroke" d={METC_LOGO_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
       </g>
       <g className="metc-script-logo__final-ink">
