@@ -36,6 +36,13 @@ export function MetcHomePage() {
   }, [language]);
 
   useEffect(() => {
+    if (!("IntersectionObserver" in window)) {
+      document.querySelectorAll(".reveal").forEach((node) => node.classList.add("is-visible"));
+      return;
+    }
+
+    document.documentElement.classList.add("reveal-enabled");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -51,7 +58,10 @@ export function MetcHomePage() {
     const nodes = document.querySelectorAll(".reveal");
     nodes.forEach((node) => observer.observe(node));
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      document.documentElement.classList.remove("reveal-enabled");
+    };
   }, []);
 
   useEffect(() => {
