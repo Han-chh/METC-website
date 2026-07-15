@@ -149,7 +149,7 @@ button{font:inherit}
   display:block;width:100%;height:auto;overflow:visible;
 }
 .metc-script-logo__write-reveal{
-  fill:none;stroke:#fff;stroke-width:52;stroke-linecap:round;stroke-linejoin:round;
+  fill:none;stroke:#fff;stroke-width:54;stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:1;stroke-dashoffset:1;
   animation:metcLogoGuideWrite var(--metc-draw-duration) var(--metc-draw-ease) .08s forwards;
 }
