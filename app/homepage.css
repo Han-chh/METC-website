@@ -144,16 +144,15 @@ button{font:inherit}
 .hero-kicker{color:rgba(37,87,69,.78)}
 .logo-stage{width:min(708px,96%);margin:0 0 16px;filter:drop-shadow(0 0 12px rgba(255,250,221,.26)) drop-shadow(0 10px 18px rgba(42,61,45,.08))}
 .script-logo-svg{display:block;width:100%;height:auto;overflow:visible}
+.metc-script-logo__write-reveal{
+  transform-box:fill-box;transform-origin:left center;transform:scaleX(0);
+  animation:metcLogoWrite 4.9s cubic-bezier(.32,.08,.18,1) .12s forwards;
+}
 .metc-script-logo__shadow{
-  fill:none;stroke:url(#metc-logo-shadow-ink);stroke-width:15;stroke-linecap:round;stroke-linejoin:round;
-  transform-box:view-box;transform-origin:center;transform:translate(2px,2.4px) skewX(-10deg);opacity:.9;
+  opacity:1;
 }
 .metc-script-logo__one-stroke{
-  fill:none;stroke:url(#metc-logo-bright-ink);stroke-width:13;stroke-linecap:round;stroke-linejoin:round;
-  stroke-dasharray:1;stroke-dashoffset:1;
-  transform-box:view-box;transform-origin:center;transform:skewX(-10deg);
-  filter:drop-shadow(0 0 13px rgba(255,246,196,.55));
-  animation:metcLogoWrite 4.9s cubic-bezier(.32,.08,.18,1) .12s forwards;
+  filter:drop-shadow(0 0 9px rgba(255,246,196,.34));
 }
 .metc-script-logo__one-stroke-glint{
   fill:none;stroke:rgba(255,255,255,.86);stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;
@@ -199,7 +198,7 @@ button{font:inherit}
 .metc-script-logo__dust{animation-delay:.8s!important}
 .metc-script-logo__dust:nth-of-type(2n){animation-delay:1.9s!important}
 .metc-script-logo__dust:nth-of-type(3n){animation-delay:3s!important}
-@keyframes metcLogoWrite{to{stroke-dashoffset:0}}
+@keyframes metcLogoWrite{to{transform:scaleX(1)}}
 @keyframes metcLogoGlint{to{stroke-dashoffset:-.18;opacity:.32}}
 @keyframes metcGlintPulse{
   0%,100%{opacity:.18}
@@ -226,11 +225,13 @@ button{font:inherit}
 }
 @media (prefers-reduced-motion:reduce){
   .metc-script-logo__one-stroke,
+  .metc-script-logo__write-reveal,
   .metc-script-logo__one-stroke-glint,
   .metc-script-logo__ambient,
   .metc-script-logo__meteor,
   .metc-script-logo__spark,
   .metc-script-logo__dust{animation:none}
+  .metc-script-logo__write-reveal{transform:scaleX(1)}
   .metc-script-logo__one-stroke{stroke-dashoffset:0}
   .metc-script-logo__one-stroke-glint,
   .metc-script-logo__meteor,
