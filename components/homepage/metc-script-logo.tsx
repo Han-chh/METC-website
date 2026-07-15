@@ -1,15 +1,23 @@
+import type { CSSProperties } from "react";
+
+type LogoMotionStyle = CSSProperties & Record<`--${string}`, string>;
+
 const METC_ONE_STROKE_PATH =
-  "M24 86 C46 38 68 22 92 24 C116 26 111 82 135 84 C158 86 166 29 192 26 C225 22 236 57 246 88 C254 91 261 90 268 88 L268 27 L331 27 L268 27 L268 57 L322 57 L268 57 L268 88 L334 88 C348 68 360 39 350 27 L444 27 L397 27 C396 45 392 68 389 88 C418 93 474 85 530 52 C568 23 622 21 654 36 C632 28 591 31 562 50 C523 76 548 101 602 91 C627 87 645 78 657 69";
+  "M24 86 C46 38 68 22 92 24 C116 26 111 82 135 84 C158 86 166 29 192 26 C225 22 236 57 246 88 C254 91 261 90 268 88 L268 27 L331 27 C356 25 399 25 444 27 C420 29 377 29 331 27 L268 27 L268 57 L322 57 L268 57 L268 88 L334 88 C359 87 385 84 404 78 C406 62 407 45 407 33 C404 48 399 69 389 88 C418 93 474 85 530 52 C568 23 622 21 654 36 C632 28 591 31 562 50 C523 76 548 101 602 91 C627 87 645 78 657 69";
 
 const METC_METEORS = [
-  { x1: 118, y1: 18, x2: 56, y2: 52, delay: "4.8s", duration: "2.8s" },
-  { x1: 205, y1: 12, x2: 147, y2: 45, delay: "5.3s", duration: "3.2s" },
-  { x1: 318, y1: 15, x2: 258, y2: 49, delay: "5.9s", duration: "2.9s" },
-  { x1: 472, y1: 13, x2: 410, y2: 48, delay: "6.2s", duration: "3.5s" },
-  { x1: 641, y1: 29, x2: 576, y2: 70, delay: "6.8s", duration: "3.1s" },
-  { x1: 690, y1: 48, x2: 625, y2: 83, delay: "7.4s", duration: "3.7s" },
-  { x1: 386, y1: 6, x2: 326, y2: 38, delay: "8s", duration: "3.3s" },
-  { x1: 532, y1: 22, x2: 470, y2: 58, delay: "8.5s", duration: "3.4s" },
+  { x1: 118, y1: 18, x2: 56, y2: 52, tx: -28, ty: 15, delay: "4.8s", duration: "2.8s" },
+  { x1: 169, y1: 93, x2: 229, y2: 63, tx: 27, ty: -14, delay: "5.1s", duration: "3.1s" },
+  { x1: 205, y1: 12, x2: 147, y2: 45, tx: -25, ty: 15, delay: "5.3s", duration: "3.2s" },
+  { x1: 318, y1: 15, x2: 258, y2: 49, tx: -28, ty: 16, delay: "5.9s", duration: "2.9s" },
+  { x1: 329, y1: 91, x2: 284, y2: 53, tx: -21, ty: -18, delay: "6.4s", duration: "3s" },
+  { x1: 472, y1: 13, x2: 410, y2: 48, tx: -29, ty: 16, delay: "6.2s", duration: "3.5s" },
+  { x1: 481, y1: 89, x2: 548, y2: 55, tx: 30, ty: -16, delay: "6.6s", duration: "3.3s" },
+  { x1: 641, y1: 29, x2: 576, y2: 70, tx: -31, ty: 19, delay: "6.8s", duration: "3.1s" },
+  { x1: 690, y1: 48, x2: 625, y2: 83, tx: -30, ty: 16, delay: "7.4s", duration: "3.7s" },
+  { x1: 621, y1: 95, x2: 677, y2: 63, tx: 26, ty: -15, delay: "7.8s", duration: "3.4s" },
+  { x1: 386, y1: 6, x2: 326, y2: 38, tx: -28, ty: 15, delay: "8s", duration: "3.3s" },
+  { x1: 532, y1: 22, x2: 470, y2: 58, tx: -29, ty: 17, delay: "8.5s", duration: "3.4s" },
 ];
 
 const METC_SPARKS = [
@@ -95,7 +103,12 @@ export function MetcScriptLogo() {
             y1={meteor.y1}
             x2={meteor.x2}
             y2={meteor.y2}
-            style={{ animationDelay: meteor.delay, animationDuration: meteor.duration }}
+            style={{
+              "--meteor-x": `${meteor.tx}px`,
+              "--meteor-y": `${meteor.ty}px`,
+              animationDelay: meteor.delay,
+              animationDuration: meteor.duration,
+            } as LogoMotionStyle}
           />
         ))}
         {METC_SPARKS.map((spark, index) => (
