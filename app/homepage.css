@@ -160,7 +160,7 @@ button{font:inherit}
   filter:drop-shadow(0 0 8px rgba(255,255,235,.72));
   animation:metcLogoGlint 4.9s cubic-bezier(.32,.08,.18,1) .4s forwards,metcGlintPulse 4.6s ease-in-out 5.4s infinite;
 }
-.metc-script-logo__ambient{opacity:0;animation:metcAmbientOn .75s ease 4.7s forwards}
+.metc-script-logo__ambient{opacity:1}
 .metc-script-logo__meteor{
   stroke:url(#metc-meteor-ink);stroke-width:3.2;stroke-linecap:round;opacity:0;
   filter:drop-shadow(0 0 10px rgba(255,242,171,.9)) drop-shadow(0 0 18px rgba(255,202,103,.42));
@@ -177,6 +177,26 @@ button{font:inherit}
   filter:drop-shadow(0 0 7px rgba(255,237,154,.86));
   animation:metcDustDrift 5.8s ease-in-out infinite;
 }
+.metc-script-logo__meteor:nth-of-type(1){animation-delay:.32s!important}
+.metc-script-logo__meteor:nth-of-type(2){animation-delay:1.05s!important}
+.metc-script-logo__meteor:nth-of-type(3){animation-delay:1.72s!important}
+.metc-script-logo__meteor:nth-of-type(4){animation-delay:2.28s!important}
+.metc-script-logo__meteor:nth-of-type(5){animation-delay:2.9s!important}
+.metc-script-logo__meteor:nth-of-type(6){animation-delay:3.48s!important}
+.metc-script-logo__meteor:nth-of-type(7){animation-delay:4.08s!important}
+.metc-script-logo__meteor:nth-of-type(8){animation-delay:4.62s!important}
+.metc-script-logo__meteor:nth-of-type(9){animation-delay:1.38s!important}
+.metc-script-logo__meteor:nth-of-type(10){animation-delay:2.68s!important}
+.metc-script-logo__meteor:nth-of-type(11){animation-delay:3.82s!important}
+.metc-script-logo__meteor:nth-of-type(12){animation-delay:4.4s!important}
+.metc-script-logo__spark{animation-delay:.45s!important}
+.metc-script-logo__spark:nth-of-type(2n){animation-delay:1.15s!important}
+.metc-script-logo__spark:nth-of-type(3n){animation-delay:1.85s!important}
+.metc-script-logo__spark:nth-of-type(4n){animation-delay:2.55s!important}
+.metc-script-logo__spark:nth-of-type(5n){animation-delay:3.15s!important}
+.metc-script-logo__dust{animation-delay:.8s!important}
+.metc-script-logo__dust:nth-of-type(2n){animation-delay:1.9s!important}
+.metc-script-logo__dust:nth-of-type(3n){animation-delay:3s!important}
 @keyframes metcLogoWrite{to{stroke-dashoffset:0}}
 @keyframes metcLogoGlint{to{stroke-dashoffset:-.18;opacity:.32}}
 @keyframes metcGlintPulse{
