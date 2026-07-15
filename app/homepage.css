@@ -143,18 +143,22 @@ button{font:inherit}
 }
 .hero-kicker{color:rgba(37,87,69,.78)}
 .logo-stage{width:min(708px,96%);margin:0 0 16px;filter:drop-shadow(0 0 18px rgba(255,239,130,.42)) drop-shadow(0 12px 22px rgba(42,61,45,.1))}
-.script-logo-svg{display:block;width:100%;height:auto;overflow:visible}
+.script-logo-svg{
+  --metc-draw-duration:4.9s;
+  --metc-draw-ease:cubic-bezier(.45,0,.2,1);
+  display:block;width:100%;height:auto;overflow:visible;
+}
 .metc-script-logo__write-reveal{
-  fill:none;stroke:#fff;stroke-width:66;stroke-linecap:round;stroke-linejoin:round;
+  fill:none;stroke:#fff;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:1;stroke-dashoffset:1;
-  animation:metcLogoGuideWrite 5.35s linear .08s forwards;
+  animation:metcLogoGuideWrite var(--metc-draw-duration) var(--metc-draw-ease) .08s forwards;
 }
 .metc-script-logo__drawn-ink{
-  animation:metcDrawnInkHandOff .42s ease-out 5.44s forwards;
+  animation:metcDrawnInkHandOff .35s ease-out 4.95s forwards;
 }
 .metc-script-logo__final-ink{
   opacity:0;
-  animation:metcFinalInkSettle .46s ease-out 5.4s forwards;
+  animation:metcFinalInkSettle .42s ease-out 4.92s forwards;
 }
 .metc-script-logo__shadow{
   opacity:1;
@@ -166,18 +170,39 @@ button{font:inherit}
   filter:drop-shadow(0 0 14px rgba(255,246,167,.64)) drop-shadow(0 0 28px rgba(255,202,72,.32));
 }
 .metc-script-logo__laser-line{
-  fill:none;stroke:url(#metc-laser-ink);stroke-width:5.2;stroke-linecap:round;stroke-linejoin:round;
-  stroke-dasharray:.22 .78;stroke-dashoffset:1;mix-blend-mode:screen;
+  fill:none;stroke:url(#metc-laser-ink);stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:.07 .93;stroke-dashoffset:1;mix-blend-mode:screen;
   filter:drop-shadow(0 0 8px rgba(255,255,235,.96)) drop-shadow(0 0 20px rgba(255,211,76,.72));
-  animation:metcLaserTrace 5.35s linear .18s forwards,metcTraceFade .9s ease-out 5.48s forwards;
+  animation:metcLaserTrace var(--metc-draw-duration) var(--metc-draw-ease) .2s forwards,metcTraceFade 1s ease-out 4.95s forwards;
 }
 .metc-script-logo__one-stroke-glint{
-  fill:none;stroke:rgba(255,255,255,.94);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;
-  stroke-dasharray:.16 .84;stroke-dashoffset:1;mix-blend-mode:screen;
+  fill:none;stroke:rgba(255,255,255,.94);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:.04 .96;stroke-dashoffset:1;mix-blend-mode:screen;
   filter:drop-shadow(0 0 9px rgba(255,255,235,.9)) drop-shadow(0 0 18px rgba(255,232,113,.62));
-  animation:metcLogoGlint 5.35s linear .34s forwards,metcGlintPulse 4.6s ease-in-out 5.9s infinite;
+  animation:metcLogoGlint var(--metc-draw-duration) var(--metc-draw-ease) .4s forwards,metcGlintPulse 4.6s ease-in-out 5.4s infinite;
 }
-.metc-script-logo__ambient{opacity:1}
+.metc-script-logo__write-head{
+  opacity:0;mix-blend-mode:screen;
+  filter:drop-shadow(0 0 10px rgba(255,242,171,.95)) drop-shadow(0 0 24px rgba(255,202,103,.58));
+  animation:metcWriteHeadOn .18s ease-out .08s forwards,metcWriteHeadOff .42s ease-out 4.92s forwards;
+}
+.metc-script-logo__write-head-halo{
+  fill:url(#metc-spark-core);opacity:.86;
+  animation:metcWriteHeadPulse 1.15s ease-in-out infinite;
+}
+.metc-script-logo__write-head-core{
+  fill:#fffef4;opacity:1;
+}
+.metc-script-logo__write-head-dust{
+  fill:#fffdf2;opacity:.76;transform-box:fill-box;transform-origin:center;
+  animation:metcWriteHeadDust .86s ease-in-out infinite;
+}
+.metc-script-logo__write-head-dust-b{animation-delay:.18s}
+.metc-script-logo__write-head-dust-c{animation-delay:.34s}
+.metc-script-logo__ambient{
+  opacity:0;
+  animation:metcAmbientOn .35s ease-out 5.1s forwards;
+}
 .metc-script-logo__meteor{
   stroke:url(#metc-meteor-ink);stroke-width:3.2;stroke-linecap:round;opacity:0;
   filter:drop-shadow(0 0 10px rgba(255,242,171,.9)) drop-shadow(0 0 18px rgba(255,202,103,.42));
@@ -194,26 +219,26 @@ button{font:inherit}
   filter:drop-shadow(0 0 7px rgba(255,237,154,.86));
   animation:metcDustDrift 5.8s ease-in-out infinite;
 }
-.metc-script-logo__meteor:nth-of-type(1){animation-delay:.32s!important}
-.metc-script-logo__meteor:nth-of-type(2){animation-delay:1.05s!important}
-.metc-script-logo__meteor:nth-of-type(3){animation-delay:1.72s!important}
-.metc-script-logo__meteor:nth-of-type(4){animation-delay:2.28s!important}
-.metc-script-logo__meteor:nth-of-type(5){animation-delay:2.9s!important}
-.metc-script-logo__meteor:nth-of-type(6){animation-delay:3.48s!important}
-.metc-script-logo__meteor:nth-of-type(7){animation-delay:4.08s!important}
-.metc-script-logo__meteor:nth-of-type(8){animation-delay:4.62s!important}
-.metc-script-logo__meteor:nth-of-type(9){animation-delay:1.38s!important}
-.metc-script-logo__meteor:nth-of-type(10){animation-delay:2.68s!important}
-.metc-script-logo__meteor:nth-of-type(11){animation-delay:3.82s!important}
-.metc-script-logo__meteor:nth-of-type(12){animation-delay:4.4s!important}
-.metc-script-logo__spark{animation-delay:.45s!important}
-.metc-script-logo__spark:nth-of-type(2n){animation-delay:1.15s!important}
-.metc-script-logo__spark:nth-of-type(3n){animation-delay:1.85s!important}
-.metc-script-logo__spark:nth-of-type(4n){animation-delay:2.55s!important}
-.metc-script-logo__spark:nth-of-type(5n){animation-delay:3.15s!important}
-.metc-script-logo__dust{animation-delay:.8s!important}
-.metc-script-logo__dust:nth-of-type(2n){animation-delay:1.9s!important}
-.metc-script-logo__dust:nth-of-type(3n){animation-delay:3s!important}
+.metc-script-logo__meteor:nth-of-type(1){animation-delay:5.42s!important}
+.metc-script-logo__meteor:nth-of-type(2){animation-delay:6.15s!important}
+.metc-script-logo__meteor:nth-of-type(3){animation-delay:6.82s!important}
+.metc-script-logo__meteor:nth-of-type(4){animation-delay:7.38s!important}
+.metc-script-logo__meteor:nth-of-type(5){animation-delay:8s!important}
+.metc-script-logo__meteor:nth-of-type(6){animation-delay:8.58s!important}
+.metc-script-logo__meteor:nth-of-type(7){animation-delay:9.18s!important}
+.metc-script-logo__meteor:nth-of-type(8){animation-delay:9.72s!important}
+.metc-script-logo__meteor:nth-of-type(9){animation-delay:6.48s!important}
+.metc-script-logo__meteor:nth-of-type(10){animation-delay:7.78s!important}
+.metc-script-logo__meteor:nth-of-type(11){animation-delay:8.92s!important}
+.metc-script-logo__meteor:nth-of-type(12){animation-delay:9.5s!important}
+.metc-script-logo__spark{animation-delay:5.55s!important}
+.metc-script-logo__spark:nth-of-type(2n){animation-delay:6.25s!important}
+.metc-script-logo__spark:nth-of-type(3n){animation-delay:6.95s!important}
+.metc-script-logo__spark:nth-of-type(4n){animation-delay:7.65s!important}
+.metc-script-logo__spark:nth-of-type(5n){animation-delay:8.25s!important}
+.metc-script-logo__dust{animation-delay:5.9s!important}
+.metc-script-logo__dust:nth-of-type(2n){animation-delay:7s!important}
+.metc-script-logo__dust:nth-of-type(3n){animation-delay:8.1s!important}
 @keyframes metcLogoWrite{to{transform:scaleX(1)}}
 @keyframes metcLogoGuideWrite{to{stroke-dashoffset:0}}
 @keyframes metcLaserTrace{to{stroke-dashoffset:-.2}}
@@ -221,6 +246,17 @@ button{font:inherit}
 @keyframes metcDrawnInkHandOff{to{opacity:0}}
 @keyframes metcFinalInkSettle{to{opacity:1}}
 @keyframes metcLogoGlint{to{stroke-dashoffset:-.18;opacity:.32}}
+@keyframes metcWriteHeadOn{to{opacity:1}}
+@keyframes metcWriteHeadOff{to{opacity:0}}
+@keyframes metcWriteHeadPulse{
+  0%,100%{opacity:.54;transform:scale(.76)}
+  50%{opacity:1;transform:scale(1.08)}
+}
+@keyframes metcWriteHeadDust{
+  0%,100%{opacity:0;transform:translate(0,0) scale(.5)}
+  44%{opacity:.78;transform:translate(-5px,3px) scale(1.12)}
+  72%{opacity:.24;transform:translate(-9px,6px) scale(.74)}
+}
 @keyframes metcGlintPulse{
   0%,100%{opacity:.18}
   42%{opacity:.62}
@@ -251,6 +287,10 @@ button{font:inherit}
   .metc-script-logo__final-ink,
   .metc-script-logo__laser-line,
   .metc-script-logo__one-stroke-glint,
+  .metc-script-logo__write-head,
+  .metc-script-logo__write-head-halo,
+  .metc-script-logo__write-head-core,
+  .metc-script-logo__write-head-dust,
   .metc-script-logo__ambient,
   .metc-script-logo__meteor,
   .metc-script-logo__spark,
@@ -259,6 +299,7 @@ button{font:inherit}
   .metc-script-logo__drawn-ink{opacity:0}
   .metc-script-logo__final-ink{opacity:1}
   .metc-script-logo__laser-line{opacity:0;stroke-dashoffset:0}
+  .metc-script-logo__write-head{opacity:0}
   .metc-script-logo__one-stroke{stroke-dashoffset:0}
   .metc-script-logo__one-stroke-glint,
   .metc-script-logo__meteor,
