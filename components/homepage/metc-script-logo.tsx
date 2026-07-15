@@ -1,265 +1,44 @@
-const METC_SCRIPT_LOGO_PATH = `
-M 15 79.38
-       Q 14 83.25 16.12 84
-       Q 18.25 84.75 21.88 83.75
-       Q 25.5 82.75 28.12 78.5
-       Q 30.75 74.25 30.75 72.88
-       Q 30.75 71.5 32.12 70.5
-       Q 33.5 69.5 36.62 63.5
-       Q 39.75 57.5 46.25 48.88
-       Q 52.75 40.25 56.5 36.62
-       Q 60.25 33 64.38 30.38
-       Q 68.5 27.75 74.38 26.25
-       Q 80.25 24.75 81.38 23.75
-       Q 82.5 22.75 84.88 22.75
-       Q 87.25 22.75 92.12 28.62
-       Q 97 34.5 97 36.38
-       Q 97 38.25 99 41.88
-       Q 101 45.5 101 48.38
-       Q 101 51.25 102 53.25
-       Q 103 55.25 105.5 57.38
-       Q 108 59.5 108 64.88
-       Q 108 70.25 111.75 75.5
-       Q 115.5 80.75 120 83.25
-       Q 124.5 85.75 130.88 85.75
-       Q 137.25 85.75 143.38 83.12
-       Q 149.5 80.5 156.5 74
-       Q 163.5 67.5 164.62 64.5
-       Q 165.75 61.5 167.25 60.38
-       Q 168.75 59.25 168.75 58.38
-       Q 168.75 57.5 177.38 46.38
-       Q 186 35.25 189.75 32
-       Q 193.5 28.75 197 27.25
-       Q 200.5 25.75 205.38 25.75
-       Q 210.25 25.75 213.62 28.62
-       Q 217 31.5 218.5 36.38
-       Q 220 41.25 221 41.88
-       Q 222 42.5 222 45.38
-       Q 222 48.25 224.5 55.88
-       Q 227 63.5 227 68.88
-       Q 227 74.25 229 77.75
-       Q 231 81.25 233.62 83.88
-       Q 236.25 86.5 240.88 88.62
-       Q 245.5 90.75 255.88 90.25
-       Q 266.25 89.75 267.38 88.75
-       Q 268.5 87.75 273.88 86.75
-       Q 279.25 85.75 281.88 83.75
-       Q 284.5 81.75 287.5 83.75
-       Q 290.5 85.75 328.88 85.75
-       Q 367.25 85.75 371.25 83.75
-       Q 375.25 81.75 377.75 82.25
-       Q 380.25 82.75 383.88 86.75
-       Q 387.5 90.75 389.5 90
-       Q 391.5 89.25 393.5 91
-       Q 395.5 92.75 401.88 92.25
-       Q 408.25 91.75 413.75 89.25
-       Q 419.25 86.75 422.88 83.62
-       Q 426.5 80.5 442 62.12
-       Q 457.5 43.75 462.88 40.25
-       Q 468.25 36.75 469.38 34.88
-       Q 470.5 33 474.88 32.88
-       Q 479.25 32.75 484.88 30.25
-       Q 490.5 27.75 494.38 27.75
-       Q 498.25 27.75 499.38 26.75
-       Q 500.5 25.75 514.88 25.75
-       Q 529.25 25.75 534.25 26.75
-       Q 539.25 27.75 550.25 32.75
-       Q 561.25 37.75 563.12 41.62
-       Q 565 45.5 565 51.88
-       Q 565 58.25 564 58.88
-       Q 563 59.5 561.5 63.38
-       Q 560 67.25 558.62 68.62
-       Q 557.25 70 550.38 70
-       Q 543.5 70 539.5 69
-       Q 535.5 68 532.12 64.62
-       Q 528.75 61.25 528.75 56.38
-       Q 528.75 51.5 526.62 47.38
-       Q 524.5 43.25 521.88 41.62
-       Q 519.25 40 513.75 38.5
-       Q 508.25 37 498.88 37.5
-       Q 489.5 38 488.5 38.88
-       Q 487.5 39.75 480 40.88
-       Q 472.5 42 469.88 44
-       Q 467.25 46 465.88 46
-       Q 464.5 46 459.25 50.75
-       Q 454 55.5 452.5 58
-       Q 451 60.5 451 65.38
-       Q 451 70.25 454.88 75.75
-       Q 458.75 81.25 459.88 81.25
-       Q 461 81.25 463.75 83.5
-       Q 466.5 85.75 469.88 86.25
-       Q 473.25 86.75 474.38 87.75
-       Q 475.5 88.75 478.88 88.75
-       Q 482.25 88.75 483.38 89.75
-       Q 484.5 90.75 502.88 90.75
-       Q 521.25 90.75 534.25 87.25
-       Q 547.25 83.75 549.38 81.75
-       Q 551.5 79.75 564.88 76.25
-       Q 578.25 72.75 579.88 71.25
-       Q 581.5 69.75 586.38 68.75
-       Q 591.25 67.75 591.88 66.75
-       Q 592.5 65.75 595.38 64.75
-       Q 598.25 63.75 599 62.12
-       Q 599.75 60.5 603 58.62
-       Q 606.25 56.75 608.38 54
-       Q 610.5 51.25 607.88 49.75
-       Q 605.25 48.25 597.75 53.62
-       Q 590.25 59 585.75 61.5
-       Q 581.25 64 578.75 64.38
-       Q 576.25 64.75 575.5 63.12
-       Q 574.75 61.5 575.75 60.38
-       Q 576.75 59.25 577.25 54.88
-       Q 577.75 50.5 576.75 46.5
-       Q 575.75 42.5 573.62 39.38
-       Q 571.5 36.25 564.38 31.12
-       Q 557.25 26 546.75 23.5
-       Q 536.25 21 527.38 21
-       Q 518.5 21 515.88 22
-       Q 513.25 23 500.88 22.5
-       Q 488.5 22 477.5 25.5
-       Q 466.5 29 460.88 33
-       Q 455.25 37 453.38 37.5
-       Q 451.5 38 445.88 42.62
-       Q 440.25 47.25 438.62 51.25
-       Q 437 55.25 434.5 56.25
-       Q 432 57.25 428.5 61.88
-       Q 425 66.5 425 67.88
-       Q 425 69.25 418.75 75.5
-       Q 412.5 81.75 407.88 83.88
-       Q 403.25 86 400.38 86
-       Q 397.5 86 396.62 85.12
-       Q 395.75 84.25 395.75 81.88
-       Q 395.75 79.5 401.25 54
-       Q 406.75 28.5 420 28.62
-       Q 433.25 28.75 434.88 26.62
-       Q 436.5 24.5 434.88 23.25
-       Q 433.25 22 366.88 21.5
-       Q 300.5 21 296.5 21.5
-       Q 292.5 22 289.75 23.75
-       Q 287 25.5 285 34
-       Q 283 42.5 282.88 49
-       Q 282.75 55.5 280.5 60.88
-       Q 278.25 66.25 278.12 69.25
-       Q 278 72.25 276.38 75.38
-       Q 274.75 78.5 269.5 80.75
-       Q 264.25 83 257.75 83.38
-       Q 251.25 83.75 248.25 82.38
-       Q 245.25 81 242 76.12
-       Q 238.75 71.25 238.25 62.88
-       Q 237.75 54.5 235.75 49.38
-       Q 233.75 44.25 233.75 42.38
-       Q 233.75 40.5 232.75 39.88
-       Q 231.75 39.25 231.75 37.88
-       Q 231.75 36.5 230.25 35.38
-       Q 228.75 34.25 228.75 32.38
-       Q 228.75 30.5 227.75 29.88
-       Q 226.75 29.25 226.75 27.38
-       Q 226.75 25.5 222.5 22.25
-       Q 218.25 19 209.88 19
-       Q 201.5 19 200.38 20
-       Q 199.25 21 195.38 21
-       Q 191.5 21 187 23.5
-       Q 182.5 26 173.25 36.25
-       Q 164 46.5 162.25 50.25
-       Q 160.5 54 157.25 57.25
-       Q 154 60.5 152 64
-       Q 150 67.5 144.12 73.25
-       Q 138.25 79 136.38 79
-       Q 134.5 79 133.5 80.5
-       Q 132.5 82 128.88 79.38
-       Q 125.25 76.75 123.5 74
-       Q 121.75 71.25 118.25 58.38
-       Q 114.75 45.5 109.25 34
-       Q 103.75 22.5 99 20.25
-       Q 94.25 18 91 18
-       Q 87.75 18 88 19.5
-       Q 88.25 21 85 21
-       Q 81.75 21 81.38 20
-       Q 81 19 78.75 18.5
-       Q 76.5 18 72.5 18.5
-       Q 68.5 19 64.5 21.5
-       Q 60.5 24 59.38 26
-       Q 58.25 28 54.88 28.5
-       Q 51.5 29 44.75 35.62
-       Q 38 42.25 35.5 46.75
-       Q 33 51.25 29.25 55.5
-       Q 25.5 59.75 25.75 61
-       Q 26 62.25 21 68.88
-       Q 16 75.5 15 79.38 Z
+const METC_ONE_STROKE_PATH =
+  "M24 86 C46 38 68 22 92 24 C116 26 111 82 135 84 C158 86 166 29 192 26 C225 22 236 57 246 88 C254 91 261 90 268 88 L268 27 L331 27 L268 27 L268 57 L322 57 L268 57 L268 88 L334 88 C348 68 360 39 350 27 L444 27 L397 27 C396 45 392 68 389 88 C418 93 474 85 530 52 C568 23 622 21 654 36 C632 28 591 31 562 50 C523 76 548 101 602 91 C627 87 645 78 657 69";
 
-       M 462.75 66.38
-       Q 462.75 64.5 466.38 58.38
-       Q 470 52.25 472.75 50.5
-       Q 475.5 48.75 481 46.75
-       Q 486.5 44.75 495.38 44.25
-       Q 504.25 43.75 508.75 45.25
-       Q 513.25 46.75 514.62 48.12
-       Q 516 49.5 515.5 55.38
-       Q 515 61.25 516.62 64.38
-       Q 518.25 67.5 522.88 70.62
-       Q 527.5 73.75 531.38 74.25
-       Q 535.25 74.75 538.38 76.12
-       Q 541.5 77.5 538.88 79.25
-       Q 536.25 81 526.25 83
-       Q 516.25 85 504.88 85
-       Q 493.5 85 491.88 84
-       Q 490.25 83 486.38 83
-       Q 482.5 83 478.88 81
-       Q 475.25 79 473.38 79
-       Q 471.5 79 468.75 76.75
-       Q 466 74.5 464.38 71.38
-       Q 462.75 68.25 462.75 66.38 Z
+const METC_METEORS = [
+  { x1: 118, y1: 18, x2: 56, y2: 52, delay: "4.8s", duration: "2.8s" },
+  { x1: 205, y1: 12, x2: 147, y2: 45, delay: "5.3s", duration: "3.2s" },
+  { x1: 318, y1: 15, x2: 258, y2: 49, delay: "5.9s", duration: "2.9s" },
+  { x1: 472, y1: 13, x2: 410, y2: 48, delay: "6.2s", duration: "3.5s" },
+  { x1: 641, y1: 29, x2: 576, y2: 70, delay: "6.8s", duration: "3.1s" },
+  { x1: 690, y1: 48, x2: 625, y2: 83, delay: "7.4s", duration: "3.7s" },
+  { x1: 386, y1: 6, x2: 326, y2: 38, delay: "8s", duration: "3.3s" },
+  { x1: 532, y1: 22, x2: 470, y2: 58, delay: "8.5s", duration: "3.4s" },
+];
 
-       M 309.75 33.38
-       Q 309.75 30.5 310.62 29.62
-       Q 311.5 28.75 350.38 28.75
-       Q 389.25 28.75 389.62 33.5
-       Q 390 38.25 389 39.88
-       Q 388 41.5 388 45.38
-       Q 388 49.25 384.5 60.25
-       Q 381 71.25 378.62 74.12
-       Q 376.25 77 372.25 78
-       Q 368.25 79 335.38 78.5
-       Q 302.5 78 302.62 70.25
-       Q 302.75 62.5 304.62 59.12
-       Q 306.5 55.75 325.38 55.25
-       Q 344.25 54.75 346.38 53
-       Q 348.5 51.25 347.88 49.62
-       Q 347.25 48 328.38 48
-       Q 309.5 48 308.62 44.75
-       Q 307.75 41.5 308.75 38.88
-       Q 309.75 36.25 309.75 33.38 Z
+const METC_SPARKS = [
+  { cx: 42, cy: 58, r: 2.6, delay: "4.7s", duration: "2.3s" },
+  { cx: 58, cy: 31, r: 3, delay: "5s", duration: "2.6s" },
+  { cx: 116, cy: 75, r: 2.2, delay: "5.4s", duration: "2.4s" },
+  { cx: 153, cy: 91, r: 2.5, delay: "5.8s", duration: "2.9s" },
+  { cx: 214, cy: 66, r: 2.4, delay: "6.1s", duration: "2.7s" },
+  { cx: 262, cy: 86, r: 2.1, delay: "6.5s", duration: "3s" },
+  { cx: 304, cy: 25, r: 2.9, delay: "5.2s", duration: "2.8s" },
+  { cx: 342, cy: 55, r: 2.3, delay: "6.9s", duration: "3.1s" },
+  { cx: 379, cy: 60, r: 2.4, delay: "7.2s", duration: "3s" },
+  { cx: 421, cy: 27, r: 2.8, delay: "7.5s", duration: "2.7s" },
+  { cx: 486, cy: 81, r: 3.1, delay: "5.6s", duration: "3.2s" },
+  { cx: 529, cy: 52, r: 2.6, delay: "7.9s", duration: "2.8s" },
+  { cx: 575, cy: 31, r: 2.3, delay: "6.3s", duration: "2.5s" },
+  { cx: 620, cy: 36, r: 2.8, delay: "6.7s", duration: "2.9s" },
+  { cx: 650, cy: 72, r: 2.4, delay: "8.2s", duration: "2.7s" },
+  { cx: 681, cy: 69, r: 2.2, delay: "7.7s", duration: "3.1s" },
+];
 
-       M 614.75 35.75
-       Q 609 42.5 609 44.75
-       Q 609 47 610.62 46.88
-       Q 612.25 46.75 613.75 47.75
-       Q 615.25 48.75 620.5 42.5
-       Q 625.75 36.25 629.12 33.5
-       Q 632.5 30.75 635 29.75
-       Q 637.5 28.75 646.38 28.75
-       Q 655.25 28.75 655.88 29.75
-       Q 656.5 30.75 658.38 30.75
-       Q 660.25 30.75 662.12 32.62
-       Q 664 34.5 663.5 40.38
-       Q 663 46.25 659.25 50.62
-       Q 655.5 55 653.38 56.12
-       Q 651.25 57.25 652.38 58.5
-       Q 653.5 59.75 654.88 59.38
-       Q 656.25 59 656.88 59.75
-       Q 657.5 60.5 663.62 57.5
-       Q 669.75 54.5 673.75 48.88
-       Q 677.75 43.25 677.75 39.38
-       Q 677.75 35.5 674.5 31.75
-       Q 671.25 28 664.25 25
-       Q 657.25 22 648.38 22
-       Q 639.5 22 635 23
-       Q 630.5 24 629.88 25
-       Q 629.25 26 624.88 27.5
-       Q 620.5 29 614.75 35.75 Z`;
-
-const METC_SCRIPT_REVEAL_PATH =
-  "M30 78 C50 43 68 24 92 27 C114 30 108 78 131 78 C154 78 158 28 184 27 C206 26 211 56 218 80 C226 58 236 36 256 31 C282 24 321 27 326 35 C331 43 306 48 277 48 C255 48 249 58 262 64 C275 70 305 64 318 69 C331 74 311 86 283 87 C247 88 225 80 224 66 C223 52 237 37 256 31 C284 26 332 28 366 31 L472 31 C451 31 434 32 419 35 C413 50 409 70 409 86 C409 97 429 98 456 86 C482 74 503 58 526 48 C555 30 610 28 650 43 C610 30 558 36 534 58 C511 80 540 96 589 93 C626 91 655 78 672 62";
+const METC_TRAIL_DUST = [
+  { cx: 89, cy: 25, r: 1.4, delay: "5.4s" },
+  { cx: 241, cy: 86, r: 1.2, delay: "6.2s" },
+  { cx: 273, cy: 57, r: 1.3, delay: "7s" },
+  { cx: 397, cy: 27, r: 1.5, delay: "7.8s" },
+  { cx: 531, cy: 52, r: 1.4, delay: "8.6s" },
+  { cx: 602, cy: 91, r: 1.3, delay: "9.4s" },
+];
 
 export function MetcScriptLogo() {
   return (
@@ -271,107 +50,74 @@ export function MetcScriptLogo() {
       fill="none"
       shapeRendering="geometricPrecision"
     >
-      <title id="logoTitle">METC handwritten logo</title>
+      <title id="logoTitle">METC one-stroke logo</title>
       <defs>
-        <path id="metc-script-logo-path" d={METC_SCRIPT_LOGO_PATH} />
-        <path id="metc-script-reveal-path" d={METC_SCRIPT_REVEAL_PATH} />
-        <radialGradient id="metc-laser-core" cx="50%" cy="50%" r="50%">
+        <linearGradient id="metc-logo-bright-ink" x1="20" y1="26" x2="674" y2="92" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#fffef7" />
+          <stop offset="0.4" stopColor="#fff7cf" />
+          <stop offset="0.68" stopColor="#ffffff" />
+          <stop offset="1" stopColor="#fff3bd" />
+        </linearGradient>
+        <linearGradient id="metc-logo-shadow-ink" x1="20" y1="28" x2="674" y2="94" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#84664f" stopOpacity="0.28" />
+          <stop offset="1" stopColor="#4f3d31" stopOpacity="0.14" />
+        </linearGradient>
+        <linearGradient id="metc-meteor-ink" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stopColor="#ffffff" stopOpacity="0" />
+          <stop offset="0.34" stopColor="#fff2a8" stopOpacity="0.9" />
+          <stop offset="0.72" stopColor="#ffffff" />
+          <stop offset="1" stopColor="#ffffff" />
+        </linearGradient>
+        <radialGradient id="metc-spark-core" cx="50%" cy="50%" r="50%">
           <stop offset="0" stopColor="#ffffff" />
-          <stop offset="0.42" stopColor="#fff1a8" />
+          <stop offset="0.44" stopColor="#fff3a6" />
           <stop offset="1" stopColor="#ffc46b" stopOpacity="0" />
         </radialGradient>
-        <linearGradient id="metc-logo-bright-ink" x1="20" y1="28" x2="672" y2="86" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#fffef7" />
-          <stop offset="0.45" stopColor="#fff9dc" />
-          <stop offset="0.72" stopColor="#ffffff" />
-          <stop offset="1" stopColor="#fff4ca" />
-        </linearGradient>
-        <filter id="metc-laser-glow" x="-80%" y="-80%" width="260%" height="260%">
-          <feGaussianBlur stdDeviation="4" result="blur" />
+        <filter id="metc-script-glow" x="-10%" y="-55%" width="120%" height="210%">
+          <feGaussianBlur stdDeviation="1.25" result="softGlow" />
           <feMerge>
-            <feMergeNode in="blur" />
+            <feMergeNode in="softGlow" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-        <filter id="metc-script-edge-smooth" x="-2%" y="-10%" width="104%" height="120%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="0.12" />
-        </filter>
-        <mask id="metc-script-reveal-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="708" height="116">
-          <rect width="708" height="116" fill="black" />
-          <rect className="metc-script-logo__reveal-window" width="708" height="116" fill="white" />
-        </mask>
       </defs>
-      <g className="metc-script-logo__animated" mask="url(#metc-script-reveal-mask)" filter="url(#metc-script-edge-smooth)">
-        <use href="#metc-script-logo-path" fill="#715A46" fillOpacity="0.16" fillRule="evenodd" transform="translate(1.5 2)" />
-        <use href="#metc-script-logo-path" fill="#FFFDF2" fillRule="evenodd" />
-      </g>
-      <path
-        className="metc-script-logo__writing-line"
-        d={METC_SCRIPT_REVEAL_PATH}
-        pathLength="1"
-      />
-      <path
-        className="metc-script-logo__body-reflection"
-        d={METC_SCRIPT_REVEAL_PATH}
-        pathLength="1"
-      />
-      <path
-        className="metc-script-logo__shine"
-        d={METC_SCRIPT_REVEAL_PATH}
-        pathLength="1"
-      />
-      <g className="metc-script-logo__laser" filter="url(#metc-laser-glow)">
-        <circle className="metc-script-logo__laser-halo" cx="0" cy="0" r="16" />
-        <circle className="metc-script-logo__laser-core" cx="0" cy="0" r="5" />
-        <animateMotion
-          path={METC_SCRIPT_REVEAL_PATH}
-          begin="0.16s"
-          dur="7.2s"
-          fill="freeze"
-          rotate="auto"
-          calcMode="spline"
-          keyTimes="0;1"
-          keySplines=".32 .08 .18 1"
-        />
-      </g>
-      <g className="metc-script-logo__particles" aria-hidden="true">
-        {[
-          { r: 2.8, dx: -8, dy: -7, delay: 0.18 },
-          { r: 2.1, dx: -13, dy: 5, delay: 0.24 },
-          { r: 1.8, dx: -4, dy: 11, delay: 0.31 },
-          { r: 1.5, dx: -16, dy: -2, delay: 0.38 },
-          { r: 1.2, dx: -9, dy: 13, delay: 0.46 },
-        ].map((particle, index) => (
-          <circle
-            key={index}
-            className="metc-script-logo__particle"
-            cx={particle.dx}
-            cy={particle.dy}
-            r={particle.r}
-          >
-            <animateMotion
-              path={METC_SCRIPT_REVEAL_PATH}
-              begin={`${particle.delay}s`}
-              dur="7.22s"
-              fill="freeze"
-              calcMode="spline"
-              keyTimes="0;1"
-              keySplines=".32 .08 .18 1"
-            />
-            <animate
-              attributeName="opacity"
-              values="0;.85;.45;0"
-              keyTimes="0;.18;.72;1"
-              begin={`${particle.delay}s`}
-              dur="7.22s"
-              fill="freeze"
-            />
-          </circle>
+
+      <path className="metc-script-logo__shadow" d={METC_ONE_STROKE_PATH} pathLength="1" aria-hidden="true" />
+      <path className="metc-script-logo__one-stroke" d={METC_ONE_STROKE_PATH} pathLength="1" filter="url(#metc-script-glow)" />
+      <path className="metc-script-logo__one-stroke-glint" d={METC_ONE_STROKE_PATH} pathLength="1" aria-hidden="true" />
+
+      <g className="metc-script-logo__ambient" aria-hidden="true">
+        {METC_METEORS.map((meteor, index) => (
+          <line
+            key={`meteor-${index}`}
+            className="metc-script-logo__meteor"
+            x1={meteor.x1}
+            y1={meteor.y1}
+            x2={meteor.x2}
+            y2={meteor.y2}
+            style={{ animationDelay: meteor.delay, animationDuration: meteor.duration }}
+          />
         ))}
-      </g>
-      <g className="metc-script-logo__final" filter="url(#metc-script-edge-smooth)">
-        <use href="#metc-script-logo-path" fill="#715A46" fillOpacity="0.16" fillRule="evenodd" transform="translate(1.5 2)" />
-        <use href="#metc-script-logo-path" fill="#FFFDF2" fillRule="evenodd" />
+        {METC_SPARKS.map((spark, index) => (
+          <circle
+            key={`spark-${index}`}
+            className="metc-script-logo__spark"
+            cx={spark.cx}
+            cy={spark.cy}
+            r={spark.r}
+            style={{ animationDelay: spark.delay, animationDuration: spark.duration }}
+          />
+        ))}
+        {METC_TRAIL_DUST.map((dust, index) => (
+          <circle
+            key={`dust-${index}`}
+            className="metc-script-logo__dust"
+            cx={dust.cx}
+            cy={dust.cy}
+            r={dust.r}
+            style={{ animationDelay: dust.delay }}
+          />
+        ))}
       </g>
     </svg>
   );
