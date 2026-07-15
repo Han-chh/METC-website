@@ -79,9 +79,9 @@ export function MetcScriptLogo() {
           <stop offset="0.82" stopColor="#ffe16f" />
           <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
         </linearGradient>
-        <clipPath id="metc-logo-write-clip" clipPathUnits="userSpaceOnUse">
-          <rect className="metc-script-logo__write-reveal" x="0" y="0" width="708" height="116" />
-        </clipPath>
+        <mask id="metc-logo-write-mask" maskUnits="userSpaceOnUse">
+          <path className="metc-script-logo__write-reveal" d={METC_DRAW_GUIDE_PATH} pathLength="1" />
+        </mask>
         <linearGradient id="metc-meteor-ink" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0" stopColor="#ffffff" stopOpacity="0" />
           <stop offset="0.34" stopColor="#fff2a8" stopOpacity="0.9" />
@@ -95,9 +95,7 @@ export function MetcScriptLogo() {
         </radialGradient>
       </defs>
 
-      <g clipPath="url(#metc-logo-write-clip)">
-        <path className="metc-script-logo__imprint" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
-        <path className="metc-script-logo__drawing-trace" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
+      <g className="metc-script-logo__drawn-ink" mask="url(#metc-logo-write-mask)">
         <path
           className="metc-script-logo__shadow"
           d={METC_LOGO_PATH}
@@ -108,9 +106,22 @@ export function MetcScriptLogo() {
           aria-hidden="true"
         />
         <path className="metc-script-logo__one-stroke" d={METC_LOGO_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
-        <path className="metc-script-logo__laser-line" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
-        <path className="metc-script-logo__one-stroke-glint" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
       </g>
+      <g className="metc-script-logo__final-ink">
+        <path
+          className="metc-script-logo__shadow"
+          d={METC_LOGO_PATH}
+          fill="#715A46"
+          fillOpacity="0.16"
+          fillRule="evenodd"
+          transform="translate(1.5 2)"
+          aria-hidden="true"
+        />
+        <path className="metc-script-logo__one-stroke" d={METC_LOGO_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
+      </g>
+      <path className="metc-script-logo__drawing-trace" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
+      <path className="metc-script-logo__laser-line" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
+      <path className="metc-script-logo__one-stroke-glint" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
 
       <g className="metc-script-logo__ambient" aria-hidden="true">
         {METC_METEORS.map((meteor, index) => (
