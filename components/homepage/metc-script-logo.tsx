@@ -110,7 +110,6 @@ export function MetcScriptLogo() {
         />
         <path className="metc-script-logo__one-stroke" d={METC_LOGO_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
       </g>
-      <path className="metc-script-logo__drawing-trace" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
       <path className="metc-script-logo__laser-line" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
       <path className="metc-script-logo__one-stroke-glint" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
 
