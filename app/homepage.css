@@ -149,16 +149,16 @@ button{font:inherit}
   display:block;width:100%;height:auto;overflow:visible;
 }
 .metc-script-logo__write-reveal{
-  fill:none;stroke:#fff;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;
+  fill:none;stroke:#fff;stroke-width:52;stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:1;stroke-dashoffset:1;
   animation:metcLogoGuideWrite var(--metc-draw-duration) var(--metc-draw-ease) .08s forwards;
 }
 .metc-script-logo__drawn-ink{
-  animation:metcDrawnInkHandOff .35s ease-out 4.95s forwards;
+  animation:metcDrawnInkHandOff .35s ease-out 5.18s forwards;
 }
 .metc-script-logo__final-ink{
   opacity:0;
-  animation:metcFinalInkSettle .42s ease-out 4.92s forwards;
+  animation:metcFinalInkSettle .52s ease-out 5.12s forwards;
 }
 .metc-script-logo__shadow{
   opacity:1;
@@ -184,7 +184,7 @@ button{font:inherit}
 .metc-script-logo__write-head{
   opacity:0;mix-blend-mode:screen;
   filter:drop-shadow(0 0 10px rgba(255,242,171,.95)) drop-shadow(0 0 24px rgba(255,202,103,.58));
-  animation:metcWriteHeadOn .18s ease-out .08s forwards,metcWriteHeadOff .42s ease-out 4.92s forwards;
+  animation:metcWriteHeadOn .18s ease-out .08s forwards,metcWriteHeadOff .42s ease-out 5.12s forwards;
 }
 .metc-script-logo__write-head-halo{
   fill:url(#metc-spark-core);opacity:.86;
