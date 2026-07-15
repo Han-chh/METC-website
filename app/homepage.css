@@ -145,7 +145,7 @@ button{font:inherit}
 .logo-stage{width:min(708px,96%);margin:0 0 16px;filter:drop-shadow(0 0 18px rgba(255,239,130,.42)) drop-shadow(0 12px 22px rgba(42,61,45,.1))}
 .script-logo-svg{display:block;width:100%;height:auto;overflow:visible}
 .metc-script-logo__write-reveal{
-  fill:none;stroke:#fff;stroke-width:52;stroke-linecap:round;stroke-linejoin:round;
+  fill:none;stroke:#fff;stroke-width:66;stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:1;stroke-dashoffset:1;
   animation:metcLogoGuideWrite 5.35s linear .08s forwards;
 }
@@ -166,14 +166,14 @@ button{font:inherit}
   filter:drop-shadow(0 0 14px rgba(255,246,167,.64)) drop-shadow(0 0 28px rgba(255,202,72,.32));
 }
 .metc-script-logo__laser-line{
-  fill:none;stroke:url(#metc-laser-ink);stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;
-  stroke-dasharray:.16 .84;stroke-dashoffset:1;mix-blend-mode:screen;
+  fill:none;stroke:url(#metc-laser-ink);stroke-width:5.2;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:.22 .78;stroke-dashoffset:1;mix-blend-mode:screen;
   filter:drop-shadow(0 0 8px rgba(255,255,235,.96)) drop-shadow(0 0 20px rgba(255,211,76,.72));
   animation:metcLaserTrace 5.35s linear .18s forwards,metcTraceFade .9s ease-out 5.48s forwards;
 }
 .metc-script-logo__one-stroke-glint{
-  fill:none;stroke:rgba(255,255,255,.94);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;
-  stroke-dasharray:.1 .9;stroke-dashoffset:1;mix-blend-mode:screen;
+  fill:none;stroke:rgba(255,255,255,.94);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:.16 .84;stroke-dashoffset:1;mix-blend-mode:screen;
   filter:drop-shadow(0 0 9px rgba(255,255,235,.9)) drop-shadow(0 0 18px rgba(255,232,113,.62));
   animation:metcLogoGlint 5.35s linear .34s forwards,metcGlintPulse 4.6s ease-in-out 5.9s infinite;
 }
