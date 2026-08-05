@@ -149,14 +149,29 @@ button{font:inherit}
   display:block;width:100%;height:auto;overflow:visible;
 }
 .metc-script-logo__write-reveal{
-  fill:none;stroke:#fff;stroke-width:54;stroke-linecap:round;stroke-linejoin:round;
+  fill:none;stroke:#fff;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;
   stroke-dasharray:1;stroke-dashoffset:1;
   animation:metcLogoGuideWrite var(--metc-draw-duration) var(--metc-draw-ease) .08s forwards;
+}
+.metc-script-logo__tail-write-reveal{
+  fill:none;stroke:#fff;stroke-width:18;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:1;stroke-dashoffset:1;
+  animation:metcLogoGuideWrite var(--metc-draw-duration) var(--metc-draw-ease) .08s forwards;
+}
+.metc-script-logo__drawn-ink{
+  animation:metcDrawnInkHandOff .35s ease-out 5.12s forwards;
+}
+.metc-script-logo__final-ink{
+  opacity:0;
+  animation:metcFinalInkSettle .42s ease-out 5.08s forwards;
 }
 .metc-script-logo__shadow{
   opacity:1;
 }
-.metc-script-logo__ink .metc-script-logo__one-stroke{
+.metc-script-logo__drawn-ink .metc-script-logo__one-stroke{
+  filter:none;
+}
+.metc-script-logo__final-ink .metc-script-logo__one-stroke{
   filter:drop-shadow(0 0 14px rgba(255,246,167,.64)) drop-shadow(0 0 28px rgba(255,202,72,.32));
 }
 .metc-script-logo__laser-line{
@@ -174,7 +189,7 @@ button{font:inherit}
 .metc-script-logo__write-head{
   opacity:0;mix-blend-mode:screen;
   filter:drop-shadow(0 0 10px rgba(255,242,171,.95)) drop-shadow(0 0 24px rgba(255,202,103,.58));
-  animation:metcWriteHeadOn .18s ease-out .08s forwards,metcWriteHeadOff .42s ease-out 5.12s forwards;
+  animation:metcWriteHeadOn .18s ease-out .08s forwards,metcWriteHeadOff .42s ease-out 5.02s forwards;
 }
 .metc-script-logo__write-head-halo{
   fill:url(#metc-spark-core);opacity:.86;
@@ -233,6 +248,8 @@ button{font:inherit}
 @keyframes metcLogoGuideWrite{to{stroke-dashoffset:0}}
 @keyframes metcLaserTrace{to{stroke-dashoffset:-.2}}
 @keyframes metcTraceFade{to{opacity:0}}
+@keyframes metcDrawnInkHandOff{to{opacity:0}}
+@keyframes metcFinalInkSettle{to{opacity:1}}
 @keyframes metcLogoGlint{to{stroke-dashoffset:-.18;opacity:.32}}
 @keyframes metcWriteHeadOn{to{opacity:1}}
 @keyframes metcWriteHeadOff{to{opacity:0}}
@@ -271,7 +288,9 @@ button{font:inherit}
 @media (prefers-reduced-motion:reduce){
   .metc-script-logo__one-stroke,
   .metc-script-logo__write-reveal,
-  .metc-script-logo__ink,
+  .metc-script-logo__tail-write-reveal,
+  .metc-script-logo__drawn-ink,
+  .metc-script-logo__final-ink,
   .metc-script-logo__laser-line,
   .metc-script-logo__one-stroke-glint,
   .metc-script-logo__write-head,
@@ -282,8 +301,10 @@ button{font:inherit}
   .metc-script-logo__meteor,
   .metc-script-logo__spark,
   .metc-script-logo__dust{animation:none}
-  .metc-script-logo__write-reveal{stroke-dashoffset:0}
-  .metc-script-logo__ink{opacity:1}
+  .metc-script-logo__write-reveal,
+  .metc-script-logo__tail-write-reveal{stroke-dashoffset:0}
+  .metc-script-logo__drawn-ink{opacity:0}
+  .metc-script-logo__final-ink{opacity:1}
   .metc-script-logo__laser-line{opacity:0;stroke-dashoffset:0}
   .metc-script-logo__write-head{opacity:0}
   .metc-script-logo__one-stroke{stroke-dashoffset:0}

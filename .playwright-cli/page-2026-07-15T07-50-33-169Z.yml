@@ -1,0 +1,210 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - link "METC home" [ref=f2e3] [cursor=pointer]:
+      - /url: "#top"
+      - text: METC
+    - navigation "Primary" [ref=f2e4]:
+      - link "探索 METC" [ref=f2e5] [cursor=pointer]:
+        - /url: "#explore"
+      - link "学生作品" [ref=f2e6] [cursor=pointer]:
+        - /url: "#works"
+      - link "社团灵魂" [ref=f2e7] [cursor=pointer]:
+        - /url: "#spirit"
+    - button "Switch language" [ref=f2e8] [cursor=pointer]:
+      - generic [ref=f2e9]: 中
+      - generic [ref=f2e10]: /
+      - generic [ref=f2e11]: EN
+  - main [ref=f2e12]:
+    - generic [ref=f2e13]:
+      - generic [ref=f2e16]:
+        - generic [ref=f2e17]:
+          - generic "METC" [ref=f2e18]:
+            - img "METC one-stroke logo" [ref=f2e19]
+          - paragraph [ref=f2e58]: Maths and Engineering Teaching Club
+          - heading "把数学、工程与课堂现场写成一个可以被看见、被翻开、被继续探索的世界。" [level=1] [ref=f2e59]
+          - generic [ref=f2e60]:
+            - link "进入成果展览空间" [ref=f2e61] [cursor=pointer]:
+              - /url: "#explore"
+            - link "查看首页模型" [ref=f2e62] [cursor=pointer]:
+              - /url: "#activities"
+        - generic [ref=f2e65]:
+          - generic [ref=f2e66]: Curiosity
+          - generic [ref=f2e67]: Build
+          - generic [ref=f2e68]: Teach
+      - paragraph [ref=f2e77]: 先有问题，再让课堂发生。
+    - generic [ref=f2e78]:
+      - generic [ref=f2e79]:
+        - paragraph [ref=f2e83]: 不是先给答案
+        - heading "先让学生去问、去做、去发现。" [level=2] [ref=f2e84]
+        - paragraph [ref=f2e85]: METC 把数学、物理、经济与工程带进真实课堂。我们设计问题、实验与作品，让每一个学生都留下可以被看见的参与痕迹。
+        - generic [ref=f2e86]: 课堂不是讲完，是发生。
+      - generic [ref=f2e87]:
+        - generic [ref=f2e88]: 今天的黑板
+        - generic [ref=f2e89]: 如果光可以转弯，影子会去哪？
+        - generic [ref=f2e91]:
+          - generic [ref=f2e92]: △
+          - generic [ref=f2e93]: ↗
+          - generic [ref=f2e94]: ∑
+          - generic [ref=f2e95]: "?"
+          - generic [ref=f2e96]: ◎
+    - generic [ref=f2e97]:
+      - generic [ref=f2e98]:
+        - paragraph [ref=f2e99]: 探索这所社团
+        - heading "每一个物件，都是一个内容入口。" [level=2] [ref=f2e100]
+        - paragraph [ref=f2e101]: 学校元素不再统治首屏，但仍然保留在中下部，作为课程、活动、作品与反馈的真实容器。
+      - generic [ref=f2e102]:
+        - link "活动与项目" [ref=f2e103] [cursor=pointer]:
+          - /url: "#activities"
+          - generic [ref=f2e105]: "01"
+          - generic [ref=f2e106]:
+            - generic [ref=f2e107]: 活动与项目
+            - generic [ref=f2e108]: 推开档案门，查看真实课堂项目。
+        - link "课程表" [ref=f2e109] [cursor=pointer]:
+          - /url: "#courses"
+          - generic [ref=f2e110]: MON - FRI
+          - generic [ref=f2e113]:
+            - generic [ref=f2e114]: 课程表
+            - generic [ref=f2e115]: 教案、PPT、实验记录与课程结构。
+        - link "学生作品" [ref=f2e116] [cursor=pointer]:
+          - /url: "#works"
+          - generic [ref=f2e120]:
+            - generic [ref=f2e121]: 学生作品
+            - generic [ref=f2e122]: 看他们亲手做出了什么。
+        - link "学生声音" [ref=f2e123] [cursor=pointer]:
+          - /url: "#voices"
+          - generic [ref=f2e125]:
+            - generic [ref=f2e126]: 学生声音
+            - generic [ref=f2e127]: 真实反馈，比 testimonial 更有力量。
+        - link "合作学校" [ref=f2e128] [cursor=pointer]:
+          - /url: "#schools"
+          - generic [ref=f2e133]:
+            - generic [ref=f2e134]: 合作学校
+            - generic [ref=f2e135]: 路线、校牌和我们去过的地方。
+        - link "社团档案" [ref=f2e136] [cursor=pointer]:
+          - /url: "#archive"
+          - generic [ref=f2e138]: M-24
+          - generic [ref=f2e139]:
+            - generic [ref=f2e140]: 社团档案
+            - generic [ref=f2e141]: 把每次教学留下的材料收好。
+        - link "社团灵魂" [ref=f2e142] [cursor=pointer]:
+          - /url: "#spirit"
+          - generic [ref=f2e144]: Curiosity before answers.
+          - generic [ref=f2e145]: Learning by doing.
+          - generic [ref=f2e146]: Every student participates.
+          - generic [ref=f2e147]:
+            - generic [ref=f2e148]: 社团灵魂
+            - generic [ref=f2e149]: 翻开这页，读 METC 的课堂原则。
+        - link "团队" [ref=f2e150] [cursor=pointer]:
+          - /url: "#team"
+          - generic [ref=f2e151]: M
+          - generic [ref=f2e152]: E
+          - generic [ref=f2e153]: T
+          - generic [ref=f2e154]: C
+          - generic [ref=f2e155]:
+            - generic [ref=f2e156]: 团队
+            - generic [ref=f2e157]: 站在课堂另一边的人。
+    - generic [ref=f2e158]:
+      - generic [ref=f2e159]:
+        - paragraph [ref=f2e160]: 学生作品展
+        - heading "比“听懂了”更重要的，是做出来了。" [level=2] [ref=f2e161]
+      - generic [ref=f2e162]:
+        - article [ref=f2e163]:
+          - generic [ref=f2e169]:
+            - text: 光学 · 七年级
+            - heading "会“变形”的万花筒" [level=3] [ref=f2e170]
+            - paragraph [ref=f2e171]: “我转了一下，里面像多了一个宇宙。”
+          - generic [ref=f2e172]: 查看制作过程 ↗
+        - article [ref=f2e173]:
+          - generic [ref=f2e179]:
+            - text: 工程 · 八年级
+            - heading "纸筒望远镜" [level=3] [ref=f2e180]
+            - paragraph [ref=f2e181]: “第一次发现，失败的模型也可以继续改。”
+          - generic [ref=f2e182]: 查看制作过程 ↗
+        - article [ref=f2e183]:
+          - generic [ref=f2e189]:
+            - text: 经济学 · 八年级
+            - heading "我们的第一家公司" [level=3] [ref=f2e190]
+            - paragraph [ref=f2e191]: “价格不是越低越好，我们差点把自己卖亏了。”
+          - generic [ref=f2e192]: 打开项目档案 ↗
+        - article [ref=f2e193]:
+          - generic [ref=f2e199]:
+            - text: 物理 · 七年级
+            - heading "让灯真正亮起来" [level=3] [ref=f2e200]
+            - paragraph [ref=f2e201]: “我们三次都接错了，第四次它突然亮了。”
+          - generic [ref=f2e202]: 查看实验记录 ↗
+    - generic [ref=f2e204]:
+      - generic [ref=f2e205]:
+        - generic [ref=f2e206]: ARCHIVE
+        - paragraph [ref=f2e207]: 活动成果
+        - heading "每次活动，都留下一本可以再次打开的档案。" [level=2] [ref=f2e208]
+      - generic [ref=f2e209]:
+        - article [ref=f2e210]:
+          - text: OPTICS / 2026
+          - generic [ref=f2e211]: △
+          - heading "光学：从影子到万花筒" [level=3] [ref=f2e212]
+          - paragraph [ref=f2e213]: 8 课时 · 42 名学生 · 67 件作品
+        - article [ref=f2e214]:
+          - text: ECON / 2026
+          - generic [ref=f2e215]: ¥
+          - heading "微观经济学：开一家小公司" [level=3] [ref=f2e216]
+          - paragraph [ref=f2e217]: 8 课时 · 模拟市场 · 学生路演
+        - article [ref=f2e218]:
+          - text: ONLINE / 2025
+          - generic [ref=f2e219]: ◫
+          - heading "在线课堂：把互动送到另一间教室" [level=3] [ref=f2e220]
+          - paragraph [ref=f2e221]: 跨校协作 · 实时挑战 · 课后作品
+    - generic [ref=f2e222]:
+      - generic [ref=f2e223]:
+        - paragraph [ref=f2e224]: 学生声音
+        - heading "最好的反馈，不像 testimonial。" [level=2] [ref=f2e225]
+      - generic [ref=f2e226]:
+        - article [ref=f2e227]:
+          - paragraph [ref=f2e229]: “我本来不想举手，但我们组的模型坏了，只能去问。”
+          - generic [ref=f2e230]: 七年级学生 · 光学课程
+        - article [ref=f2e231]:
+          - paragraph [ref=f2e233]: “我以前觉得经济就是赚钱，后来发现亏钱也有很多理由。”
+          - generic [ref=f2e234]: 八年级学生 · 微观经济学
+        - article [ref=f2e235]:
+          - paragraph [ref=f2e237]: “老师说没有标准答案，所以我们真的做了四种不一样的。”
+          - generic [ref=f2e238]: 学生小组 · 工程活动
+    - generic [ref=f2e240]:
+      - generic [ref=f2e241]:
+        - generic [ref=f2e242]: 社团灵魂
+        - generic [ref=f2e243]: 20—26
+      - generic [ref=f2e244]:
+        - generic [ref=f2e245]:
+          - generic [ref=f2e246]: "01"
+          - heading "Curiosity before answers." [level=3] [ref=f2e247]
+          - paragraph [ref=f2e248]: 先有问题，再有讲解。
+        - generic [ref=f2e249]:
+          - generic [ref=f2e250]: "02"
+          - heading "Learning by doing." [level=3] [ref=f2e251]
+          - paragraph [ref=f2e252]: 能亲手做，就不要只在屏幕上看。
+        - generic [ref=f2e253]:
+          - generic [ref=f2e254]: "03"
+          - heading "Every student participates." [level=3] [ref=f2e255]
+          - paragraph [ref=f2e256]: 不是只有最先举手的人在上课。
+        - generic [ref=f2e257]:
+          - generic [ref=f2e258]: "04"
+          - heading "Teaching is also learning." [level=3] [ref=f2e259]
+          - paragraph [ref=f2e260]: 每一堂课，也在重新教育我们。
+      - generic [ref=f2e261]: ↙
+      - generic [ref=f2e262]: 下次，做得更好。
+    - generic [ref=f2e263]:
+      - generic [ref=f2e265]: ➤
+      - generic [ref=f2e267]:
+        - paragraph [ref=f2e268]: 今天的课结束了
+        - heading "但问题还没有。" [level=2] [ref=f2e269]
+        - paragraph [ref=f2e270]: 继续探索 METC 的活动、课程、学生作品与故事。
+      - generic [ref=f2e271]:
+        - link "探索 METC" [ref=f2e272] [cursor=pointer]:
+          - /url: "#explore"
+        - link "联系我们" [ref=f2e273] [cursor=pointer]:
+          - /url: mailto:hello@example.com
+        - link "回到顶部 ↑" [ref=f2e274] [cursor=pointer]:
+          - /url: "#top"
+      - generic [ref=f2e275]:
+        - generic [ref=f2e276]: METC — Maths and Engineering Teaching Club
+        - generic [ref=f2e277]: Phase 2-4 homepage model
+  - status
+  - button "Open Next.js Dev Tools" [ref=f2e283] [cursor=pointer]

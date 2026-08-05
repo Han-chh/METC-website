@@ -20,10 +20,10 @@ const METC_LOGO_PATH = METC_LOGO_BASE_PATH
   );
 
 const METC_DRAW_GUIDE_PATH =
-  "M24 86 C46 38 68 22 92 24 C116 26 111 82 135 84 C158 86 166 29 192 26 C225 22 236 57 246 88 C254 91 263 91 272 83 C276 68 278 47 284 34 C306 27 380 27 438 28 C394 32 335 31 286 31 C280 39 276 48 276 57 C295 57 315 56 333 55 C313 60 294 61 276 60 C274 69 273 78 276 86 C305 89 342 89 372 85 C393 82 405 73 407 58 C410 43 412 32 420 29 C414 48 404 73 392 88 C410 94 438 82 464 56 C503 21 566 22 604 36 C574 28 512 34 477 52 C443 70 468 90 529 88 C576 87 611 75 653 70";
+  "M24 86 C46 38 68 22 92 24 C116 26 111 82 135 84 C158 86 166 29 192 26 C225 22 236 57 246 88 C254 91 263 91 272 83 C276 68 278 47 284 34 C306 27 380 27 438 28 C394 32 335 31 286 31 C280 39 276 48 276 57 C295 57 315 56 333 55 C313 60 294 61 276 60 C274 69 273 78 276 86 C305 89 342 89 372 85 C393 82 405 73 407 58 C410 43 412 32 420 29 C414 48 404 73 392 88 C410 94 438 82 464 56 C503 21 566 22 604 36 C574 28 512 34 477 52 C443 70 468 90 529 88 C566 87 596 74 608 56 C612 51 616 43 623 36 C635 24 650 24 662 30 C674 36 675 45 667 52 C663 56 659 58 654 58";
 
-const METC_C_LOWER_PATH =
-  "M 455 69 C 456 64 463 62 467 66 C 481 80 503 86 531 85 C 575 84 612 74 651 65 C 655 64 658 67 657 71 C 656 75 653 77 649 78 C 610 87 576 93 532 94 C 489 95 460 86 453 75 C 452 73 452 71 455 69 Z";
+const METC_C_TAIL_PATH =
+  "M 614.75 35.75 Q 609 42.5 609 44.75 Q 609 47 610.62 46.88 Q 612.25 46.75 613.75 47.75 Q 615.25 48.75 620.5 42.5 Q 625.75 36.25 629.12 33.5 Q 632.5 30.75 635 29.75 Q 637.5 28.75 646.38 28.75 Q 655.25 28.75 655.88 29.75 Q 656.5 30.75 658.38 30.75 Q 660.25 30.75 662.12 32.62 Q 664 34.5 663.5 40.38 Q 663 46.25 659.25 50.62 Q 655.5 55 653.38 56.12 Q 651.35 57.3 652.35 58.45 Q 653.35 59.6 654.88 59.38 Q 656.25 59 656.88 59.75 Q 657.5 60.5 663.62 57.5 Q 669.75 54.5 673.75 48.88 Q 677.75 43.25 677.75 39.38 Q 677.75 35.5 674.5 31.75 Q 671.25 28 664.25 25 Q 657.25 22 648.38 22 Q 639.5 22 635 23 Q 630.5 24 629.88 25 Q 629.25 26 624.88 27.5 Q 620.5 29 614.75 35.75 Z";
 
 const METC_METEORS = [
   { x1: 118, y1: 18, x2: 56, y2: 52, tx: -28, ty: 15, delay: "4.8s", duration: "2.8s" },
@@ -96,17 +96,14 @@ export function MetcScriptLogo() {
           <stop offset="0.82" stopColor="#ffe16f" />
           <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
         </linearGradient>
-        <mask
-          id="metc-logo-write-mask"
-          maskUnits="userSpaceOnUse"
-          maskContentUnits="userSpaceOnUse"
-          x="0"
-          y="0"
-          width="708"
-          height="116"
-        >
+        <mask id="metc-logo-write-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="708" height="116">
           <rect width="708" height="116" fill="black" />
           <path className="metc-script-logo__write-reveal" d={METC_DRAW_GUIDE_PATH} pathLength="1" />
+          <path d={METC_C_TAIL_PATH} fill="black" />
+        </mask>
+        <mask id="metc-logo-tail-write-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="708" height="116">
+          <rect width="708" height="116" fill="black" />
+          <path className="metc-script-logo__tail-write-reveal" d={METC_DRAW_GUIDE_PATH} pathLength="1" />
         </mask>
         <linearGradient id="metc-meteor-ink" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0" stopColor="#ffffff" stopOpacity="0" />
@@ -121,7 +118,13 @@ export function MetcScriptLogo() {
         </radialGradient>
       </defs>
 
-      <g className="metc-script-logo__ink" mask="url(#metc-logo-write-mask)">
+      <g className="metc-script-logo__drawn-ink" mask="url(#metc-logo-write-mask)">
+        <path className="metc-script-logo__one-stroke" d={METC_LOGO_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
+      </g>
+      <g className="metc-script-logo__drawn-ink" mask="url(#metc-logo-tail-write-mask)">
+        <path className="metc-script-logo__one-stroke" d={METC_C_TAIL_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
+      </g>
+      <g className="metc-script-logo__final-ink">
         <path
           className="metc-script-logo__shadow"
           d={METC_LOGO_PATH}
@@ -131,17 +134,7 @@ export function MetcScriptLogo() {
           transform="translate(1.5 2)"
           aria-hidden="true"
         />
-        <path
-          className="metc-script-logo__shadow"
-          d={METC_C_LOWER_PATH}
-          fill="#715A46"
-          fillOpacity="0.16"
-          fillRule="evenodd"
-          transform="translate(1.5 2)"
-          aria-hidden="true"
-        />
         <path className="metc-script-logo__one-stroke" d={METC_LOGO_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
-        <path className="metc-script-logo__one-stroke" d={METC_C_LOWER_PATH} fill="url(#metc-logo-vital-ink)" fillRule="evenodd" />
       </g>
       <path className="metc-script-logo__laser-line" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
       <path className="metc-script-logo__one-stroke-glint" d={METC_DRAW_GUIDE_PATH} pathLength="1" aria-hidden="true" />
