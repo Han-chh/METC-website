@@ -1,4 +1,5 @@
-import { homepageContent, type Language, localize } from "../../data/homepage-content";
+import type { Language } from "../../content";
+import { homepageCopy } from "../../content";
 import { MetcScriptLogo } from "./metc-script-logo";
 
 type HeroSectionProps = {
@@ -7,54 +8,57 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
-  const { hero } = homepageContent;
+  const { hero } = homepageCopy[language];
 
   return (
-    <section className="hero hero-brand" id="hero">
-      <div className="hero-wash hero-wash-a" aria-hidden="true" />
-      <div className="hero-wash hero-wash-b" aria-hidden="true" />
-      <div className="hero-rule hero-rule-a" aria-hidden="true" />
-      <div className="hero-rule hero-rule-b" aria-hidden="true" />
+    <section className="hero-section" id="top">
+      <div className="hero-grid" aria-hidden="true" />
+      <div className="hero-particle-field" aria-hidden="true">
+        <i className="hero-particle particle-a" /><i className="hero-particle particle-b" />
+        <i className="hero-particle particle-c" /><i className="hero-particle particle-d" />
+        <i className="hero-particle particle-e" /><i className="hero-particle particle-f" />
+        <i className="shooting-star star-one" /><i className="shooting-star star-two" />
+      </div>
+      <svg className="hero-orbit" viewBox="0 0 900 520" aria-hidden="true">
+        <path d="M42 364 C238 474 564 444 814 205" />
+        <path d="M112 152 C338 42 683 101 862 330" />
+        <circle cx="814" cy="205" r="8" />
+        <circle cx="112" cy="152" r="5" />
+      </svg>
 
-      <div className="hero-content hero-content-brand">
-        <div className="hero-copy-stack">
-          <div className="logo-stage" aria-label="METC">
-            <MetcScriptLogo />
-          </div>
-          <p className="club-fullname">{localize(hero.fullName, language)}</p>
-          <h1>{localize(hero.lead, language)}</h1>
-          <div className="hero-actions">
-            <a className="hero-cta hero-cta-primary" href="#explore" onClick={(event) => onAnchorClick(event, "#explore")}>
-              {localize(hero.primaryCta, language)}
-            </a>
-            <a className="hero-cta hero-cta-secondary" href="#activities" onClick={(event) => onAnchorClick(event, "#activities")}>
-              {localize(hero.secondaryCta, language)}
-            </a>
-          </div>
+      <div className="hero-inner">
+        <p className="hero-eyebrow hero-enter hero-enter-1">{hero.eyebrow}</p>
+
+        <div className="hero-logo-stage hero-enter hero-enter-2">
+          <MetcScriptLogo />
+          <span className="logo-note logo-note-left">signal / inquiry</span>
+          <span className="logo-note logo-note-right">ask → make → teach</span>
         </div>
 
-        <div className="hero-studio" aria-hidden="true">
-          <div className="chalk-orbit" />
-          <div className="hero-blackboard">
-            <span>{localize(hero.ribbonNotes[0], language)}</span>
-            <span>{localize(hero.ribbonNotes[1], language)}</span>
-            <span>{localize(hero.ribbonNotes[2], language)}</span>
+        <div className="hero-lower hero-enter hero-enter-3">
+          <div className="hero-title-wrap">
+            <h1>
+              {hero.title}
+              <span>{hero.titleAccent}</span>
+            </h1>
           </div>
-          <div className="hero-paper-stack">
-            <span className="paper-line paper-line-a" />
-            <span className="paper-line paper-line-b" />
-            <span className="paper-line paper-line-c" />
-          </div>
-          <div className="hero-pencil">
-            <span className="pencil-tip" />
+          <div className="hero-intro">
+            <p>{hero.body}</p>
+            <div className="hero-actions">
+              <a className="button button-dark" href="#explore" onClick={(event) => onAnchorClick(event, "#explore")}>
+                {hero.primaryCta}<span aria-hidden="true">↘</span>
+              </a>
+              <a className="text-link" href="#teaching" onClick={(event) => onAnchorClick(event, "#teaching")}>
+                {hero.secondaryCta}<span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="hero-floor" aria-hidden="true">
-        <div className="hero-floor-line" />
-        <p className="hero-slogan">{localize(hero.slogan, language)}</p>
-      </div>
+      <a className="hero-scroll" href="#explore" onClick={(event) => onAnchorClick(event, "#explore")}>
+        <span>{hero.scroll}</span><i aria-hidden="true" />
+      </a>
     </section>
   );
 }

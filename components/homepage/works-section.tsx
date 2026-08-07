@@ -1,68 +1,52 @@
-import { homepageContent, type Language, localize } from "../../data/homepage-content";
+import type { Language } from "../../content";
+import { homepageCopy } from "../../content";
 
-type WorksSectionProps = {
+type ActivitySectionProps = {
   language: Language;
+  onDemoClick: () => void;
 };
 
-export function WorksSection({ language }: WorksSectionProps) {
-  const { works } = homepageContent;
+const BASE_PATH = "/METC-website";
+
+export function ActivitySection({ language, onDemoClick }: ActivitySectionProps) {
+  const { activities } = homepageCopy[language];
 
   return (
-    <section className="works-section" id="works">
-      <div className="section-heading light reveal">
-        <p className="eyebrow">{localize(works.eyebrow, language)}</p>
-        <h2>{localize(works.title, language)}</h2>
-      </div>
+    <section className="activity-section section-pad" id="activities">
+      <div className="section-shell">
+        <div className="activity-intro reveal">
+          <p className="section-eyebrow">{activities.eyebrow}</p>
+          <h2 className="section-title preserve-lines">{activities.title}</h2>
+          <p className="section-body">{activities.body}</p>
+        </div>
 
-      <div className="work-rail">
-        {works.items.map((work, index) => (
-          <article
-            className={`work-card reveal ${index === 0 ? "tilt-a" : index === 1 ? "tilt-b" : index === 2 ? "tilt-c" : "tilt-d"}`}
-            key={work.key}
-            tabIndex={0}
-          >
-            <div className={`work-art ${work.artClass}`} aria-hidden="true">
-              {work.artClass === "kaleidoscope" ? (
-                <>
-                  <span className="glass-chip chip-a" />
-                  <span className="glass-chip chip-b" />
-                  <span className="glass-chip chip-c" />
-                  <span className="glass-chip chip-d" />
-                </>
-              ) : null}
-              {work.artClass === "telescope" ? (
-                <>
-                  <span className="scope-body" />
-                  <span className="scope-lens" />
-                  <span className="scope-label" />
-                  <span className="scope-shadow" />
-                </>
-              ) : null}
-              {work.artClass === "market" ? (
-                <>
-                  <span className="market-receipt receipt-a" />
-                  <span className="market-receipt receipt-b" />
-                  <span className="market-coin coin-a" />
-                  <span className="market-coin coin-b" />
-                </>
-              ) : null}
-              {work.artClass === "circuit" ? (
-                <>
-                  <span className="battery-pack" />
-                  <span className="light-bulb" />
-                  <span className="copper-tape tape-left" />
-                  <span className="copper-tape tape-right" />
-                </>
-              ) : null}
-            </div>
-            <div className="work-meta">
-              <small>{localize(work.category, language)}</small>
-              <h3>{localize(work.title, language)}</h3>
-              <p>{localize(work.quote, language)}</p>
-            </div>
-            <span className="work-action">{localize(work.action, language)}</span>
-          </article>
-        ))}
+        <figure className="classroom-stage reveal">
+          <div className="classroom-photo-wrap">
+            <img src={`${BASE_PATH}/images/metc-classroom-workshop.png`} alt="Students and teaching assistants testing a handmade bridge in a classroom workshop" />
+            <span className="photo-counter">01 / 04</span>
+          </div>
+          <figcaption>{activities.photoCaption}</figcaption>
+          <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
+          <svg className="photo-arrow" viewBox="0 0 170 90" aria-hidden="true"><path d="M7 72 C65 15 111 17 157 48 M143 35 L158 48 L143 59" /></svg>
+        </figure>
+
+        <div className="student-work-index reveal">
+          <div className="work-index-heading">
+            <p>{activities.projectLabel}</p>
+            <button type="button" className="text-link light-link" onClick={onDemoClick}>{activities.demoCta}<span>→</span></button>
+          </div>
+          <div className="project-rows">
+            {activities.projects.map((project) => (
+              <button type="button" onClick={onDemoClick} key={project.number}>
+                <span className="project-letter">{project.number}</span>
+                <small>{project.type}</small>
+                <h3>{project.title}</h3>
+                <p>{project.detail}</p>
+                <i aria-hidden="true">↗</i>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

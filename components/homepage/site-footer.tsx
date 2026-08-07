@@ -1,46 +1,27 @@
-import { homepageContent, type Language, localize } from "../../data/homepage-content";
+import type { Language } from "../../content";
+import { homepageCopy } from "../../content";
 
-type SiteFooterProps = {
-  language: Language;
-  onAnchorClick: (event: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
-};
+type SiteFooterProps = { language: Language; onDemoClick: () => void };
 
-export function SiteFooter({ language, onAnchorClick }: SiteFooterProps) {
-  const { footer } = homepageContent;
+export function SiteFooter({ language, onDemoClick }: SiteFooterProps) {
+  const { footer } = homepageCopy[language];
 
   return (
-    <footer className="dusk-footer">
-      <div className="sunset-disc" aria-hidden="true" />
-      <div className="paper-plane" aria-hidden="true">
-        ➤
+    <footer className="site-footer">
+      <div className="footer-line-art" aria-hidden="true">
+        <svg viewBox="0 0 1200 190"><path d="M-10 153 C159 42 322 174 493 87 C649 8 789 151 947 79 C1057 29 1133 55 1212 20" /></svg>
       </div>
-      <div className="footer-school" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
-
-      <div className="footer-copy reveal">
-        <p className="eyebrow">{localize(footer.eyebrow, language)}</p>
-        <h2>{localize(footer.title, language)}</h2>
-        <p>{localize(footer.body, language)}</p>
-      </div>
-
-      <div className="footer-links">
-        {footer.links.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            onClick={item.href.startsWith("#") ? (event) => onAnchorClick(event, item.href) : undefined}
-          >
-            {localize(item.label, language)}
-          </a>
-        ))}
-      </div>
-
-      <div className="footer-bottom">
-        <span>METC — Maths and Engineering Teaching Club</span>
-        <span>Phase 2-4 homepage model</span>
+      <div className="footer-inner">
+        <div className="footer-lead reveal">
+          <p className="section-eyebrow">{footer.eyebrow}</p>
+          <h2>{footer.title}</h2>
+          <p className="preserve-lines">{footer.body}</p>
+        </div>
+        <div className="footer-nav reveal">
+          <div><p>{footer.aboutLabel}</p>{footer.aboutLinks.map((link) => <button type="button" onClick={onDemoClick} key={link}>{link}</button>)}</div>
+          <div><p>{footer.statementLabel}</p>{footer.statementLinks.map((link) => <button type="button" onClick={onDemoClick} key={link}>{link}</button>)}</div>
+        </div>
+        <div className="footer-bottom"><span>{footer.copyright}</span><span>{footer.demo}</span></div>
       </div>
     </footer>
   );

@@ -1,95 +1,56 @@
-import { homepageContent, type Language, localize } from "../../data/homepage-content";
+import type { Language } from "../../content";
+import { homepageCopy } from "../../content";
 
-type ExploreSectionProps = {
-  language: Language;
-  onAnchorClick: (event: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
-};
+type ExploreSectionProps = { language: Language };
 
-export function ExploreSection({ language, onAnchorClick }: ExploreSectionProps) {
-  const { explore } = homepageContent;
+export function ExploreSection({ language }: ExploreSectionProps) {
+  const { explore } = homepageCopy[language];
 
   return (
-    <section className="explore-section" id="explore">
-      <div className="section-heading reveal">
-        <p className="eyebrow">{localize(explore.eyebrow, language)}</p>
-        <h2>{localize(explore.title, language)}</h2>
-        <p>{localize(explore.body, language)}</p>
-      </div>
+    <section className="explore-section section-pad" id="explore">
+      <div className="section-shell">
+        <div className="section-intro reveal">
+          <p className="section-eyebrow">{explore.eyebrow}</p>
+          <h2 className="section-title preserve-lines">{explore.title}</h2>
+          <p className="section-body">{explore.body}</p>
+        </div>
 
-      <div className="campus-map reveal">
-        {explore.cards.map((card) => (
-          <a
-            key={card.id}
-            className={`campus-object ${card.kind}-object`}
-            href={card.href}
-            onClick={(event) => onAnchorClick(event, card.href)}
-            aria-label={localize(card.title, language)}
-          >
-            {card.kicker ? <span className="object-kicker">{card.kicker}</span> : null}
+        <nav className="explore-jumps reveal" aria-label="Explore METC sections">
+          {[
+            { id: "teaching", number: "01", label: language === "zh" ? "教学设计" : "Teaching Design" },
+            { id: "activities", number: "02", label: language === "zh" ? "课堂活动" : "Classroom Activities" },
+            { id: "voices", number: "03", label: language === "zh" ? "学生声音" : "Student Voices" }
+          ].map((item) => (
+            <a href={`#${item.id}`} key={item.id}>
+              <span>{item.number}</span><strong>{item.label}</strong><i aria-hidden="true">↘</i>
+            </a>
+          ))}
+        </nav>
 
-            {card.kind === "activities" ? (
-              <>
-                <span className="door-knob" />
-                <span className="door-window">01</span>
-              </>
-            ) : null}
+        <div className="mission-spread reveal">
+          <div className="mission-statement">
+            <span>{explore.missionLabel}</span>
+            <p>{explore.mission}</p>
+          </div>
+          <div className="philosophy-statement">
+            <span>{explore.philosophyLabel}</span>
+            <p>{explore.philosophy}</p>
+            <em>{explore.principle}</em>
+          </div>
+          <svg className="mission-pencil-line" viewBox="0 0 760 128" aria-hidden="true">
+            <path d="M12 88 C155 32 228 120 355 67 C478 16 564 105 746 38" pathLength="1" />
+          </svg>
+        </div>
 
-            {card.kind === "courses" ? (
-              <>
-                <span className="tape tape-a" />
-                <span className="rule" />
-              </>
-            ) : null}
-
-            {card.kind === "works" ? (
-              <>
-                <span className="photo photo-1" />
-                <span className="photo photo-2" />
-                <span className="photo photo-3" />
-              </>
-            ) : null}
-
-            {card.kind === "voices" ? <span className="pin" /> : null}
-
-            {card.kind === "schools" ? (
-              <div className="school-shelf" aria-hidden="true">
-                <span className="school-card school-card-a" />
-                <span className="school-card school-card-b" />
-                <span className="school-card school-card-c" />
-              </div>
-            ) : null}
-
-            {card.kind === "archive" ? (
-              <>
-                <span className="locker-slits" />
-                <span className="locker-number">M-24</span>
-              </>
-            ) : null}
-
-            {card.kind === "spirit" ? (
-              <>
-                <span className="paper-corner" />
-                <span className="handline">Curiosity before answers.</span>
-                <span className="handline">Learning by doing.</span>
-                <span className="handline">Every student participates.</span>
-              </>
-            ) : null}
-
-            {card.kind === "team" ? (
-              <>
-                <span className="portrait p1">M</span>
-                <span className="portrait p2">E</span>
-                <span className="portrait p3">T</span>
-                <span className="portrait p4">C</span>
-              </>
-            ) : null}
-
-            <span className="object-label">
-              <b>{localize(card.title, language)}</b>
-              <small>{localize(card.description, language)}</small>
-            </span>
-          </a>
-        ))}
+        <ol className="principle-line reveal">
+          {explore.steps.map((step) => (
+            <li key={step.number}>
+              <span>{step.number}</span>
+              <h3>{step.title}</h3>
+              <p>{step.detail}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

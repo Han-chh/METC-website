@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "METC — Learning by Making",
-  description: "METC public website frontend foundation"
+  title: "METC — Math and Engineering Teaching Club",
+  description: "A student-created, student-centered math and engineering teaching club."
 };
 
 export default function RootLayout({
