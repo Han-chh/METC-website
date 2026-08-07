@@ -4,11 +4,12 @@ import { homepageCopy } from "../../content";
 type ActivitySectionProps = {
   language: Language;
   onDemoClick: () => void;
+  onGalleryEnter: () => void;
 };
 
 const BASE_PATH = "/METC-website";
 
-export function ActivitySection({ language, onDemoClick }: ActivitySectionProps) {
+export function ActivitySection({ language, onDemoClick, onGalleryEnter }: ActivitySectionProps) {
   const { activities } = homepageCopy[language];
 
   return (
@@ -19,7 +20,7 @@ export function ActivitySection({ language, onDemoClick }: ActivitySectionProps)
           <h2 className="section-title preserve-lines">{activities.title}</h2>
           <div className="section-action-copy">
             <p className="section-body">{activities.body}</p>
-            <button type="button" className="button button-coral section-entry-button" onClick={onDemoClick}>
+            <button type="button" className="button button-coral section-entry-button" onClick={onGalleryEnter}>
               {activities.demoCta}<span>↗</span>
             </button>
           </div>

@@ -80,7 +80,8 @@ export const zh: HomepageCopy = {
       { quote: "第一次有人认真问我：你为什么这样猜？", name: "周同学", grade: "七年级 · 数学探索" },
       { quote: "当我向同组的人解释清楚时，我才发现自己真的懂了。", name: "陈同学", grade: "九年级 · 学生助教" }
     ],
-    closing: "Learning leaves a voice. / 学习会留下声音。"
+    closing: "Learning leaves a voice. / 学习会留下声音。",
+    demoCta: "进入反馈"
   },
   footer: {
     eyebrow: "Keep the question open.",

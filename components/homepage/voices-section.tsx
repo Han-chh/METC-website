@@ -1,9 +1,9 @@
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
 
-type VoicesSectionProps = { language: Language };
+type VoicesSectionProps = { language: Language; onVoicesEnter: () => void };
 
-export function VoicesSection({ language }: VoicesSectionProps) {
+export function VoicesSection({ language, onVoicesEnter }: VoicesSectionProps) {
   const { voices } = homepageCopy[language];
 
   return (
@@ -11,7 +11,12 @@ export function VoicesSection({ language }: VoicesSectionProps) {
       <div className="section-shell">
         <div className="voices-heading reveal">
           <p className="section-eyebrow">{voices.eyebrow}</p>
-          <h2 className="section-title preserve-lines">{voices.title}</h2>
+          <div className="voices-heading-main">
+            <h2 className="section-title preserve-lines">{voices.title}</h2>
+            <button type="button" className="button button-coral section-entry-button" onClick={onVoicesEnter}>
+              {voices.demoCta}<span aria-hidden="true">→</span>
+            </button>
+          </div>
         </div>
 
         <div className="editorial-quote reveal">

@@ -412,6 +412,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .voices-section { background: #f3d58b; }
 .voices-heading { display: grid; grid-template-columns: .45fr 1fr; gap: 8vw; align-items: start; }
 .voices-heading .section-eyebrow { margin-top: 18px; }
+.voices-heading-main { display: flex; align-items: center; justify-content: space-between; gap: clamp(20px, 3vw, 44px); }
+.voices-heading-main .section-title { flex: 1 1 auto; font-size: clamp(2.15rem, 2.75vw, 3rem); white-space: nowrap; }
+.voices-heading .section-entry-button { flex: 0 0 auto; margin: 0; }
 .editorial-quote { position: relative; max-width: 1050px; margin: clamp(46px,5vw,66px) 0 0 auto; }
 .quote-mark { position: absolute; left: -85px; top: -70px; color: rgba(232,120,93,.74); font-family: var(--display); font-size: 11rem; line-height: 1; }
 .editorial-quote blockquote { position: relative; margin: 0; font-family: var(--display); font-size: clamp(2.2rem,4.4vw,4.55rem); line-height: 1.16; letter-spacing: -.045em; }
@@ -574,6 +577,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-rows i { grid-column: 3; grid-row: 1 / 4; }
   .project-rows p { font-size: .78rem; }
   .voices-heading { grid-template-columns: 1fr; }
+  .voices-heading-main { display: block; }
+  .voices-heading-main .section-title { font-size: clamp(2.45rem, 11.5vw, 4rem); white-space: normal; }
+  .voices-heading .section-entry-button { margin: 24px 0 0 16px; }
   .editorial-quote { margin-top: 48px; }
   .quote-mark { left: -5px; top: -68px; font-size: 8rem; }
   .editorial-quote blockquote { font-size: clamp(2rem,9.5vw,3.1rem); }

@@ -19,6 +19,8 @@ export function MetcHomePage() {
   const [languageReady, setLanguageReady] = useState(false);
   const [toastVisible, setToastVisible] = useState(false);
   const [libraryTransition, setLibraryTransition] = useState(false);
+  const [galleryTransition, setGalleryTransition] = useState(false);
+  const [voicesTransition, setVoicesTransition] = useState(false);
 
   useEffect(() => {
     const savedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
@@ -78,6 +80,20 @@ export function MetcHomePage() {
     window.setTimeout(() => router.push("/teaching", { scroll: true }), 340);
   }
 
+  function enterGallery() {
+    if (galleryTransition) return;
+    setGalleryTransition(true);
+    window.sessionStorage.setItem("metc-gallery-entry", "flash");
+    window.setTimeout(() => router.push("/activities", { scroll: true }), 340);
+  }
+
+  function enterVoices() {
+    if (voicesTransition) return;
+    setVoicesTransition(true);
+    window.sessionStorage.setItem("metc-voices-entry", "flash");
+    window.setTimeout(() => router.push("/voices", { scroll: true }), 340);
+  }
+
   return (
     <>
       <div className="site-atmosphere" aria-hidden="true">
@@ -96,14 +112,14 @@ export function MetcHomePage() {
         <HeroSection language={language} onAnchorClick={handleAnchorClick} />
         <ExploreSection language={language} />
         <TeachingSection language={language} onDemoClick={() => setToastVisible(true)} onLibraryEnter={enterLibrary} />
-        <ActivitySection language={language} onDemoClick={() => setToastVisible(true)} />
-        <VoicesSection language={language} />
+        <ActivitySection language={language} onDemoClick={() => setToastVisible(true)} onGalleryEnter={enterGallery} />
+        <VoicesSection language={language} onVoicesEnter={enterVoices} />
       </main>
       <SiteFooter language={language} onDemoClick={() => setToastVisible(true)} />
       <div className={`prototype-toast${toastVisible ? " show" : ""}`} role="status" aria-live="polite">
         {homepageCopy[language].demoMessage}
       </div>
-      {libraryTransition && <div className="library-entry-flash" aria-hidden="true" />}
+      {(libraryTransition || galleryTransition || voicesTransition) && <div className="library-entry-flash" aria-hidden="true" />}
     </>
   );
 }

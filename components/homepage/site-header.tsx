@@ -7,9 +7,10 @@ type SiteHeaderProps = {
   onToggleLanguage: () => void;
   onAnchorClick?: (event: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
   variant?: "home" | "secondary";
+  activePage?: "teaching" | "activities" | "voices";
 };
 
-export function SiteHeader({ language, onToggleLanguage, onAnchorClick, variant = "home" }: SiteHeaderProps) {
+export function SiteHeader({ language, onToggleLanguage, onAnchorClick, variant = "home", activePage }: SiteHeaderProps) {
   const { nav } = homepageCopy[language];
   const isSecondary = variant === "secondary";
 
@@ -28,7 +29,7 @@ export function SiteHeader({ language, onToggleLanguage, onAnchorClick, variant 
 
         <nav className="primary-nav" aria-label="Primary navigation">
           {nav.map((item) => isSecondary ? (
-            item.id === "teaching" ? <Link className="nav-current" key={item.id} href="/teaching"><span>{language === "zh" ? item.zh : item.en}</span></Link> : <Link key={item.id} href={`/#${item.id}`}><span>{language === "zh" ? item.zh : item.en}</span></Link>
+            item.id === "teaching" || item.id === "activities" || item.id === "voices" ? <Link className={activePage === item.id ? "nav-current" : undefined} key={item.id} href={`/${item.id}`}><span>{language === "zh" ? item.zh : item.en}</span></Link> : <Link key={item.id} href={`/#${item.id}`}><span>{language === "zh" ? item.zh : item.en}</span></Link>
           ) : (
             <a key={item.id} href={`#${item.id}`} onClick={(event) => onAnchorClick?.(event, `#${item.id}`)}>
               <span>{language === "zh" ? item.zh : item.en}</span>

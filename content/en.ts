@@ -80,7 +80,8 @@ export const en: HomepageCopy = {
       { quote: "It was the first time someone really asked me: why did you predict that?", name: "Zhou", grade: "Grade 7 · Math Exploration" },
       { quote: "When I could explain it to my group, I realized I actually understood it.", name: "Chen", grade: "Grade 9 · Student TA" }
     ],
-    closing: "Learning leaves a voice. / 学习会留下声音。"
+    closing: "Learning leaves a voice. / 学习会留下声音。",
+    demoCta: "Enter Feedback"
   },
   footer: {
     eyebrow: "Keep the question open.",

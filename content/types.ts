@@ -55,6 +55,7 @@ export type HomepageCopy = {
     leadGrade: string;
     sideStories: Array<{ quote: string; name: string; grade: string }>;
     closing: string;
+    demoCta: string;
   };
   footer: {
     eyebrow: string;
