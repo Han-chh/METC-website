@@ -9,17 +9,6 @@ type HeroSectionProps = {
 
 export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
   const { hero } = homepageCopy[language];
-  const fieldGuide = language === "zh"
-    ? [
-        ["01", "发现现象", "先让问题出现"],
-        ["02", "搭建模型", "用材料验证猜想"],
-        ["03", "分享解释", "把发现交给同伴"]
-      ]
-    : [
-        ["01", "Notice", "Let the question appear"],
-        ["02", "Build", "Test a working model"],
-        ["03", "Share", "Give the finding to a peer"]
-      ];
 
   return (
     <section className="hero-section" id="top">
@@ -36,29 +25,29 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
         <i className="shooting-star star-one" /><i className="shooting-star star-two" />
         <i className="shooting-star star-three" />
       </div>
-      <svg className="hero-orbit" viewBox="0 0 900 520" aria-hidden="true">
-        <path d="M42 364 C238 474 564 444 814 205" />
-        <path d="M112 152 C338 42 683 101 862 330" />
-        <circle cx="814" cy="205" r="8" />
-        <circle cx="112" cy="152" r="5" />
-      </svg>
-      <aside className="hero-field-guide hero-enter hero-enter-2" aria-label="METC learning path">
-        <p>{language === "zh" ? "课堂地图 / 2026" : "CLASSROOM MAP / 2026"}</p>
-        <ol>
-          {fieldGuide.map(([number, title, detail]) => (
-            <li key={number}>
-              <span>{number}</span><strong>{title}</strong><small>{detail}</small>
-            </li>
-          ))}
-        </ol>
-      </aside>
+      <div className="hero-graphic-set" aria-hidden="true">
+        <svg className="hero-graphic hero-graphic-a" viewBox="0 0 310 188">
+          <path d="M38 121 L90 32 L142 121 Z" />
+          <circle cx="224" cy="55" r="28" />
+          <rect x="186" y="110" width="74" height="44" rx="8" />
+          <circle className="hero-graphic-node" cx="38" cy="121" r="5" />
+          <circle className="hero-graphic-node" cx="142" cy="121" r="5" />
+        </svg>
+        <svg className="hero-graphic hero-graphic-b" viewBox="0 0 180 84">
+          <path d="M8 48 C32 10 56 10 80 48 S128 86 172 31" />
+          <circle className="hero-graphic-node" cx="8" cy="48" r="4" />
+          <circle className="hero-graphic-node" cx="172" cy="31" r="4" />
+        </svg>
+        <svg className="hero-graphic hero-graphic-c" viewBox="0 0 210 56">
+          <path d="M12 28 H198" />
+          <circle className="hero-graphic-node" cx="38" cy="28" r="6" />
+          <circle className="hero-graphic-node" cx="105" cy="28" r="4" />
+          <circle className="hero-graphic-node" cx="172" cy="28" r="6" />
+        </svg>
+      </div>
 
       <div className="hero-inner">
         <p className="hero-eyebrow hero-enter hero-enter-1">{hero.eyebrow}</p>
-        <div className="hero-context hero-enter hero-enter-1" aria-label="METC classroom context">
-          <span>01 / LIVE LEARNING LAB</span><i aria-hidden="true" />
-          <strong>{language === "zh" ? "学生共创实验课堂" : "Student-led classroom experiments"}</strong>
-        </div>
 
         <div className="hero-logo-stage hero-enter hero-enter-2">
           <MetcScriptLogo />
