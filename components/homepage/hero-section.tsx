@@ -26,6 +26,18 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
         <i className="shooting-star star-three" />
       </div>
       <div className="hero-graphic-set" aria-hidden="true">
+        <svg className="hero-illustration hero-cell" viewBox="0 0 205 148">
+          <path className="cell-membrane" d="M31 44c17-29 52-32 79-20 25-15 57-1 66 26 11 30-6 62-35 70-26 8-42-7-64 0-32 10-61-16-57-45 2-14 3-20 11-31z" />
+          <path className="cell-wall" d="M31 44c17-29 52-32 79-20 25-15 57-1 66 26" />
+          <ellipse className="cell-nucleus" cx="105" cy="73" rx="25" ry="22" />
+          <circle className="cell-nucleolus" cx="109" cy="70" r="7" />
+          <path className="cell-organelle cell-mito" d="M45 67c8-10 23-6 24 4 1 11-16 15-24 6-4-4-3-7 0-10zM141 89c8-10 22-6 23 4 1 10-16 14-23 6-4-4-4-7 0-10z" />
+          <path className="cell-organelle cell-er" d="M74 38c8 3 13 0 18-4M71 44c8 3 15 1 22-3M121 44c12-7 23-4 31 3M123 51c10-6 21-3 29 4" />
+          <circle className="cell-vacuole" cx="54" cy="99" r="13" />
+          <circle className="cell-dot" cx="151" cy="61" r="4" />
+          <circle className="cell-dot" cx="71" cy="111" r="3" />
+          <text className="cell-caption" x="50" y="144">LIVING CELL</text>
+        </svg>
         <svg className="hero-illustration hero-bridge-lab" viewBox="0 0 280 145">
           <path className="school-shadow" d="M27 124c48 9 170 9 225 0" />
           <path className="bridge-support bridge-support-blue" d="M36 101h39v19H36z" />
@@ -40,12 +52,6 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
           <circle className="school-dot school-dot-coral" cx="263" cy="51" r="4" />
           <path className="school-spark school-spark-small" d="M21 40v13M15 46h13" />
           <text className="bridge-caption" x="84" y="141">PAPER BRIDGE TEST</text>
-        </svg>
-        <svg className="hero-illustration hero-line-texture hero-line-texture-side" viewBox="0 0 180 94">
-          <path className="texture-line texture-line-dashed" d="M8 22c25 15 48 15 72 0s53-15 92 0" />
-          <path className="texture-line texture-line-soft" d="M16 49c22-12 45-12 67 0s48 12 81 0" />
-          <path className="texture-line texture-line-strong" d="M47 80h91" />
-          <path className="texture-tick" d="M41 75v10M145 75v10" />
         </svg>
         <svg className="hero-illustration hero-note-strip" viewBox="0 0 246 76">
           <path className="note-dash" d="M7 65h232" />
@@ -78,18 +84,36 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
           <path className="school-spark" d="M276 109v16M268 117h16" />
           <path className="school-spark school-spark-small" d="M31 113v11M25 119h12" />
         </svg>
-        <svg className="hero-illustration hero-optics" viewBox="0 0 200 112">
-          <path className="school-shadow" d="M22 98c33 7 119 7 155 0" />
-          <circle className="optics-sun" cx="27" cy="28" r="12" />
-          <path className="sun-ray" d="M27 7v-5M8 28H3M14 15l-4-4M40 15l4-4M40 39l5 4" />
-          <path className="light-ray light-ray-in" d="M45 33 105 57" />
-          <path className="mirror" d="m108 33 21 49" />
-          <path className="mirror-stripe" d="m112 39 12 29M117 34l12 29M108 50l12 29" />
-          <path className="light-ray light-ray-reflect" d="m121 62 48-29" />
-          <path className="water-fill" d="M18 75h165v19c-41 7-122 7-165 0z" />
-          <path className="water-line" d="M18 75h165" />
-          <path className="light-ray light-ray-refract" d="m105 57 24 18" />
-          <circle className="school-dot school-dot-coral" cx="170" cy="32" r="5" />
+        <svg className="hero-illustration hero-optics" viewBox="0 0 220 120">
+          <path className="school-shadow" d="M18 109c42 8 139 8 184 0" />
+          <circle className="optics-sun" cx="26" cy="35" r="13" />
+          <path className="sun-ray" d="M26 14V7M5 35H1M12 21 7 16M40 21l5-5M40 49l6 5" />
+          <path className="light-ray light-ray-in" d="M45 41 118 72" />
+          <path className="light-arrow" d="m87 54 10 3-6 8" />
+          <path className="mirror" d="m112 48 22 52" />
+          <path className="mirror-stripe" d="m116 54 13 30M121 49l13 30M112 66l13 30" />
+          <path className="mirror-normal" d="M122 72V22" />
+          <path className="light-ray light-ray-reflect" d="m122 72 65-41" />
+          <path className="light-arrow light-arrow-reflect" d="m165 45 11-3-2 10" />
+          <circle className="reflection-target" cx="192" cy="28" r="8" />
+          <path className="target-rays" d="M192 14v-5M179 28h-5M202 19l4-4M202 37l5 4" />
+          <text className="optics-label" x="48" y="65">LIGHT IN</text>
+          <text className="optics-label optics-label-reflect" x="141" y="68">REFLECTED</text>
+          <text className="optics-label" x="103" y="115">MIRROR</text>
+        </svg>
+        <svg className="hero-illustration hero-rocket" viewBox="0 0 190 135">
+          <path className="rocket-trail" d="M95 120c-2-20 10-34 7-52" />
+          <path className="rocket-bottle" d="M82 19h26v18c0 5 13 9 13 22v38c0 12-9 20-20 20H89c-11 0-20-8-20-20V59c0-13 13-17 13-22z" />
+          <path className="rocket-neck" d="M82 19h26v11H82z" />
+          <path className="rocket-vinegar" d="M72 82h46v15c0 10-7 17-17 17H89c-10 0-17-7-17-17z" />
+          <path className="rocket-label" d="M79 61h32" />
+          <circle className="rocket-bubble" cx="88" cy="75" r="3" />
+          <circle className="rocket-bubble" cx="103" cy="69" r="2.5" />
+          <circle className="rocket-bubble" cx="109" cy="79" r="2" />
+          <path className="rocket-cap" d="M85 117h20v8H85z" />
+          <path className="rocket-flame" d="M88 125c3 8 11 8 14 0 4 7 12 8 14 2-5-8-13-10-19-19-3 9-11 13-15 20 2 4 4 3 6-3z" />
+          <path className="rocket-spark" d="M50 43v16M42 51h16M143 79v13M137 85h12" />
+          <text className="rocket-caption" x="45" y="133">VINEGAR ROCKET</text>
         </svg>
         <svg className="hero-illustration hero-economy" viewBox="0 0 220 104">
           <path className="school-shadow" d="M23 91c41 8 135 8 174 0" />
