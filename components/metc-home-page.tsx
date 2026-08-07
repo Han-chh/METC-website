@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { homepageCopy, type Language } from "../content";
 import { TeachingSection } from "./homepage/archive-section";
 import { ExploreSection } from "./homepage/explore-section";
@@ -13,22 +14,27 @@ import { ActivitySection } from "./homepage/works-section";
 const LANGUAGE_STORAGE_KEY = "metc-language";
 
 export function MetcHomePage() {
+  const router = useRouter();
   const [language, setLanguage] = useState<Language>("zh");
+  const [languageReady, setLanguageReady] = useState(false);
   const [toastVisible, setToastVisible] = useState(false);
+  const [libraryTransition, setLibraryTransition] = useState(false);
 
   useEffect(() => {
     const savedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
     if (savedLanguage === "zh" || savedLanguage === "en") {
       setLanguage(savedLanguage);
-      return;
+    } else {
+      setLanguage(window.navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
     }
-    setLanguage(window.navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
+    setLanguageReady(true);
   }, []);
 
   useEffect(() => {
+    if (!languageReady) return;
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
-  }, [language]);
+  }, [language, languageReady]);
 
   useEffect(() => {
     if (!("IntersectionObserver" in window)) {
@@ -65,6 +71,13 @@ export function MetcHomePage() {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
+  function enterLibrary() {
+    if (libraryTransition) return;
+    setLibraryTransition(true);
+    window.sessionStorage.setItem("metc-library-entry", "flash");
+    window.setTimeout(() => router.push("/teaching", { scroll: true }), 340);
+  }
+
   return (
     <>
       <div className="site-atmosphere" aria-hidden="true">
@@ -82,7 +95,7 @@ export function MetcHomePage() {
       <main className="page-shell">
         <HeroSection language={language} onAnchorClick={handleAnchorClick} />
         <ExploreSection language={language} />
-        <TeachingSection language={language} onDemoClick={() => setToastVisible(true)} />
+        <TeachingSection language={language} onDemoClick={() => setToastVisible(true)} onLibraryEnter={enterLibrary} />
         <ActivitySection language={language} onDemoClick={() => setToastVisible(true)} />
         <VoicesSection language={language} />
       </main>
@@ -90,6 +103,7 @@ export function MetcHomePage() {
       <div className={`prototype-toast${toastVisible ? " show" : ""}`} role="status" aria-live="polite">
         {homepageCopy[language].demoMessage}
       </div>
+      {libraryTransition && <div className="library-entry-flash" aria-hidden="true" />}
     </>
   );
 }

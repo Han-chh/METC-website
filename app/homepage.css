@@ -431,21 +431,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer-line-art { position: absolute; left: 0; right: 0; top: 0; opacity: .18; }
 .footer-line-art svg { width: 100%; }
 .footer-line-art path { fill: none; stroke: var(--sun); stroke-width: 2; }
-.footer-inner { position: relative; width: var(--shell); margin: 0 auto; padding: 84px 0 32px; }
+.footer-inner { position: relative; width: var(--shell); margin: 0 auto; padding: 19px 0 9px; }
 .footer-lead { display: grid; grid-template-columns: 1fr 1.1fr; gap: 7vw; align-items: end; }
-.footer-lead .section-eyebrow { grid-column: 1 / -1; color: var(--sun); }
-.footer-lead h2 { margin: 0; max-width: 720px; font-family: var(--display); font-size: clamp(2.5rem,5vw,5rem); line-height: 1.08; letter-spacing: -.05em; }
+.footer-lead .section-eyebrow { grid-column: 1 / -1; margin-bottom: 9px; color: var(--sun); }
+.footer-lead h2 { margin: 0; max-width: none; font-family: var(--display); font-size: clamp(1.45rem,2.05vw,2.05rem); line-height: 1.05; letter-spacing: -.05em; white-space: nowrap; }
 .footer-lead > p:last-child { margin: 0 0 8px; color: rgba(255,247,219,.6); }
-.footer-nav { margin-top: 62px; padding: 28px 0 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 12%; border-top: 1px solid rgba(255,255,255,.25); }
+.footer-nav { margin-top: 13px; padding: 7px 0 11px; display: grid; grid-template-columns: 1fr 1fr; gap: 12%; border-top: 1px solid rgba(255,255,255,.25); }
 .footer-nav > div { display: flex; flex-direction: column; align-items: flex-start; }
-.footer-nav p { margin: 0 0 18px; color: var(--sun); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-.footer-nav button { padding: 5px 0; background: transparent; color: var(--chalk); cursor: pointer; text-align: left; }
+.footer-nav p { margin: 0 0 5px; color: var(--sun); font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.footer-nav button { padding: 1px 0; background: transparent; color: var(--chalk); cursor: pointer; text-align: left; }
 .footer-nav button:hover { color: var(--sun); }
-.footer-bottom { padding-top: 22px; display: flex; justify-content: space-between; gap: 30px; border-top: 1px solid rgba(255,255,255,.14); color: rgba(255,247,219,.44); font-size: .65rem; }
+.footer-bottom { padding-top: 6px; display: flex; justify-content: space-between; gap: 30px; border-top: 1px solid rgba(255,247,219,.14); color: rgba(255,247,219,.44); font-size: .55rem; }
 
 /* Toast and motion */
 .prototype-toast { position: fixed; z-index: 130; left: 50%; bottom: 28px; max-width: calc(100vw - 32px); padding: 13px 18px; border-radius: 999px; background: var(--ink-deep); color: white; box-shadow: 0 18px 48px rgba(0,0,0,.22); opacity: 0; transform: translate(-50%,18px); pointer-events: none; transition: opacity 220ms ease, transform 220ms ease; font-size: .82rem; }
 .prototype-toast.show { opacity: 1; transform: translate(-50%,0); }
+.library-entry-flash { position: fixed; z-index: 180; inset: 0; pointer-events: none; background: linear-gradient(135deg, #fffaf0, #f7efdc 48%, #e6eee1); animation: libraryEntryFlash 340ms cubic-bezier(.32,.72,.36,1) forwards; }
 .reveal-enabled .reveal { opacity: 0; transform: translateY(32px); transition: opacity 700ms cubic-bezier(.2,.72,.22,1), transform 700ms cubic-bezier(.2,.72,.22,1); }
 .reveal-enabled .reveal.is-visible { opacity: 1; transform: none; }
 @keyframes drawLogo { to { stroke-dashoffset: 0; } }
@@ -466,6 +467,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes siteSnow { 5% { opacity: .78; } 100% { opacity: 0; transform: translate(56px, 104vh) scale(.55); } }
 @keyframes siteRain { 5% { opacity: .45; } 100% { opacity: 0; transform: translate(82px, 108vh) rotate(13deg); } }
 @keyframes siteMeteor { 5% { opacity: 0; transform: translate(0, 0) rotate(-34deg); } 15% { opacity: .86; } 31% { opacity: 0; transform: translate(-320px, 210px) rotate(-34deg); } 100% { opacity: 0; } }
+@keyframes libraryEntryFlash { 0% { opacity: 0; } 45% { opacity: 1; } 100% { opacity: 1; } }
 
 /* Tablet */
 @media (max-width: 1020px) {
@@ -499,7 +501,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .course-manual { margin-top: clamp(41px,4.5vw,58px); }.manual-page { min-height: 432px; padding: clamp(27px,3.4vw,45px); }.resource-index { margin-top: 38px; gap: 36px; }.resource-list button { min-height: 68px; }
   .classroom-stage { margin-top: clamp(41px,4.5vw,58px); }.student-work-index { margin-top: 49px; }.project-rows button { min-height: 83px; padding: 14px 0; }
   .editorial-quote { margin-top: clamp(41px,4.5vw,60px); }.voice-margins { margin-top: 52px; }.voices-closing { margin-top: 54px; }
-  .footer-inner { padding-top: 76px; }.footer-nav { margin-top: 56px; padding-bottom: 40px; }
+  .footer-inner { padding-top: 19px; }.footer-nav { margin-top: 13px; padding-bottom: 11px; }
 }
 
 @media (max-width: 1180px) and (min-width: 761px) { .hero-books { right: 7%; width: min(250px, 26vw); } .hero-cell { left: 27%; width: min(165px, 17vw); } .hero-note-strip { left: 47%; width: min(190px, 20vw); } .hero-bridge-lab { left: 52%; width: min(210px, 22vw); } .hero-optics { left: 48%; width: min(160px, 16vw); } .hero-rocket { right: 4%; width: min(155px, 15vw); } .hero-economy { left: 42%; width: min(180px, 18vw); } .hero-supplies { width: min(230px, 24vw); } }
@@ -577,11 +579,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .editorial-quote blockquote { font-size: clamp(2rem,9.5vw,3.1rem); }
   .voice-margins { margin-top: 48px; grid-template-columns: 1fr; gap: 40px; }
   .voices-closing { margin-top: 50px; }
-  .footer-inner { padding-top: 72px; }
+  .footer-inner { padding-top: 24px; }
   .footer-lead { grid-template-columns: 1fr; gap: 28px; }
   .footer-lead .section-eyebrow { grid-column: 1; }
-  .footer-lead h2 { font-size: clamp(2.5rem,11vw,4rem); }
-  .footer-nav { margin-top: 52px; gap: 28px; }
+  .footer-lead h2 { font-size: clamp(2.15rem,9.5vw,3.1rem); }
+  .footer-nav { margin-top: 16px; gap: 20px; }
   .footer-bottom { flex-direction: column; gap: 7px; }
   .prototype-toast { width: calc(100vw - 32px); border-radius: 16px; text-align: center; }
 }
@@ -603,4 +605,36 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .metc-logo-laser, .metc-logo-atmosphere, .hero-particle, .shooting-star, .site-atmosphere { display: none; }
   .hero-illustration { opacity: 1; clip-path: none; transform: none; }
   .reveal-enabled .reveal { opacity: 1; transform: none; }
+  .library-entry-flash { animation-duration: .01ms; }
+}
+
+/* Desktop density and display type reset: the site is composed at 90% browser-scale,
+   with section titles deliberately subordinate to the work and content beneath them. */
+@media (min-width: 761px) {
+  body { zoom: .9; font-size: 16px; }
+  .hero-section { min-height: 111.112svh; }
+  /* Keep the main section titles as visible anchors.  Their scale now matches the
+     curriculum-library title, while the single-line rule preserves the new compact rhythm. */
+  .section-title { max-width: none; font-size: clamp(2.35rem, 3.15vw, 3.15rem); line-height: 1.08; white-space: nowrap; }
+  .hero-title-wrap h1 { max-width: none; font-size: clamp(2.2rem, 3.35vw, 3.55rem); line-height: 1.08; white-space: nowrap; }
+  .hero-title-wrap h1 span { display: inline; margin-left: .16em; }
+  .mission-statement p { max-width: none; font-size: clamp(1.45rem, 2.15vw, 2.25rem); }
+  .manual-page h3 { max-width: none; font-size: clamp(1.45rem, 2.25vw, 2.35rem); white-space: nowrap; }
+  .project-rows h3 { font-size: clamp(1.12rem, 1.55vw, 1.58rem); white-space: nowrap; }
+  .editorial-quote blockquote { font-size: clamp(1.8rem, 3.15vw, 3.25rem); }
+  .voices-closing { font-size: clamp(1.28rem, 1.95vw, 1.95rem); }
+  /* Larger, single-line display copy needs the full section measure.  Keep the
+     supporting copy beneath it instead of allowing the two columns to collide. */
+  .section-intro, .activity-intro { grid-template-columns: 1fr; gap: 0; }
+  .section-intro .section-title, .activity-intro .section-title { grid-column: 1 / -1; }
+  .section-intro .section-body, .activity-intro .section-action-copy { max-width: 680px; margin-top: 20px; }
+  .teaching-intro { max-width: none; }
+  .voices-heading { grid-template-columns: 1fr; gap: 0; }
+  .voices-heading .section-eyebrow { margin-top: 0; }
+  .footer-inner { padding-top: 17px; }
+  .footer-nav { margin-top: 12px; }
+}
+
+@media (max-width: 760px) {
+  .footer-lead h2 { white-space: normal; }
 }

@@ -4,9 +4,10 @@ import { homepageCopy } from "../../content";
 type TeachingSectionProps = {
   language: Language;
   onDemoClick: () => void;
+  onLibraryEnter: () => void;
 };
 
-export function TeachingSection({ language, onDemoClick }: TeachingSectionProps) {
+export function TeachingSection({ language, onDemoClick, onLibraryEnter }: TeachingSectionProps) {
   const { teaching } = homepageCopy[language];
 
   return (
@@ -30,7 +31,7 @@ export function TeachingSection({ language, onDemoClick }: TeachingSectionProps)
               </button>
             ))}
           </div>
-          <button type="button" className="button button-coral" onClick={onDemoClick}>{teaching.demoCta}<span>↗</span></button>
+          <button type="button" className="button button-coral" onClick={onLibraryEnter}>{teaching.demoCta}<span>→</span></button>
         </div>
 
         <div className="course-manual reveal">
@@ -72,3 +73,4 @@ export function TeachingSection({ language, onDemoClick }: TeachingSectionProps)
     </section>
   );
 }
+import Link from "next/link";
