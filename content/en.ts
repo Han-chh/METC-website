@@ -18,7 +18,7 @@ export const en: HomepageCopy = {
   },
   explore: {
     eyebrow: "01 — Explore METC / 探索 METC",
-    title: "We do not finish the answer.\nWe hand over the question.",
+    title: "We do not finish the answer\nWe hand over the question",
     body: "METC was started by high-school student educators. We believe learning happens not by watching a perfect demonstration, but by moving through guesses, making, failure, and explanation.",
     missionLabel: "Teaching Mission",
     mission: "Help more students see that their ideas carry weight in mathematics and engineering.",
@@ -34,7 +34,7 @@ export const en: HomepageCopy = {
   },
   teaching: {
     eyebrow: "02 — Teaching Design / 教学设计",
-    title: "A class is first designed with care on paper.",
+    title: "A class is first designed with care on paper",
     body: "From syllabus to slides to the materials in each student's hands, every page is shaped around one question: where will a real discovery happen?",
     edition: "METC COURSE NOTES · 2026",
     chapter: "UNIT 03 / STRUCTURE",
@@ -59,7 +59,7 @@ export const en: HomepageCopy = {
   },
   activities: {
     eyebrow: "03 — Classroom Activities / 课堂活动",
-    title: "Knowledge is not displayed.\nIt happens on the table.",
+    title: "Knowledge is not displayed\nIt happens on the table",
     body: "Teachers and students gather around the same table. Every conversation, tilted model, and round of retesting is part of the real class.",
     photoCaption: "Bridge Lab · Structural design workshop · 2026",
     projectLabel: "Student Works / 学生作品",
@@ -84,7 +84,7 @@ export const en: HomepageCopy = {
   },
   footer: {
     eyebrow: "Keep the question open.",
-    title: "The next class begins with a good question.",
+    title: "The next class begins with a good question",
     body: "METC · Math and Engineering Teaching Club\nStudent-created. Student-centered.",
     aboutLabel: "About METC",
     statementLabel: "Statements",

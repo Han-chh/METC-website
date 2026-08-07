@@ -18,7 +18,7 @@ export const zh: HomepageCopy = {
   },
   explore: {
     eyebrow: "01 — Explore METC / 探索 METC",
-    title: "不是把答案讲完，\n而是把问题交给学生。",
+    title: "不是把答案讲完，\n而是把问题交给学生",
     body: "METC 由高中生教学者共同发起。我们相信，最好的学习不是旁观一次正确示范，而是亲手经历猜想、制作、失败和重新解释。",
     missionLabel: "Teaching Mission",
     mission: "让更多学生在数学与工程里，看见自己的想法有重量。",
@@ -34,7 +34,7 @@ export const zh: HomepageCopy = {
   },
   teaching: {
     eyebrow: "02 — Teaching Design / 教学设计",
-    title: "一堂课，先在纸上被认真设计。",
+    title: "一堂课，先在纸上被认真设计",
     body: "从 syllabus 到课堂 PPT，再到学生手里的材料包，每一页都围绕同一个问题组织：学生会在哪里产生真正的发现？",
     edition: "METC COURSE NOTES · 2026",
     chapter: "UNIT 03 / STRUCTURE",
@@ -59,7 +59,7 @@ export const zh: HomepageCopy = {
   },
   activities: {
     eyebrow: "03 — Classroom Activities / 课堂活动",
-    title: "知识不是被展示，\n而是在桌面上发生。",
+    title: "知识不是被展示，\n而是在桌面上发生",
     body: "教学者和学生围在同一张桌子边。每一次讨论、每一个歪掉的模型、每一轮重新测试，都是课堂真正的内容。",
     photoCaption: "Bridge Lab · 结构设计工作坊 · 2026",
     projectLabel: "Student Works / 学生作品",
@@ -84,7 +84,7 @@ export const zh: HomepageCopy = {
   },
   footer: {
     eyebrow: "Keep the question open.",
-    title: "下一堂课，从一个好问题开始。",
+    title: "下一堂课，从一个好问题开始",
     body: "METC · Math and Engineering Teaching Club\nStudent-created. Student-centered.",
     aboutLabel: "About METC",
     statementLabel: "Statements",

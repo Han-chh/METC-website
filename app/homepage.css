@@ -96,7 +96,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: right 220ms ease;
 }
 .primary-nav a:hover::after, .primary-nav a:focus-visible::after { right: 0; }
-.primary-nav span { font-size: 1.18rem; font-weight: 760; letter-spacing: -0.025em; }
+.primary-nav span { font-size: 1.08rem; font-weight: 760; letter-spacing: -0.025em; }
 .language-toggle {
   justify-self: end;
   min-width: 98px;
@@ -440,7 +440,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   :root { --shell: min(100% - 44px, 920px); }
   .header-inner { grid-template-columns: 100px 1fr 88px; gap: 12px; padding-left: 16px; }
   .primary-nav { gap: 20px; }
-  .primary-nav span { font-size: 1.05rem; }
+  .primary-nav span { font-size: .98rem; }
   .language-toggle { min-width: 80px; padding-inline: 10px; }
   .hero-section { padding-inline: 24px; }
   .hero-logo-stage { width: min(680px, 78vw); }
@@ -466,7 +466,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .primary-nav { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; gap: 14px; overflow-x: auto; scrollbar-width: none; padding: 2px 2px 5px; }
   .primary-nav::-webkit-scrollbar { display: none; }
   .primary-nav a { min-width: max-content; }
-  .primary-nav span { font-size: .99rem; }
+  .primary-nav span { font-size: .92rem; }
   .primary-nav small { display: none; }
   .hero-section { min-height: 100svh; padding: 126px 16px 72px; }
   .hero-inner { justify-content: center; }
