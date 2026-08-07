@@ -9,9 +9,9 @@ export const en: HomepageCopy = {
   ],
   hero: {
     eyebrow: "Math and Engineering Teaching Club",
-    title: "Bring questions into class.",
-    titleAccent: "Let curiosity get its hands dirty.",
-    body: "A student-created, student-centered math and engineering teaching club. We turn abstract ideas into things students can touch, discuss, and question again.",
+    title: "Bring questions into class",
+    titleAccent: "Let curiosity get its hands dirty",
+    body: "A student-created, student-centered math and engineering teaching club — we turn abstract ideas into things students can touch, discuss, and question again",
     primaryCta: "Start exploring",
     secondaryCta: "See teaching design",
     scroll: "Turn the page"

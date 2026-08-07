@@ -38,7 +38,7 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
         <div className="hero-logo-stage hero-enter hero-enter-2">
           <MetcScriptLogo />
           <span className="logo-note logo-note-left">signal / inquiry</span>
-          <span className="logo-note logo-note-right">ask → make → teach</span>
+          <span className="logo-note logo-note-right">ask -&gt; teach -&gt; make</span>
         </div>
 
         <div className="hero-lower hero-enter hero-enter-3">

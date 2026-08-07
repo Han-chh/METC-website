@@ -10,8 +10,8 @@ export const zh: HomepageCopy = {
   hero: {
     eyebrow: "Math and Engineering Teaching Club",
     title: "把问题带进课堂，",
-    titleAccent: "让好奇心动手发生。",
-    body: "由学生创造、面向学生的数学与工程教学社团。我们把抽象概念变成能触摸、能讨论、能继续追问的课堂现场。",
+    titleAccent: "让好奇心动手发生",
+    body: "由学生创造、面向学生的数学与工程教学社团，我们把抽象概念变成能触摸、能讨论、能继续追问的课堂现场",
     primaryCta: "开始探索",
     secondaryCta: "查看教学设计",
     scroll: "向下翻开课堂"
