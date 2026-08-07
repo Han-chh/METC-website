@@ -88,15 +88,15 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
           <path className="school-shadow" d="M18 109c42 8 139 8 184 0" />
           <circle className="optics-sun" cx="26" cy="35" r="13" />
           <path className="sun-ray" d="M26 14V7M5 35H1M12 21 7 16M40 21l5-5M40 49l6 5" />
-          <path className="light-ray light-ray-in" d="M45 41 118 72" />
-          <path className="light-arrow" d="m87 54 10 3-6 8" />
-          <path className="mirror" d="m112 48 22 52" />
-          <path className="mirror-stripe" d="m116 54 13 30M121 49l13 30M112 66l13 30" />
-          <path className="mirror-normal" d="M122 72V22" />
-          <path className="light-ray light-ray-reflect" d="m122 72 65-41" />
-          <path className="light-arrow light-arrow-reflect" d="m165 45 11-3-2 10" />
-          <circle className="reflection-target" cx="192" cy="28" r="8" />
-          <path className="target-rays" d="M192 14v-5M179 28h-5M202 19l4-4M202 37l5 4" />
+          <path className="light-ray light-ray-in" d="M45 41 118 79" />
+          <path className="light-arrow" d="m87 62 10 3-6 8" />
+          <path className="mirror" d="M76 84h80" />
+          <path className="mirror-stripe" d="M84 81h63M93 87h48" />
+          <path className="mirror-normal" d="M118 79V22" />
+          <path className="light-ray light-ray-reflect" d="m118 79 69-42" />
+          <path className="light-arrow light-arrow-reflect" d="m165 50 11-3-2 10" />
+          <circle className="reflection-target" cx="192" cy="34" r="8" />
+          <path className="target-rays" d="M192 20v-5M179 34h-5M202 25l4-4M202 43l5 4" />
           <text className="optics-label" x="48" y="65">LIGHT IN</text>
           <text className="optics-label optics-label-reflect" x="141" y="68">REFLECTED</text>
           <text className="optics-label" x="103" y="115">MIRROR</text>
