@@ -34,6 +34,10 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
 
       <div className="hero-inner">
         <p className="hero-eyebrow hero-enter hero-enter-1">{hero.eyebrow}</p>
+        <div className="hero-context hero-enter hero-enter-1" aria-label="METC classroom context">
+          <span>01 / LIVE LEARNING LAB</span><i aria-hidden="true" />
+          <strong>{language === "zh" ? "学生共创实验课堂" : "Student-led classroom experiments"}</strong>
+        </div>
 
         <div className="hero-logo-stage hero-enter hero-enter-2">
           <MetcScriptLogo />
@@ -47,6 +51,9 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
               {hero.title}
               <span>{hero.titleAccent}</span>
             </h1>
+            <div className="hero-topic-tags" aria-label="Learning approach">
+              {(language === "zh" ? ["真实问题", "动手制作", "同伴讨论"] : ["Real questions", "Build together", "Peer discussion"]).map((label) => <span key={label}>{label}</span>)}
+            </div>
           </div>
           <div className="hero-intro">
             <p>{hero.body}</p>

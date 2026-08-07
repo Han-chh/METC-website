@@ -86,20 +86,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .header-brand-mark { font-family: var(--display); font-weight: 720; font-size: 1.32rem; letter-spacing: -0.04em; }
 .header-brand-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--coral); }
 .primary-nav { display: flex; justify-content: center; gap: clamp(24px, 3vw, 50px); }
-.primary-nav a { min-height: 38px; padding: 0 10px; display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; position: relative; border: 1px solid transparent; border-radius: 12px; transform: translateY(0); transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease; }
+.primary-nav a { display: grid; justify-items: start; line-height: 1.2; position: relative; }
 .primary-nav a::after {
   content: "";
   position: absolute;
-  left: 12px; right: 12px; bottom: 4px;
+  left: 0; right: 100%; bottom: -8px;
   height: 2px;
-  border-radius: 999px;
   background: var(--coral);
-  opacity: .82;
-  transform: scaleX(1);
-  transition: opacity 200ms ease, transform 200ms ease, height 200ms ease;
+  transition: right 220ms ease;
 }
-.primary-nav a:hover, .primary-nav a:focus-visible { background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,235,205,.74)); box-shadow: 0 2px 0 rgba(255,255,255,.88) inset, 0 4px 0 rgba(25,55,47,.07), 0 12px 20px rgba(43,52,39,.15); transform: translateY(-3px); outline: none; }
-.primary-nav a:hover::after, .primary-nav a:focus-visible::after { height: 3px; opacity: 1; transform: scaleX(1.08); }
+.primary-nav a:hover::after, .primary-nav a:focus-visible::after { right: 0; }
 .primary-nav span { font-size: 1.08rem; font-weight: 760; letter-spacing: -0.025em; }
 .language-toggle {
   justify-self: end;
@@ -212,6 +208,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-orbit circle { fill: var(--coral); }
 .hero-inner { width: min(1360px, 100%); margin: 0 auto; display: flex; flex-direction: column; justify-content: center; }
 .hero-eyebrow { color: var(--ink); margin-left: 6px; font-family: var(--display); font-size: clamp(.95rem, 1.25vw, 1.16rem); font-weight: 600; letter-spacing: .005em; text-transform: none; }
+.hero-context { margin: -10px 0 8px 6px; display: flex; align-items: center; gap: 12px; color: rgba(25,55,47,.72); font-size: .64rem; font-weight: 800; letter-spacing: .12em; }
+.hero-context i { width: 26px; height: 1px; background: var(--coral); }.hero-context strong { color: var(--ink-soft); font-size: .61rem; font-weight: 750; letter-spacing: .05em; }
 .hero-logo-stage { position: relative; width: min(720px, 66vw); margin: clamp(4px, 1.5vh, 16px) 0 clamp(14px, 2vh, 26px); }
 .script-logo-svg { display: block; width: 100%; height: auto; overflow: visible; transform: rotate(-1.4deg); animation: logoLightBloom 10s ease-in-out 3.2s infinite; }
 .metc-logo-shadow, .metc-logo-stroke, .metc-logo-highlight { fill: none; stroke-linecap: round; stroke-linejoin: round; }
@@ -253,6 +251,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   line-height: 1.06;
 }
 .hero-title-wrap h1 span { display: block; color: var(--ink); }
+.hero-topic-tags { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px 18px; }.hero-topic-tags span { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-soft); font-size: .69rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }.hero-topic-tags span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--coral); box-shadow: 0 0 0 4px rgba(232,120,93,.12); }
 .hero-intro { padding-bottom: 7px; }
 .hero-intro > p { margin: 0; max-width: 500px; color: var(--ink-soft); font-size: 1.02rem; }
 .hero-actions { margin-top: 28px; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
@@ -459,6 +458,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .quote-mark { left: -48px; }
 }
 
+/* Desktop and tablet density: approximately 90% of the original visual scale */
+@media (min-width: 761px) {
+  :root { --shell: min(1116px, calc(100vw - 58px)); }
+  body { font-size: 14.4px; }
+  .site-header { padding: 12px 18px 0; }.header-inner { min-height: 76px; padding: 10px 14px 10px 22px; border-radius: 23px; }.header-brand-mark { font-size: 1.2rem; }.language-toggle { min-width: 90px; padding: 9px 12px; }
+  .section-pad { padding: clamp(61px, 6.3vw, 94px) 0; }
+  .section-title { max-width: 810px; font-size: clamp(2.43rem, 5.04vw, 4.82rem); }.section-body { max-width: 558px; margin-top: 27px; font-size: clamp(.9rem, 1.26vw, 1.04rem); }
+  .hero-section { min-height: 100svh; padding: 112px 28px 64px; }.hero-logo-stage { width: min(648px, 60vw); margin-bottom: 20px; }.hero-title-wrap h1 { max-width: 738px; font-size: clamp(2.3rem, 4.5vw, 4.5rem); }.hero-lower { gap: clamp(38px, 7.2vw, 108px); }.hero-topic-tags { margin-top: 20px; }.hero-actions { margin-top: 24px; }.hero-scroll { right: 28px; bottom: 22px; }
+  .mission-spread { margin-top: clamp(41px, 4.5vw, 58px); padding: clamp(27px, 3.6vw, 43px); }.principle-line { margin-top: 47px; }.principle-line li { padding-top: 22px; }
+  .course-manual { margin-top: clamp(41px,4.5vw,58px); }.manual-page { min-height: 432px; padding: clamp(27px,3.4vw,45px); }.resource-index { margin-top: 38px; gap: 36px; }.resource-list button { min-height: 68px; }
+  .classroom-stage { margin-top: clamp(41px,4.5vw,58px); }.student-work-index { margin-top: 49px; }.project-rows button { min-height: 83px; padding: 14px 0; }
+  .editorial-quote { margin-top: clamp(41px,4.5vw,60px); }.voice-margins { margin-top: 52px; }.voices-closing { margin-top: 54px; }
+  .footer-inner { padding-top: 76px; }.footer-nav { margin-top: 56px; padding-bottom: 40px; }
+}
+
 /* Mobile */
 @media (max-width: 760px) {
   :root { --shell: calc(100vw - 32px); }
@@ -475,6 +489,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-section { min-height: 100svh; padding: 126px 16px 72px; }
   .hero-inner { justify-content: center; }
   .hero-eyebrow { font-size: .92rem; }
+  .hero-context { margin: -8px 0 8px 6px; gap: 8px; font-size: .56rem; }.hero-context i { width: 18px; }.hero-context strong { font-size: .54rem; }
   .hero-logo-stage { width: 86%; margin: 5vh 0 3.5vh 0; }
   .metc-logo-shadow { stroke-width: 31; }
   .metc-logo-stroke { stroke-width: 26; }
@@ -482,6 +497,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .logo-note-right { top: 1%; right: 2%; }
   .hero-lower { grid-template-columns: 1fr; gap: 22px; }
   .hero-title-wrap h1 { font-size: clamp(2.3rem, 11vw, 3.5rem); }
+  .hero-topic-tags { margin-top: 18px; gap: 7px 14px; }.hero-topic-tags span { font-size: .6rem; }
   .hero-intro > p { font-size: .9rem; line-height: 1.7; }
   .hero-actions { margin-top: 22px; gap: 20px; }
   .button { min-height: 48px; padding: 0 18px; }
