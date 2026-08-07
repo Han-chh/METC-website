@@ -14,6 +14,9 @@ export function SiteHeader({ language, onToggleLanguage, onAnchorClick }: SiteHe
     <header className="site-header">
       <div className="header-inner">
         <a className="header-brand" href="#top" onClick={(event) => onAnchorClick(event, "#top")} aria-label="METC home">
+          <span className="header-brand-emblem" aria-hidden="true">
+            <img src="/METC-website/images/metc-graduation-logo.jpg" alt="" />
+          </span>
           <span className="header-brand-mark">METC</span>
           <span className="header-brand-dot" aria-hidden="true" />
         </a>
