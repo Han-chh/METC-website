@@ -9,6 +9,17 @@ type HeroSectionProps = {
 
 export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
   const { hero } = homepageCopy[language];
+  const fieldGuide = language === "zh"
+    ? [
+        ["01", "发现现象", "先让问题出现"],
+        ["02", "搭建模型", "用材料验证猜想"],
+        ["03", "分享解释", "把发现交给同伴"]
+      ]
+    : [
+        ["01", "Notice", "Let the question appear"],
+        ["02", "Build", "Test a working model"],
+        ["03", "Share", "Give the finding to a peer"]
+      ];
 
   return (
     <section className="hero-section" id="top">
@@ -31,6 +42,16 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
         <circle cx="814" cy="205" r="8" />
         <circle cx="112" cy="152" r="5" />
       </svg>
+      <aside className="hero-field-guide hero-enter hero-enter-2" aria-label="METC learning path">
+        <p>{language === "zh" ? "课堂地图 / 2026" : "CLASSROOM MAP / 2026"}</p>
+        <ol>
+          {fieldGuide.map(([number, title, detail]) => (
+            <li key={number}>
+              <span>{number}</span><strong>{title}</strong><small>{detail}</small>
+            </li>
+          ))}
+        </ol>
+      </aside>
 
       <div className="hero-inner">
         <p className="hero-eyebrow hero-enter hero-enter-1">{hero.eyebrow}</p>
