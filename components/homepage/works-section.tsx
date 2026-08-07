@@ -17,7 +17,12 @@ export function ActivitySection({ language, onDemoClick }: ActivitySectionProps)
         <div className="activity-intro reveal">
           <p className="section-eyebrow">{activities.eyebrow}</p>
           <h2 className="section-title preserve-lines">{activities.title}</h2>
-          <p className="section-body">{activities.body}</p>
+          <div className="section-action-copy">
+            <p className="section-body">{activities.body}</p>
+            <button type="button" className="button button-coral section-entry-button" onClick={onDemoClick}>
+              {activities.demoCta}<span>↗</span>
+            </button>
+          </div>
         </div>
 
         <figure className="classroom-stage reveal">
@@ -33,7 +38,6 @@ export function ActivitySection({ language, onDemoClick }: ActivitySectionProps)
         <div className="student-work-index reveal">
           <div className="work-index-heading">
             <p>{activities.projectLabel}</p>
-            <button type="button" className="text-link light-link" onClick={onDemoClick}>{activities.demoCta}<span>→</span></button>
           </div>
           <div className="project-rows">
             {activities.projects.map((project) => (

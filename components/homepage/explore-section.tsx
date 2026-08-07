@@ -11,21 +11,20 @@ export function ExploreSection({ language }: ExploreSectionProps) {
       <div className="section-shell">
         <div className="section-intro reveal">
           <p className="section-eyebrow">{explore.eyebrow}</p>
+          <nav className="explore-jumps" aria-label="Explore METC sections">
+            {[
+              { id: "teaching", number: "01", label: language === "zh" ? "教学设计" : "Teaching Design" },
+              { id: "activities", number: "02", label: language === "zh" ? "课堂活动" : "Classroom Activities" },
+              { id: "voices", number: "03", label: language === "zh" ? "学生声音" : "Student Voices" }
+            ].map((item) => (
+              <a href={`#${item.id}`} key={item.id}>
+                <span>{item.number}</span><strong>{item.label}</strong><i aria-hidden="true">↘</i>
+              </a>
+            ))}
+          </nav>
           <h2 className="section-title preserve-lines">{explore.title}</h2>
           <p className="section-body">{explore.body}</p>
         </div>
-
-        <nav className="explore-jumps reveal" aria-label="Explore METC sections">
-          {[
-            { id: "teaching", number: "01", label: language === "zh" ? "教学设计" : "Teaching Design" },
-            { id: "activities", number: "02", label: language === "zh" ? "课堂活动" : "Classroom Activities" },
-            { id: "voices", number: "03", label: language === "zh" ? "学生声音" : "Student Voices" }
-          ].map((item) => (
-            <a href={`#${item.id}`} key={item.id}>
-              <span>{item.number}</span><strong>{item.label}</strong><i aria-hidden="true">↘</i>
-            </a>
-          ))}
-        </nav>
 
         <div className="mission-spread reveal">
           <div className="mission-statement">

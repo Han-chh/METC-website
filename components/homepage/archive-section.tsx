@@ -18,6 +18,21 @@ export function TeachingSection({ language, onDemoClick }: TeachingSectionProps)
           <p className="section-body">{teaching.body}</p>
         </div>
 
+        <div className="resource-index resource-index-top reveal">
+          <div className="resource-list">
+            {teaching.resources.map((resource, index) => (
+              <button type="button" onClick={onDemoClick} key={resource.type}>
+                <span className="resource-number">0{index + 1}</span>
+                <span className="resource-type">{resource.type}</span>
+                <strong>{resource.title}</strong>
+                <small>{resource.detail}</small>
+                <i aria-hidden="true">↗</i>
+              </button>
+            ))}
+          </div>
+          <button type="button" className="button button-coral" onClick={onDemoClick}>{teaching.demoCta}<span>↗</span></button>
+        </div>
+
         <div className="course-manual reveal">
           <div className="manual-spine" aria-hidden="true" />
           <div className="manual-page manual-page-left">
@@ -53,20 +68,6 @@ export function TeachingSection({ language, onDemoClick }: TeachingSectionProps)
           </div>
         </div>
 
-        <div className="resource-index reveal">
-          <div className="resource-list">
-            {teaching.resources.map((resource, index) => (
-              <button type="button" onClick={onDemoClick} key={resource.type}>
-                <span className="resource-number">0{index + 1}</span>
-                <span className="resource-type">{resource.type}</span>
-                <strong>{resource.title}</strong>
-                <small>{resource.detail}</small>
-                <i aria-hidden="true">↗</i>
-              </button>
-            ))}
-          </div>
-          <button type="button" className="button button-coral" onClick={onDemoClick}>{teaching.demoCta}<span>↗</span></button>
-        </div>
       </div>
     </section>
   );
