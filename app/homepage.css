@@ -121,9 +121,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-eyebrow, .hero-eyebrow {
   margin: 0 0 22px;
   color: var(--coral);
-  font-size: 0.72rem;
+  font-size: clamp(.94rem, 1.08vw, 1.1rem);
   font-weight: 800;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.095em;
   text-transform: uppercase;
 }
 .section-title {
