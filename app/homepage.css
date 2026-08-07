@@ -134,7 +134,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .voices-section .section-eyebrow {
   margin-bottom: 26px;
   font-family: var(--display);
-  font-size: clamp(2.45rem, 11.5vw, 4rem);
+  font-size: clamp(2.7rem, 12.4vw, 4.25rem);
   font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 1.08;
@@ -645,7 +645,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   /* Keep the main section titles as visible anchors.  Their scale now matches the
      curriculum-library title, while the single-line rule preserves the new compact rhythm. */
   .section-title { max-width: none; font-size: clamp(2.35rem, 3.15vw, 3.15rem); line-height: 1.08; white-space: nowrap; }
-  .explore-section .section-eyebrow, .teaching-section .section-eyebrow, .activity-section .section-eyebrow, .voices-section .section-eyebrow { font-size: clamp(2.5rem, 3.28vw, 3.3rem); }
+  .explore-section .section-eyebrow, .teaching-section .section-eyebrow, .activity-section .section-eyebrow, .voices-section .section-eyebrow { font-size: clamp(2.75rem, 3.6vw, 3.6rem); }
   .hero-title-wrap h1 { max-width: none; font-size: clamp(2.2rem, 3.35vw, 3.55rem); line-height: 1.08; white-space: nowrap; }
   .hero-title-wrap h1 span { display: inline; margin-left: .16em; }
   .mission-statement p { max-width: none; font-size: clamp(1.45rem, 2.15vw, 2.25rem); }
