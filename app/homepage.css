@@ -507,7 +507,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .footer-inner { padding-top: 19px; }.footer-nav { margin-top: 13px; padding-bottom: 11px; }
 }
 
-@media (max-width: 1180px) and (min-width: 761px) { .hero-books { right: 7%; width: min(250px, 26vw); } .hero-cell { left: 27%; width: min(165px, 17vw); } .hero-note-strip { left: 47%; width: min(190px, 20vw); } .hero-bridge-lab { left: 52%; width: min(210px, 22vw); } .hero-optics { left: 48%; width: min(160px, 16vw); } .hero-rocket { right: 4%; width: min(155px, 15vw); } .hero-economy { left: 42%; width: min(180px, 18vw); } .hero-supplies { width: min(230px, 24vw); } }
+/* Keep the reflection sketch in the right-hand visual field, clear of the hero headline. */
+@media (min-width: 1181px) {
+  .hero-optics { top: 25%; left: auto; right: 5%; }
+}
+
+@media (max-width: 1180px) and (min-width: 761px) {
+  .hero-optics { top: 23%; left: auto; right: 4%; }
+}
+
+@media (max-width: 1180px) and (min-width: 761px) { .hero-books { right: 7%; width: min(250px, 26vw); } .hero-cell { left: 27%; width: min(165px, 17vw); } .hero-note-strip { left: 47%; width: min(190px, 20vw); } .hero-bridge-lab { left: 52%; width: min(210px, 22vw); } .hero-optics { top: 23%; left: auto; right: 4%; width: min(160px, 16vw); } .hero-rocket { right: 4%; width: min(155px, 15vw); } .hero-economy { left: 42%; width: min(180px, 18vw); } .hero-supplies { width: min(230px, 24vw); } }
 
 /* Mobile */
 @media (max-width: 760px) {
