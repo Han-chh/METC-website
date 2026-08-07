@@ -111,7 +111,6 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
           <circle className="rocket-bubble" cx="103" cy="69" r="2.5" />
           <circle className="rocket-bubble" cx="109" cy="79" r="2" />
           <path className="rocket-cap" d="M85 117h20v8H85z" />
-          <path className="rocket-flame" d="M88 125c3 8 11 8 14 0 4 7 12 8 14 2-5-8-13-10-19-19-3 9-11 13-15 20 2 4 4 3 6-3z" />
           <path className="rocket-spark" d="M50 43v16M42 51h16M143 79v13M137 85h12" />
           <text className="rocket-caption" x="45" y="133">VINEGAR ROCKET</text>
         </svg>
