@@ -26,6 +26,21 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
         <i className="shooting-star star-three" />
       </div>
       <div className="hero-graphic-set" aria-hidden="true">
+        <svg className="hero-illustration hero-line-texture hero-line-texture-main" viewBox="0 0 280 145">
+          <path className="texture-line texture-line-soft" d="M12 40c38-25 70-25 108 0s73 25 116 0" />
+          <path className="texture-line texture-line-dashed" d="M20 67c35 17 75 17 111 0s74-17 127 0" />
+          <path className="texture-line texture-line-strong" d="M28 100c30-14 60-14 90 0s61 14 103 0" />
+          <path className="texture-arc" d="M74 129c16-35 51-51 90-41 19 5 35 17 47 34" />
+          <path className="texture-tick" d="M15 35v11M67 17v11M212 24v11M258 84v12" />
+          <circle className="texture-dot" cx="24" cy="67" r="3" />
+          <circle className="texture-dot texture-dot-coral" cx="221" cy="40" r="3.5" />
+        </svg>
+        <svg className="hero-illustration hero-line-texture hero-line-texture-side" viewBox="0 0 180 94">
+          <path className="texture-line texture-line-dashed" d="M8 22c25 15 48 15 72 0s53-15 92 0" />
+          <path className="texture-line texture-line-soft" d="M16 49c22-12 45-12 67 0s48 12 81 0" />
+          <path className="texture-line texture-line-strong" d="M47 80h91" />
+          <path className="texture-tick" d="M41 75v10M145 75v10" />
+        </svg>
         <svg className="hero-illustration hero-note-strip" viewBox="0 0 246 76">
           <path className="note-dash" d="M7 65h232" />
           <path className="note-paper note-paper-blue" d="M16 14h56v38H16z" />
