@@ -79,7 +79,7 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
           <circle className="economy-node economy-node-blue" cx="50" cy="53" r="19" />
           <path className="student-icon" d="M50 43a7 7 0 1 0 0 .1M38 65c3-9 20-9 24 0" />
           <circle className="economy-node economy-node-sun" cx="125" cy="27" r="18" />
-          <path className="coin-icon" d="M125 16v22M119 22c2-4 11-4 12 0 1 5-12 3-12 9 1 4 10 4 12 0" />
+          <path className="coin-icon" d="M125 14v26M130 20c-3-3-11-3-11 1 0 5 11 4 11 9 0 5-9 6-12 1" />
           <circle className="economy-node economy-node-coral" cx="172" cy="72" r="19" />
           <path className="shop-icon" d="M160 72h24v10h-24zM158 67h28l-3-7h-22zM166 82v-7h7v7" />
           <circle className="school-dot school-dot-mint" cx="31" cy="23" r="5" />
