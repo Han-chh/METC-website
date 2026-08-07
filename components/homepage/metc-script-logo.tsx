@@ -18,9 +18,15 @@ export function MetcScriptLogo() {
           <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G" />
         </filter>
         <linearGradient id="chalk-ink" x1="24" y1="55" x2="702" y2="142" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#FFFDF2" />
-          <stop offset="0.5" stopColor="#F8EDBD" />
-          <stop offset="1" stopColor="#FFD96A" />
+          <stop stopColor="#FFFDF2">
+            <animate attributeName="stop-color" begin="3.2s" dur="10s" values="#FFFDF2;#C5F0F0;#FFFDF2" repeatCount="indefinite" />
+          </stop>
+          <stop offset="0.5" stopColor="#F8EDBD">
+            <animate attributeName="stop-color" begin="3.2s" dur="10s" values="#F8EDBD;#BFD8FF;#F8EDBD" repeatCount="indefinite" />
+          </stop>
+          <stop offset="1" stopColor="#FFD96A">
+            <animate attributeName="stop-color" begin="3.2s" dur="10s" values="#FFD96A;#FFB89C;#FFD96A" repeatCount="indefinite" />
+          </stop>
         </linearGradient>
       </defs>
 
@@ -28,12 +34,18 @@ export function MetcScriptLogo() {
       <path className="metc-logo-stroke" d={ONE_STROKE_PATH} pathLength="1" filter="url(#chalk-texture)" />
       <path className="metc-logo-highlight" d={ONE_STROKE_PATH} pathLength="1" />
       <g className="metc-logo-laser" aria-hidden="true">
-        <circle className="metc-logo-laser-halo" cx="646" cy="108" r="22" />
         <path className="metc-logo-laser-beam" d="M690 52 L650 104" />
         <circle className="metc-logo-laser-core" cx="646" cy="108" r="5" />
         <circle className="metc-logo-spark spark-a" cx="665" cy="87" r="2" />
         <circle className="metc-logo-spark spark-b" cx="681" cy="112" r="1.6" />
         <circle className="metc-logo-spark spark-c" cx="658" cy="129" r="1.4" />
+      </g>
+      <g className="metc-logo-atmosphere" aria-hidden="true">
+        <circle className="logo-particle logo-particle-a" cx="83" cy="31" r="2" />
+        <circle className="logo-particle logo-particle-b" cx="285" cy="26" r="1.5" />
+        <circle className="logo-particle logo-particle-c" cx="526" cy="33" r="1.8" />
+        <path className="logo-meteor logo-meteor-a" d="M461 22 L505 39" />
+        <path className="logo-meteor logo-meteor-b" d="M580 160 L614 143" />
       </g>
     </svg>
   );

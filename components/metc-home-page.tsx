@@ -67,6 +67,13 @@ export function MetcHomePage() {
 
   return (
     <>
+      <div className="site-atmosphere" aria-hidden="true">
+        <i className="atmosphere-snow snow-1" /><i className="atmosphere-snow snow-2" /><i className="atmosphere-snow snow-3" /><i className="atmosphere-snow snow-4" />
+        <i className="atmosphere-snow snow-5" /><i className="atmosphere-snow snow-6" /><i className="atmosphere-snow snow-7" />
+        <i className="atmosphere-rain rain-1" /><i className="atmosphere-rain rain-2" /><i className="atmosphere-rain rain-3" /><i className="atmosphere-rain rain-4" />
+        <i className="atmosphere-rain rain-5" /><i className="atmosphere-rain rain-6" /><i className="atmosphere-rain rain-7" />
+        <i className="atmosphere-meteor meteor-1" /><i className="atmosphere-meteor meteor-2" /><i className="atmosphere-meteor meteor-3" />
+      </div>
       <SiteHeader
         language={language}
         onToggleLanguage={() => setLanguage((current) => current === "zh" ? "en" : "zh")}
