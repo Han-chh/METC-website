@@ -647,14 +647,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (min-width: 761px) {
   body { zoom: .9; font-size: 16px; }
   .hero-section { min-height: 111.112svh; }
-  /* Keep the main section titles as visible anchors.  Their scale now matches the
-     curriculum-library title, while the single-line rule preserves the new compact rhythm. */
+  /* Keep the main section titles as visible anchors while allowing long English
+     messages to wrap inside their own reading area. */
   .section-title { max-width: none; font-size: clamp(2.35rem, 3.15vw, 3.15rem); line-height: 1.08; white-space: nowrap; }
   .explore-section .section-eyebrow, .teaching-section .section-eyebrow, .activity-section .section-eyebrow, .voices-section .section-eyebrow { font-size: clamp(2.75rem, 3.6vw, 3.6rem); }
-  .hero-title-wrap h1 { max-width: none; font-size: clamp(2.2rem, 3.35vw, 3.55rem); line-height: 1.08; white-space: nowrap; }
-  .hero-title-wrap h1 span { display: inline; margin-left: .16em; }
+  .hero-title-wrap h1 { max-width: 738px; font-size: clamp(2.2rem, 3.35vw, 3.55rem); line-height: 1.08; white-space: normal; }
+  .hero-title-wrap h1 span { display: block; margin-left: 0; }
   .mission-statement p { max-width: none; font-size: clamp(1.45rem, 2.15vw, 2.25rem); }
-  .manual-page h3 { max-width: none; font-size: clamp(1.45rem, 2.25vw, 2.35rem); white-space: nowrap; }
+  .manual-page h3 { max-width: min(520px, 95%); font-size: clamp(1.45rem, 2.25vw, 2.35rem); white-space: normal; text-wrap: balance; }
   .project-rows h3 { font-size: clamp(1.12rem, 1.55vw, 1.58rem); white-space: nowrap; }
   .editorial-quote blockquote { font-size: clamp(1.8rem, 3.15vw, 3.25rem); }
   .voices-closing { font-size: clamp(1.28rem, 1.95vw, 1.95rem); }

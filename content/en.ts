@@ -17,7 +17,7 @@ export const en: HomepageCopy = {
     scroll: "Turn the page"
   },
   explore: {
-    eyebrow: "01 — Explore METC / 探索 METC",
+    eyebrow: "01 — Explore METC",
     title: "We do not finish the answer — we hand over the question",
     body: "METC was started by high-school student educators. We believe learning happens not by watching a perfect demonstration, but by moving through guesses, making, failure, and explanation.",
     missionLabel: "Teaching Mission",
@@ -33,7 +33,7 @@ export const en: HomepageCopy = {
     ]
   },
   teaching: {
-    eyebrow: "02 — Teaching Design / 教学设计",
+    eyebrow: "02 — Teaching Design",
     title: "A class is first designed with care on paper",
     body: "From syllabus to slides to the materials in each student's hands, every page is shaped around one question: where will a real discovery happen?",
     edition: "METC COURSE NOTES · 2026",
@@ -58,7 +58,7 @@ export const en: HomepageCopy = {
     demoCta: "Enter the Curriculum Library"
   },
   activities: {
-    eyebrow: "03 — Classroom Activities / 课堂活动",
+    eyebrow: "03 — Classroom Activities",
     title: "Knowledge is not displayed — it happens on the table",
     body: "Teachers and students gather around the same table. Every conversation, tilted model, and round of retesting is part of the real class.",
     photoCaption: "Bridge Lab · Structural design workshop · 2026",
@@ -71,7 +71,7 @@ export const en: HomepageCopy = {
     demoCta: "Enter the exhibition"
   },
   voices: {
-    eyebrow: "04 — Student Voices / 听 TA 们说",
+    eyebrow: "04 — Student Voices",
     title: "After one class, what stays with them?",
     leadQuote: "I used to think engineering meant making the correct answer. Then I learned that when the model falls, that is when we really start thinking.",
     leadName: "Lin",

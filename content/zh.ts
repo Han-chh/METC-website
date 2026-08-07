@@ -17,7 +17,7 @@ export const zh: HomepageCopy = {
     scroll: "向下翻开课堂"
   },
   explore: {
-    eyebrow: "01 — Explore METC / 探索 METC",
+    eyebrow: "01 — 探索 METC",
     title: "不是把答案讲完，而是把问题交给学生",
     body: "METC 由高中生教学者共同发起。我们相信，最好的学习不是旁观一次正确示范，而是亲手经历猜想、制作、失败和重新解释。",
     missionLabel: "Teaching Mission",
@@ -33,7 +33,7 @@ export const zh: HomepageCopy = {
     ]
   },
   teaching: {
-    eyebrow: "02 — Teaching Design / 教学设计",
+    eyebrow: "02 — 教学设计",
     title: "一堂课，先在纸上被认真设计",
     body: "从 syllabus 到课堂 PPT，再到学生手里的材料包，每一页都围绕同一个问题组织：学生会在哪里产生真正的发现？",
     edition: "METC COURSE NOTES · 2026",
@@ -58,7 +58,7 @@ export const zh: HomepageCopy = {
     demoCta: "进入课程大纲图书馆"
   },
   activities: {
-    eyebrow: "03 — Classroom Activities / 课堂活动",
+    eyebrow: "03 — 课堂活动",
     title: "知识不是被展示，而是在桌面上发生",
     body: "教学者和学生围在同一张桌子边。每一次讨论、每一个歪掉的模型、每一轮重新测试，都是课堂真正的内容。",
     photoCaption: "Bridge Lab · 结构设计工作坊 · 2026",
@@ -71,7 +71,7 @@ export const zh: HomepageCopy = {
     demoCta: "进入成果展览"
   },
   voices: {
-    eyebrow: "04 — Student Voices / 听 TA 们说",
+    eyebrow: "04 — 听 TA 们说",
     title: "一次课堂以后，他们把什么带走？",
     leadQuote: "我以前觉得工程就是把正确答案做出来。后来才发现，模型倒下去的时候，我们才真的开始思考。",
     leadName: "林同学",
