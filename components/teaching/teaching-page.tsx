@@ -13,7 +13,7 @@ import { PptPreview } from "./ppt-preview";
 const LANGUAGE_STORAGE_KEY = "metc-language";
 
 export function TeachingPage() {
-  const [language, setLanguage] = useState<Language>("zh");
+  const [language, setLanguage] = useState<Language>("en");
   const [languageReady, setLanguageReady] = useState(false);
   const [course, setCourse] = useState<Course | null>(null);
   const [bookPhase, setBookPhase] = useState<"opening" | "open" | "closing">("opening");
@@ -21,7 +21,7 @@ export function TeachingPage() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [showEntryFlash, setShowEntryFlash] = useState(false);
 
-  useEffect(() => { const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY); setLanguage(saved === "zh" || saved === "en" ? saved : (window.navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en")); setLanguageReady(true); }, []);
+  useEffect(() => { const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY); setLanguage(saved === "zh" || saved === "en" ? saved : "en"); setLanguageReady(true); }, []);
   useEffect(() => {
     if (window.sessionStorage.getItem("metc-library-entry") !== "flash") return;
     window.sessionStorage.removeItem("metc-library-entry");

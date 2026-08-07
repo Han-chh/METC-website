@@ -15,7 +15,7 @@ const LANGUAGE_STORAGE_KEY = "metc-language";
 
 export function MetcHomePage() {
   const router = useRouter();
-  const [language, setLanguage] = useState<Language>("zh");
+  const [language, setLanguage] = useState<Language>("en");
   const [languageReady, setLanguageReady] = useState(false);
   const [toastVisible, setToastVisible] = useState(false);
   const [libraryTransition, setLibraryTransition] = useState(false);
@@ -27,7 +27,7 @@ export function MetcHomePage() {
     if (savedLanguage === "zh" || savedLanguage === "en") {
       setLanguage(savedLanguage);
     } else {
-      setLanguage(window.navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
+      setLanguage("en");
     }
     setLanguageReady(true);
   }, []);

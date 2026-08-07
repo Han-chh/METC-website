@@ -98,7 +98,7 @@ function FeedbackViewer({ feedback, index, language, onClose, onPrevious, onNext
 }
 
 export function VoicesPage() {
-  const [language, setLanguage] = useState<Language>("zh");
+  const [language, setLanguage] = useState<Language>("en");
   const [languageReady, setLanguageReady] = useState(false);
   const [viewedIds, setViewedIds] = useState<Set<string>>(() => new Set());
   const [selectedFeedbackId, setSelectedFeedbackId] = useState<string | null>(null);
@@ -110,7 +110,7 @@ export function VoicesPage() {
 
   useEffect(() => {
     const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    setLanguage(saved === "zh" || saved === "en" ? saved : window.navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en");
+    setLanguage(saved === "zh" || saved === "en" ? saved : "en");
     setViewedIds(readViewedFeedbackIds());
     setLanguageReady(true);
   }, []);

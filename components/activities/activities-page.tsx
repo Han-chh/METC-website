@@ -145,7 +145,7 @@ function PhotoLightbox({ album, photoIndex, language, onClose, onPrevious, onNex
 }
 
 export function ActivitiesPage() {
-  const [language, setLanguage] = useState<Language>("zh");
+  const [language, setLanguage] = useState<Language>("en");
   const [languageReady, setLanguageReady] = useState(false);
   const [selectedAlbum, setSelectedAlbum] = useState<ActivityAlbum | null>(null);
   const [albumPhase, setAlbumPhase] = useState<"opening" | "open" | "closing">("opening");
@@ -155,7 +155,7 @@ export function ActivitiesPage() {
   const photoTriggerRef = useRef<HTMLButtonElement | null>(null);
   const lightboxCloseRef = useRef<HTMLButtonElement | null>(null);
 
-  useEffect(() => { const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY); setLanguage(saved === "zh" || saved === "en" ? saved : (window.navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en")); setLanguageReady(true); }, []);
+  useEffect(() => { const saved = window.localStorage.getItem(LANGUAGE_STORAGE_KEY); setLanguage(saved === "zh" || saved === "en" ? saved : "en"); setLanguageReady(true); }, []);
   useEffect(() => { if (!languageReady) return; document.documentElement.lang = language === "zh" ? "zh-CN" : "en"; window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language); }, [language, languageReady]);
   useEffect(() => { if (window.sessionStorage.getItem("metc-gallery-entry") !== "flash") return; window.sessionStorage.removeItem("metc-gallery-entry"); setShowEntryFlash(true); const timer = window.setTimeout(() => setShowEntryFlash(false), 760); return () => window.clearTimeout(timer); }, []);
   useEffect(() => { if (selectedPhotoIndex === null) return; lightboxCloseRef.current?.focus(); }, [selectedPhotoIndex]);
