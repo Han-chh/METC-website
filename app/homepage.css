@@ -206,7 +206,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-graphic-set { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 .hero-illustration { position: absolute; overflow: visible; animation: graphicFloat 7s ease-in-out infinite alternate; filter: drop-shadow(0 10px 8px rgba(25,55,47,.08)); }
 .hero-line-texture { filter: none; opacity: .75; }
-.hero-line-texture-main { top: 35%; left: 53%; width: min(280px, 22vw); animation-delay: 1.7s; }
+.hero-bridge-lab { top: 34%; left: 53%; width: min(280px, 22vw); animation-delay: 1.7s; }
 .hero-line-texture-side { top: 42%; right: 5%; width: min(180px, 15vw); animation-delay: 2.8s; }
 .hero-note-strip { top: 17%; left: 48%; width: min(246px, 20vw); animation-delay: .6s; }
 .hero-books { top: 17%; right: 4%; width: min(300px, 25vw); }
@@ -214,6 +214,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-economy { bottom: 9%; left: 43%; width: min(220px, 18vw); animation-delay: 2.3s; }
 .hero-supplies { bottom: 6%; left: 7%; width: min(300px, 24vw); animation-delay: 3s; }
 .hero-illustration .school-shadow { fill: none; stroke: rgba(25,55,47,.18); stroke-width: 3; stroke-linecap: round; }
+.hero-illustration .bridge-support { stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; }.hero-illustration .bridge-support-blue { fill: #9fcede; }.hero-illustration .bridge-support-coral { fill: #f1ab99; }.hero-illustration .bridge-paper { fill: #fffaf0; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }.hero-illustration .bridge-fold { fill: none; stroke: rgba(25,55,47,.45); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }.hero-illustration .bridge-measure, .hero-illustration .bridge-measure-tick { fill: none; stroke: rgba(25,55,47,.32); stroke-width: 1.5; stroke-linecap: round; }.hero-illustration .bridge-load { fill: #f3c84f; stroke: var(--ink); stroke-width: 2.5; }.hero-illustration .bridge-force, .hero-illustration .bridge-force-head { fill: none; stroke: #e8785d; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }.hero-illustration .bridge-dash { fill: none; stroke: #e8785d; stroke-width: 1.7; stroke-dasharray: 2 4; stroke-linecap: round; }.hero-illustration .bridge-caption { fill: rgba(25,55,47,.68); font-family: var(--accent); font-size: 8px; font-weight: 700; letter-spacing: .08em; }
 .hero-illustration .texture-line, .hero-illustration .texture-arc, .hero-illustration .texture-tick { fill: none; stroke: rgba(25,55,47,.28); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }.hero-illustration .texture-line-soft { stroke: rgba(142,189,208,.72); }.hero-illustration .texture-line-strong { stroke: rgba(25,55,47,.42); }.hero-illustration .texture-line-dashed { stroke-dasharray: 3 6; }.hero-illustration .texture-arc { stroke: rgba(243,200,79,.7); stroke-dasharray: 2 5; }.hero-illustration .texture-dot { fill: #8ebdd0; stroke: rgba(25,55,47,.48); stroke-width: 1.2; }.hero-illustration .texture-dot-coral { fill: var(--coral); }
 .hero-illustration .book-cover { stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
 .hero-illustration .book-cover-blue { fill: #9fcede; }.hero-illustration .book-cover-coral { fill: #f1ab99; }
@@ -499,7 +500,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .footer-inner { padding-top: 76px; }.footer-nav { margin-top: 56px; padding-bottom: 40px; }
 }
 
-@media (max-width: 1180px) and (min-width: 761px) { .hero-books { right: 7%; width: min(250px, 26vw); } .hero-note-strip { left: 47%; width: min(190px, 20vw); } .hero-line-texture-main { left: 52%; width: min(210px, 22vw); } .hero-line-texture-side { right: 4%; width: min(140px, 15vw); } .hero-optics { left: 48%; width: min(160px, 16vw); } .hero-economy { left: 42%; width: min(180px, 18vw); } .hero-supplies { width: min(230px, 24vw); } }
+@media (max-width: 1180px) and (min-width: 761px) { .hero-books { right: 7%; width: min(250px, 26vw); } .hero-note-strip { left: 47%; width: min(190px, 20vw); } .hero-bridge-lab { left: 52%; width: min(210px, 22vw); } .hero-line-texture-side { right: 4%; width: min(140px, 15vw); } .hero-optics { left: 48%; width: min(160px, 16vw); } .hero-economy { left: 42%; width: min(180px, 18vw); } .hero-supplies { width: min(230px, 24vw); } }
 
 /* Mobile */
 @media (max-width: 760px) {
