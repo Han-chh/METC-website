@@ -126,6 +126,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
   letter-spacing: 0.095em;
   text-transform: uppercase;
 }
+/* The four numbered sections begin with an unmistakable coral chapter heading.
+   It is intentionally at least as prominent as the statement beneath it. */
+.explore-section .section-eyebrow,
+.teaching-section .section-eyebrow,
+.activity-section .section-eyebrow,
+.voices-section .section-eyebrow {
+  margin-bottom: 26px;
+  font-family: var(--display);
+  font-size: clamp(2.45rem, 11.5vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+  text-transform: none;
+}
 .section-title {
   max-width: 900px;
   margin: 0;
@@ -631,6 +645,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   /* Keep the main section titles as visible anchors.  Their scale now matches the
      curriculum-library title, while the single-line rule preserves the new compact rhythm. */
   .section-title { max-width: none; font-size: clamp(2.35rem, 3.15vw, 3.15rem); line-height: 1.08; white-space: nowrap; }
+  .explore-section .section-eyebrow, .teaching-section .section-eyebrow, .activity-section .section-eyebrow, .voices-section .section-eyebrow { font-size: clamp(2.5rem, 3.28vw, 3.3rem); }
   .hero-title-wrap h1 { max-width: none; font-size: clamp(2.2rem, 3.35vw, 3.55rem); line-height: 1.08; white-space: nowrap; }
   .hero-title-wrap h1 span { display: inline; margin-left: .16em; }
   .mission-statement p { max-width: none; font-size: clamp(1.45rem, 2.15vw, 2.25rem); }
