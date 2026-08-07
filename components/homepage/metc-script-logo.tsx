@@ -44,8 +44,16 @@ export function MetcScriptLogo() {
         <circle className="logo-particle logo-particle-a" cx="83" cy="31" r="2" />
         <circle className="logo-particle logo-particle-b" cx="285" cy="26" r="1.5" />
         <circle className="logo-particle logo-particle-c" cx="526" cy="33" r="1.8" />
+        <circle className="logo-particle logo-particle-d" cx="169" cy="19" r="1.1" />
+        <circle className="logo-particle logo-particle-e" cx="227" cy="161" r="1.9" />
+        <circle className="logo-particle logo-particle-f" cx="348" cy="19" r="1.2" />
+        <circle className="logo-particle logo-particle-g" cx="413" cy="164" r="1.5" />
+        <circle className="logo-particle logo-particle-h" cx="601" cy="24" r="1.3" />
+        <circle className="logo-particle logo-particle-i" cx="683" cy="145" r="1.8" />
+        <circle className="logo-particle logo-particle-j" cx="705" cy="72" r="1" />
         <path className="logo-meteor logo-meteor-a" d="M461 22 L505 39" />
         <path className="logo-meteor logo-meteor-b" d="M580 160 L614 143" />
+        <path className="logo-meteor logo-meteor-c" d="M115 168 L149 151" />
       </g>
     </svg>
   );

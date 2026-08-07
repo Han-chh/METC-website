@@ -12,12 +12,18 @@ export function HeroSection({ language, onAnchorClick }: HeroSectionProps) {
 
   return (
     <section className="hero-section" id="top">
+      <div className="hero-color-wash" aria-hidden="true" />
       <div className="hero-grid" aria-hidden="true" />
       <div className="hero-particle-field" aria-hidden="true">
         <i className="hero-particle particle-a" /><i className="hero-particle particle-b" />
         <i className="hero-particle particle-c" /><i className="hero-particle particle-d" />
         <i className="hero-particle particle-e" /><i className="hero-particle particle-f" />
+        <i className="hero-particle particle-g" /><i className="hero-particle particle-h" />
+        <i className="hero-particle particle-i" /><i className="hero-particle particle-j" />
+        <i className="hero-particle particle-k" /><i className="hero-particle particle-l" />
+        <i className="hero-particle particle-m" /><i className="hero-particle particle-n" />
         <i className="shooting-star star-one" /><i className="shooting-star star-two" />
+        <i className="shooting-star star-three" />
       </div>
       <svg className="hero-orbit" viewBox="0 0 900 520" aria-hidden="true">
         <path d="M42 364 C238 474 564 444 814 205" />
