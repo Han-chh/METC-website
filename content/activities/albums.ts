@@ -14,8 +14,8 @@ const schoolNames: Record<string, LocalizedText> = {
 
 const albumTitles: Record<string, LocalizedText> = {
   "school-1a60436e": {
-    zh: "城市绿洲课程活动（2026-S2）",
-    en: "Green Oasis School Activities (2026-S2)"
+    zh: "城市绿洲（2026-S2）",
+    en: "Green Oasis School (2026-S2)"
   }
 };
 
@@ -24,10 +24,7 @@ export function localizedSchoolName(albumId: string, fallback: string): Localize
 }
 
 function localizedAlbumTitle(album: (typeof resourceAlbums)[number]): LocalizedText {
-  return albumTitles[album.id] ?? {
-    zh: `${localizedSchoolName(album.id, album.school).zh}课程活动`,
-    en: `${localizedSchoolName(album.id, album.school).en} Activities`
-  };
+  return albumTitles[album.id] ?? localizedSchoolName(album.id, album.school);
 }
 
 function toPhoto(photo: (typeof resourceAlbums)[number]["photos"][number], title: LocalizedText): GalleryPhoto {
