@@ -1,9 +1,20 @@
-.next
-node_modules
-out
-dist
-coverage
+# Local systems and tooling
+.DS_Store
+.playwright-cli/
+*.tsbuildinfo
+~$*.doc*
+~$*.ppt*
+
+# Install and build output
+.next/
+node_modules/
+out/
+dist/
+coverage/
+output/
 *.log
-pnpm-lock.yaml
+
+# This repository uses pnpm; its lockfile is tracked.
+# Avoid introducing lockfiles from other package managers.
 yarn.lock
 package-lock.json

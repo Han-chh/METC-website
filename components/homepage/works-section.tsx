@@ -106,7 +106,6 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
               <button type="button" className="button button-coral section-entry-button" onClick={onGalleryEnter}>
                 {activities.demoCta}<span>↗</span>
               </button>
-              <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
             </div>
           </div>
         </div>
