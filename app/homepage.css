@@ -962,3 +962,40 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-books { top: 22%; width: min(220px, 17.2vw); }
   .hero-bridge-lab { top: 61%; left: 68%; width: min(185px, 14.5vw); }
 }
+
+/* Navigation clarity: larger bilingual labels and an always-legible language
+   control make the header easy to scan at a glance. */
+@media (min-width: 761px) {
+  .header-inner { grid-template-columns: 174px 1fr 120px; }
+  .header-brand { gap: 10px; }
+  .header-brand-emblem { width: 36px; height: 36px; flex-basis: 36px; }
+  .header-brand-mark { font-size: 1.52rem; }
+  .header-brand-dot { width: 8px; height: 8px; }
+  .primary-nav { gap: clamp(18px, 2vw, 34px); }
+  .primary-nav a { padding: 13px 17px; }
+  .primary-nav span { font-size: 1.14rem; font-weight: 650; }
+}
+.language-toggle {
+  min-width: 110px;
+  min-height: 42px;
+  padding: 4px 5px;
+  gap: 3px;
+  border: 1px solid var(--ink-deep);
+  border-radius: 999px;
+  background: var(--ink-deep);
+  color: rgba(255, 250, 240, .82);
+  box-shadow: 0 4px 10px rgba(16,37,31,.12);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .035em;
+}
+.language-toggle span { min-width: 37px; padding: 5px 7px; border-radius: 999px; line-height: 1; }
+.language-toggle i { width: 1px; height: 18px; background: rgba(255,250,240,.32); }
+.language-toggle .active { background: var(--sun); color: var(--ink-deep); }
+.language-toggle:hover, .language-toggle:focus-visible { background: var(--ink); outline: 2px solid var(--sun); outline-offset: 3px; }
+
+@media (max-width: 760px) {
+  .header-brand { gap: 8px; }.header-brand-emblem { width: 29px; height: 29px; flex-basis: 29px; }.header-brand-mark { font-size: 1.28rem; }
+  .primary-nav { gap: 5px; }.primary-nav a { padding: 7px 10px; }.primary-nav span { font-size: .93rem; }
+  .language-toggle { min-width: 104px; min-height: 36px; padding: 3px 4px; font-size: .72rem; }.language-toggle span { min-width: 34px; padding: 5px 6px; }.language-toggle i { height: 15px; }
+}
