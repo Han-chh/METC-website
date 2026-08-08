@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState } from "react";
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
 import { resourceAlbums } from "../../src/data/resources";
@@ -9,14 +12,35 @@ type ActivitySectionProps = {
 };
 
 const BASE_PATH = "/METC-website";
-const homepageFeaturePhoto = resourceAlbums
-  .flatMap((album) => album.photos.filter((photo) => photo.id === album.homepageFeaturePhotoId))
-  .at(0);
+const homepageFeaturePhotos = resourceAlbums.flatMap((album) => {
+  const photo = album.photos.find((item) => item.id === album.homepageFeaturePhotoId);
+  return photo ? [{ ...photo, school: album.school }] : [];
+});
+
+const fallbackFeaturePhoto = {
+  src: `${BASE_PATH}/images/metc-classroom-workshop.png`,
+  alt: "METC classroom activity",
+  school: "METC"
+};
 
 export function ActivitySection({ language, onNotice, onGalleryEnter }: ActivitySectionProps) {
   const { activities } = homepageCopy[language];
-  const photoSrc = homepageFeaturePhoto?.src ?? `${BASE_PATH}/images/metc-classroom-workshop.png`;
-  const photoAlt = language === "zh" ? "上步小学学生课堂活动" : "Students taking part in a Shangbu Primary School classroom activity";
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const featurePhotos = homepageFeaturePhotos.length ? homepageFeaturePhotos : [fallbackFeaturePhoto];
+  const activePhoto = featurePhotos[activePhotoIndex] ?? featurePhotos[0];
+  const totalPhotos = featurePhotos.length;
+  const photoSource = language === "zh" ? `${activePhoto.school} · 课堂活动` : `${activePhoto.school} · Classroom activity`;
+  const previousPhoto = () => setActivePhotoIndex((index) => (index - 1 + totalPhotos) % totalPhotos);
+  const nextPhoto = () => setActivePhotoIndex((index) => (index + 1) % totalPhotos);
+
+  const finishSwipe = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null) return;
+    const offset = event.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(offset) < 36) return;
+    offset > 0 ? previousPhoto() : nextPhoto();
+  };
 
   return (
     <section className="activity-section section-pad" id="activities">
@@ -32,12 +56,25 @@ export function ActivitySection({ language, onNotice, onGalleryEnter }: Activity
           </div>
         </div>
 
-        <figure className="classroom-stage reveal">
-          <div className="classroom-photo-wrap">
-            <img src={photoSrc} alt={photoAlt} />
-            <span className="photo-counter">01 / 04</span>
+        <figure className="classroom-stage reveal" aria-roledescription="carousel" aria-label={language === "zh" ? "课堂活动精选照片" : "Featured classroom photographs"}>
+          <div
+            className="classroom-photo-wrap"
+            tabIndex={0}
+            onTouchStart={(event) => { touchStartX.current = event.touches[0].clientX; }}
+            onTouchEnd={finishSwipe}
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft") previousPhoto();
+              if (event.key === "ArrowRight") nextPhoto();
+            }}
+          >
+            <img key={activePhoto.src} src={activePhoto.src} alt={activePhoto.alt} />
+            <span className="photo-counter">{String(activePhotoIndex + 1).padStart(2, "0")} / {String(totalPhotos).padStart(2, "0")}</span>
+            {totalPhotos > 1 ? <>
+              <button className="classroom-carousel-control classroom-carousel-previous" type="button" onClick={previousPhoto} aria-label={language === "zh" ? "上一张照片" : "Previous photo"}>←</button>
+              <button className="classroom-carousel-control classroom-carousel-next" type="button" onClick={nextPhoto} aria-label={language === "zh" ? "下一张照片" : "Next photo"}>→</button>
+            </> : null}
           </div>
-          <figcaption>{activities.photoCaption}</figcaption>
+          <figcaption>{photoSource}</figcaption>
           <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
           <svg className="photo-arrow" viewBox="0 0 170 90" aria-hidden="true"><path d="M7 72 C65 15 111 17 157 48 M143 35 L158 48 L143 59" /></svg>
         </figure>

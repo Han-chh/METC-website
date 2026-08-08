@@ -409,11 +409,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-action-copy { align-self: end; }
 .section-entry-button { margin-top: 24px; }
 .classroom-stage { position: relative; margin: clamp(46px,5vw,64px) 0 0; }
-.classroom-photo-wrap { position: relative; overflow: hidden; border-radius: 3px; }
+.classroom-photo-wrap { position: relative; overflow: hidden; border-radius: 3px; outline: none; }
 .classroom-photo-wrap::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); pointer-events: none; }
-.classroom-photo-wrap img { display: block; width: 100%; aspect-ratio: 16/7; object-fit: cover; object-position: center; filter: saturate(.85) contrast(1.03); transition: transform 1.1s cubic-bezier(.2,.7,.2,1); }
+.classroom-photo-wrap img { display: block; width: 100%; aspect-ratio: 16/7; object-fit: cover; object-position: center; filter: saturate(.85) contrast(1.03); transition: transform 1.1s cubic-bezier(.2,.7,.2,1); animation: activityPhotoChange 360ms cubic-bezier(.2,.72,.22,1); }
 .classroom-stage:hover img { transform: scale(1.025); }
 .photo-counter { position: absolute; right: 18px; top: 18px; padding: 7px 10px; background: rgba(16,37,31,.82); color: white; font-size: .64rem; letter-spacing: .1em; }
+.classroom-carousel-control { position: absolute; z-index: 2; top: 50%; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: rgba(16,37,31,.7); color: white; cursor: pointer; font-size: 1.35rem; line-height: 1; opacity: .78; transform: translateY(-50%); transition: opacity 180ms ease, background 180ms ease, transform 180ms ease; }.classroom-carousel-control:hover, .classroom-carousel-control:focus-visible { background: var(--coral); opacity: 1; outline: 2px solid var(--sun); outline-offset: 3px; }.classroom-carousel-previous { left: 18px; }.classroom-carousel-next { right: 18px; }.classroom-photo-wrap:focus-visible { outline: 3px solid var(--sun); outline-offset: 4px; }
 .classroom-stage figcaption { margin-top: 16px; font-size: .72rem; letter-spacing: .06em; color: rgba(255,247,219,.6); }
 .photo-note { position: absolute; left: -15px; bottom: 9%; padding: 13px 18px; background: var(--sun); color: var(--ink-deep); font-family: var(--accent); font-size: 1rem; transform: rotate(-4deg); box-shadow: 0 14px 24px rgba(0,0,0,.2); }
 .photo-arrow { position: absolute; width: 170px; right: -54px; top: -52px; overflow: visible; }
@@ -494,6 +495,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @keyframes illustrationReveal { 0% { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateY(10px) scale(.96); } 20% { opacity: 1; } 100% { opacity: 1; clip-path: inset(0 0 0 0); transform: none; } }
 @keyframes heroEnter { to { opacity: 1; transform: none; } }
 @keyframes statementDialogIn { from { opacity: 0; transform: translateY(18px) scale(.975); } to { opacity: 1; transform: none; } }
+@keyframes activityPhotoChange { from { opacity: 0; transform: scale(1.025); } to { opacity: 1; transform: none; } }
 @keyframes laserOn { to { opacity: 1; } }
 @keyframes logoSpark { 20% { opacity: 1; transform: translate(0, 0); } 100% { opacity: 0; transform: translate(12px, -14px); } }
 @keyframes logoLightBloom { 50% { filter: drop-shadow(0 0 14px rgba(184, 229, 255, .44)) drop-shadow(0 0 26px rgba(255, 201, 94, .3)); } }
@@ -615,6 +617,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .classroom-stage { margin-top: 42px; margin-left: -16px; margin-right: -16px; }
   .classroom-photo-wrap { border-radius: 0; }
   .classroom-photo-wrap img { aspect-ratio: 4/5; object-position: 53% center; }
+  .classroom-carousel-control { width: 38px; height: 38px; }.classroom-carousel-previous { left: 12px; }.classroom-carousel-next { right: 12px; }
   .classroom-stage figcaption { padding: 0 16px; }
   .photo-note { left: 5px; bottom: 12%; font-size: .82rem; }
   .photo-arrow { display: none; }

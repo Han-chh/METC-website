@@ -580,7 +580,8 @@
         "height": 1707,
         "size": "portrait"
       }
-    ]
+    ],
+    "homepageFeaturePhotoId": "school-b3dc235f-041"
   },
   {
     "id": "school-025a2992",
@@ -726,7 +727,8 @@
         "height": 1276,
         "size": "standard"
       }
-    ]
+    ],
+    "homepageFeaturePhotoId": "school-025a2992-001"
   },
   {
     "id": "school-1a60436e",
@@ -773,7 +775,8 @@
         "height": 1279,
         "size": "standard"
       }
-    ]
+    ],
+    "homepageFeaturePhotoId": "school-1a60436e-001"
   },
   {
     "id": "school-760d99a4",
@@ -847,6 +850,7 @@
         "height": 4032,
         "size": "portrait"
       }
-    ]
+    ],
+    "homepageFeaturePhotoId": "school-760d99a4-004"
   }
 ]
