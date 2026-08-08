@@ -102,14 +102,16 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
           <h2 className="section-title preserve-lines">{activities.title}</h2>
           <div className="section-action-copy">
             <p className="section-body">{activities.body}</p>
-            <button type="button" className="button button-coral section-entry-button" onClick={onGalleryEnter}>
-              {activities.demoCta}<span>↗</span>
-            </button>
+            <div className="activity-entry-actions">
+              <button type="button" className="button button-coral section-entry-button" onClick={onGalleryEnter}>
+                {activities.demoCta}<span>↗</span>
+              </button>
+              <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
+            </div>
           </div>
         </div>
 
         <figure ref={carouselRef} className="classroom-stage reveal" aria-roledescription="carousel" aria-label={language === "zh" ? "课堂活动精选照片" : "Featured classroom photographs"}>
-          <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
           <div
             className="classroom-photo-wrap"
             tabIndex={0}

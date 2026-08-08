@@ -435,6 +435,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .activity-intro .section-body { color: rgba(255,247,219,.68); margin: 0; }
 .section-action-copy { align-self: end; }
 .section-entry-button { margin-top: 24px; }
+.activity-entry-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 24px; }
+.activity-entry-actions .section-entry-button { margin-top: 0; }
+.activity-entry-actions .photo-note { margin: 0; }
 .classroom-stage { position: relative; margin: clamp(46px,5vw,64px) 0 0; }
 .classroom-photo-wrap { position: relative; aspect-ratio: 16/7; overflow: hidden; border-radius: 3px; outline: none; }
 .classroom-photo-wrap::after { position: absolute; z-index: 3; content: ""; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.18); pointer-events: none; }
@@ -635,7 +638,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .classroom-photo { object-position: 53% center; }
   .classroom-carousel-control { width: 38px; height: 38px; }.classroom-carousel-previous { left: 12px; }.classroom-carousel-next { right: 12px; }
   .classroom-stage figcaption { padding: 0 16px; }
-  .photo-note { max-width: calc(100% - 26px); margin: 0 0 14px 5px; font-size: .82rem; }
+  .activity-entry-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .activity-entry-actions .photo-note { max-width: calc(100% - 26px); margin-left: 5px; font-size: .82rem; }
   .photo-arrow { display: none; }
   .voices-heading { grid-template-columns: 1fr; }
   .voices-heading-main { display: block; }
@@ -695,6 +699,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .section-intro, .activity-intro { grid-template-columns: 1fr; gap: 0; }
   .section-intro .section-title, .activity-intro .section-title { grid-column: 1 / -1; }
   .section-intro .section-body, .activity-intro .section-action-copy { max-width: 680px; margin-top: 20px; }
+  .activity-intro .section-action-copy { max-width: none; }
   .teaching-intro { max-width: none; }
   .voices-heading { grid-template-columns: 1fr; gap: 0; }
   .voices-heading .section-eyebrow { margin-top: 0; }
