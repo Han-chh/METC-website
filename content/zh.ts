@@ -32,21 +32,24 @@ export const zh: HomepageCopy = {
       { number: "04", title: "Connection", detail: "让同伴、学科与真实世界相遇" }
     ],
     community: {
+      label: "社团联系",
       joinLabel: "加入我们",
       contactLabel: "联系我们",
       join: {
+        eyebrow: "微信",
         title: "加入 METC",
         body: "扫描微信二维码，与社团取得联系。",
         qrAlt: "METC 微信二维码",
         qrUnavailable: "社团联系二维码即将在这里提供。"
       },
       contact: {
+        eyebrow: "联系",
         title: "联系 METC",
         body: "如需咨询 METC 相关事项，欢迎通过邮件联系学生管理团队成员。",
         officers: [
-          { role: "社长", name: "Gloria Wu", email: "s24634.wu@stu.scie.com.cn" },
-          { role: "副社长", name: "Leo Zhao", email: "s23178.zhao@stu.scie.com.cn" },
-          { role: "副社长", name: "Sheryl Xu", email: "s24670.xu@stu.scie.com.cn" }
+          { role: "Leader（社长）", name: "Gloria Wu", email: "s24634.wu@stu.scie.com.cn" },
+          { role: "Vice Leader（副社长）", name: "Leo Zhao", email: "s23178.zhao@stu.scie.com.cn" },
+          { role: "Vice Leader（副社长）", name: "Sheryl Xu", email: "s24670.xu@stu.scie.com.cn" }
         ]
       },
       close: "关闭"

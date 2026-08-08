@@ -39,7 +39,7 @@ export function CommunityActions({ language }: { language: Language }) {
 
   return (
     <>
-      <div className="explore-community-actions" aria-label="Community links">
+      <div className="explore-community-actions" aria-label={community.label}>
         <button type="button" onClick={(event) => openDialog("join", event.currentTarget)}>{community.joinLabel}<span aria-hidden="true">↗</span></button>
         <button type="button" onClick={(event) => openDialog("contact", event.currentTarget)}>{community.contactLabel}<span aria-hidden="true">↗</span></button>
       </div>
@@ -51,7 +51,7 @@ export function CommunityActions({ language }: { language: Language }) {
             <button className="community-dialog-close" type="button" onClick={closeDialog} ref={closeRef} aria-label={community.close}>×</button>
             {activeAction === "join" ? (
               <>
-                <p className="section-eyebrow">METC · WeChat</p>
+                <p className="section-eyebrow">METC · {community.join.eyebrow}</p>
                 <h2 id="community-dialog-title">{community.join.title}</h2>
                 <p>{community.join.body}</p>
                 <div className="join-qr-frame">
@@ -62,7 +62,7 @@ export function CommunityActions({ language }: { language: Language }) {
               </>
             ) : (
               <>
-                <p className="section-eyebrow">METC · Contact</p>
+                <p className="section-eyebrow">METC · {community.contact.eyebrow}</p>
                 <h2 id="community-dialog-title">{community.contact.title}</h2>
                 <p>{community.contact.body}</p>
                 <ul className="community-contact-list">

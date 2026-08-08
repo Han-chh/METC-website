@@ -32,21 +32,24 @@ export const en: HomepageCopy = {
       { number: "04", title: "Connection", detail: "Bring peers, disciplines, and the real world together" }
     ],
     community: {
+      label: "Community links",
       joinLabel: "Join us",
       contactLabel: "Contact us",
       join: {
+        eyebrow: "WeChat",
         title: "Join METC",
         body: "Scan the WeChat QR code to connect with the club.",
         qrAlt: "METC WeChat QR code",
         qrUnavailable: "The club contact code will be available here soon."
       },
       contact: {
+        eyebrow: "Contact",
         title: "Contact METC",
         body: "For questions about METC, please write to a member of the student leadership team.",
         officers: [
-          { role: "President", name: "Gloria Wu", email: "s24634.wu@stu.scie.com.cn" },
-          { role: "Vice President", name: "Leo Zhao", email: "s23178.zhao@stu.scie.com.cn" },
-          { role: "Vice President", name: "Sheryl Xu", email: "s24670.xu@stu.scie.com.cn" }
+          { role: "Leader", name: "Gloria Wu", email: "s24634.wu@stu.scie.com.cn" },
+          { role: "Vice Leader", name: "Leo Zhao", email: "s23178.zhao@stu.scie.com.cn" },
+          { role: "Vice Leader", name: "Sheryl Xu", email: "s24670.xu@stu.scie.com.cn" }
         ]
       },
       close: "Close"

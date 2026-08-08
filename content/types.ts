@@ -22,10 +22,12 @@ export type HomepageCopy = {
     principle: string;
     steps: Array<{ number: string; title: string; detail: string }>;
     community: {
+      label: string;
       joinLabel: string;
       contactLabel: string;
-      join: { title: string; body: string; qrAlt: string; qrUnavailable: string };
+      join: { eyebrow: string; title: string; body: string; qrAlt: string; qrUnavailable: string };
       contact: {
+        eyebrow: string;
         title: string;
         body: string;
         officers: Array<{ role: string; name: string; email: string }>;

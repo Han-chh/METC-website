@@ -11,7 +11,10 @@ export function ExploreSection({ language }: ExploreSectionProps) {
     <section className="explore-section section-pad" id="explore">
       <div className="section-shell">
         <div className="section-intro reveal">
-          <p className="section-eyebrow">{explore.eyebrow}</p>
+          <div className="explore-topline">
+            <p className="section-eyebrow">{explore.eyebrow}</p>
+            <CommunityActions language={language} />
+          </div>
           <nav className="explore-jumps" aria-label="Explore METC sections">
             {[
               { id: "teaching", number: "01", label: language === "zh" ? "教学设计" : "Teaching Design" },
@@ -23,9 +26,10 @@ export function ExploreSection({ language }: ExploreSectionProps) {
               </a>
             ))}
           </nav>
-          <h2 className="section-title preserve-lines">{explore.title}</h2>
-          <p className="section-body">{explore.body}</p>
-          <CommunityActions language={language} />
+          <div className="explore-copy">
+            <h2 className="section-title preserve-lines">{explore.title}</h2>
+            <p className="section-body">{explore.body}</p>
+          </div>
         </div>
 
         <div className="mission-spread reveal">
