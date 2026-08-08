@@ -13,15 +13,24 @@ type ActivitySectionProps = {
 };
 
 const BASE_PATH = "/METC-website";
+const activityEntranceFocus: Record<string, string> = {
+  "school-760d99a4-004": "50% 75%"
+};
+
 const homepageFeaturePhotos = resourceAlbums.flatMap((album) => {
   const photo = album.photos.find((item) => item.id === album.homepageFeaturePhotoId);
-  return photo ? [{ ...photo, school: localizedSchoolName(album.id, album.school) }] : [];
+  return photo ? [{
+    ...photo,
+    school: localizedSchoolName(album.id, album.school),
+    objectPosition: activityEntranceFocus[photo.id] ?? "center"
+  }] : [];
 });
 
 const fallbackFeaturePhoto = {
   src: `${BASE_PATH}/images/metc-classroom-workshop.png`,
   alt: "METC classroom activity",
-  school: { zh: "METC", en: "METC" }
+  school: { zh: "METC", en: "METC" },
+  objectPosition: "center"
 };
 
 export function ActivitySection({ language, onNotice, onGalleryEnter }: ActivitySectionProps) {
@@ -70,7 +79,7 @@ export function ActivitySection({ language, onNotice, onGalleryEnter }: Activity
               if (event.key === "ArrowRight") nextPhoto();
             }}
           >
-            <img key={activePhoto.src} src={activePhoto.src} alt={activePhoto.alt} />
+            <img key={activePhoto.src} src={activePhoto.src} alt={activePhoto.alt} style={{ objectPosition: activePhoto.objectPosition }} />
             <span className="photo-counter">{String(activePhotoIndex + 1).padStart(2, "0")} / {String(totalPhotos).padStart(2, "0")}</span>
             {totalPhotos > 1 ? <>
               <button className="classroom-carousel-control classroom-carousel-previous" type="button" onClick={previousPhoto} aria-label={language === "zh" ? "上一张照片" : "Previous photo"}>←</button>
