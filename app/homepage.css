@@ -427,11 +427,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .objective-block { margin-top: 26px; max-width: 440px; }
 .objective-block span, .materials-list > span { font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; }
 .objective-block p { margin: 10px 0 0; color: var(--ink-soft); font-size: .92rem; }
-.bridge-sketch { position: relative; margin-top: 22px; }
-.bridge-sketch svg { width: 100%; }
-.bridge-sketch path { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.bridge-sketch .sketch-load { stroke: var(--coral); }
-.bridge-sketch > span { position: absolute; right: 9%; top: 0; font-family: var(--accent); color: var(--coral); transform: rotate(7deg); }
+.rocket-sketch { position: relative; margin-top: 16px; }
+.rocket-sketch svg { width: 100%; max-height: 168px; }
+.rocket-sketch path { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.rocket-sketch .sketch-liquid { fill: rgba(167,199,173,.72); stroke: none; }
+.rocket-sketch .sketch-pressure, .rocket-sketch .sketch-trajectory { stroke: var(--coral); }
+.rocket-sketch .sketch-bubble { fill: var(--chalk); stroke: var(--ink); stroke-width: 1.5; }
+.rocket-sketch > span { position: absolute; right: 6%; top: 20%; font-family: var(--accent); color: var(--coral); transform: rotate(-7deg); }
 .manual-rule { height: 1px; margin-bottom: 34px; background: var(--ink); }
 .materials-list { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; }
 .materials-list ul { margin: 0; padding: 0; list-style: none; font-size: .85rem; }

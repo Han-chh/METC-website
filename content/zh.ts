@@ -60,19 +60,19 @@ export const zh: HomepageCopy = {
     title: "一堂课，先在纸上被认真设计",
     body: "从 syllabus 到课堂 PPT，再到学生手里的材料包，每一页都围绕同一个问题组织：学生会在哪里产生真正的发现？",
     edition: "METC COURSE NOTES · 2026",
-    chapter: "UNIT 03 / STRUCTURE",
-    question: "一张纸，能承受多大的重量？",
+    chapter: "UNIT 08 / 气体压力与反作用力",
+    question: "小苏打和白醋，如何让瓶子飞起来？",
     objective: "Learning objective",
-    objectiveBody: "用三角形稳定性理解结构受力，并通过迭代模型验证设计。",
-    materials: "Materials",
-    materialItems: ["A4 paper × 6", "paper tape", "ruler", "test weights"],
+    objectiveBody: "通过安全的瓶子火箭，观察二氧化碳气压与牛顿第三定律如何共同推动火箭。",
+    materials: "材料",
+    materialItems: ["500ml 耐压塑料瓶 × 1", "白醋 · 50–100ml", "小苏打 · 不超过 2 勺", "厚纸巾或滤纸", "胶塞与细线", "护目镜与手套"],
     timeline: [
-      { time: "08 min", label: "观察与猜想" },
-      { time: "18 min", label: "第一次搭建" },
-      { time: "12 min", label: "压力测试" },
-      { time: "10 min", label: "复盘与重做" }
+      { time: "01", label: "向瓶内倒入白醋" },
+      { time: "02", label: "把小苏打包悬在瓶口" },
+      { time: "03", label: "密封瓶口、倒置并固定" },
+      { time: "04", label: "摇晃触发，退至 3 米外观察" }
     ],
-    note: "批注：不要先告诉他们三角形最稳定。让第一次倒塌替我们说话。",
+    note: "批注：密封前别让小苏打提前碰到醋。戴好护目镜，在安全线外观察。",
     demoCta: "进入课程大纲图书馆"
   },
   activities: {

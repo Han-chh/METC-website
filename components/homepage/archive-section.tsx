@@ -25,20 +25,25 @@ export function TeachingSection({ language, onLibraryEnter }: TeachingSectionPro
         <div className="course-manual reveal">
           <div className="manual-spine" aria-hidden="true" />
           <div className="manual-page manual-page-left">
-            <div className="manual-meta"><span>{teaching.edition}</span><span>p. 18</span></div>
+            <div className="manual-meta"><span>{teaching.edition}</span><span>p. 08</span></div>
             <p className="manual-chapter">{teaching.chapter}</p>
             <h3>{teaching.question}</h3>
             <div className="objective-block">
               <span>{teaching.objective}</span>
               <p>{teaching.objectiveBody}</p>
             </div>
-            <div className="bridge-sketch" aria-hidden="true">
-              <svg viewBox="0 0 440 150">
-                <path d="M22 125 L104 52 L186 125 L268 52 L350 125 L420 66" />
-                <path d="M22 125 H420 M104 52 L268 52 L420 66 M186 125 L350 125" />
-                <path className="sketch-load" d="M220 6 V42 M208 30 L220 43 L232 30" />
+            <div className="rocket-sketch" aria-hidden="true">
+              <svg viewBox="0 0 440 170">
+                <path d="M181 31h78v23c0 8 18 15 18 35v36c0 15-11 25-25 25h-64c-14 0-25-10-25-25V89c0-20 18-27 18-35z" />
+                <path d="M181 31h78v18h-78zM191 70h58M190 104h60" />
+                <path className="sketch-liquid" d="M169 111h102v16c0 12-9 19-20 19h-62c-11 0-20-7-20-19z" />
+                <path d="M197 150h46v10h-46z" />
+                <path className="sketch-pressure" d="M220 160v-30M208 142l12-13 12 13" />
+                <path className="sketch-bubble" d="M191 119c0-4 6-4 6 0s-6 4-6 0zm13-11c0-5 7-5 7 0s-7 5-7 0zm16 16c0-3 5-3 5 0s-5 3-5 0z" />
+                <path className="sketch-trajectory" d="M303 123c32-17 61-43 79-79" />
+                <path className="sketch-trajectory" d="m370 49 13-6-3 14" />
               </svg>
-              <span>load?</span>
+              <span>CO₂ pushes ↓</span>
             </div>
           </div>
 

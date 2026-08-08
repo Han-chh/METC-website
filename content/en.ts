@@ -60,19 +60,19 @@ export const en: HomepageCopy = {
     title: "A class is first designed with care on paper",
     body: "From syllabus to slides to the materials in each student's hands, every page is shaped around one question: where will a real discovery happen?",
     edition: "METC COURSE NOTES · 2026",
-    chapter: "UNIT 03 / STRUCTURE",
-    question: "How much weight can one sheet of paper hold?",
+    chapter: "UNIT 08 / GAS PRESSURE",
+    question: "How can baking soda and vinegar launch a bottle rocket?",
     objective: "Learning objective",
-    objectiveBody: "Understand structural forces through the stability of triangles, then test the idea through iterative models.",
+    objectiveBody: "Use a safe bottle rocket to observe how carbon-dioxide pressure and Newton's third law work together.",
     materials: "Materials",
-    materialItems: ["A4 paper × 6", "paper tape", "ruler", "test weights"],
+    materialItems: ["500 ml pressure-safe plastic bottle", "white vinegar · 50–100 ml", "baking soda · up to 2 scoops", "paper towel or filter paper", "rubber stopper and string", "goggles and gloves"],
     timeline: [
-      { time: "08 min", label: "Observe & predict" },
-      { time: "18 min", label: "First build" },
-      { time: "12 min", label: "Load test" },
-      { time: "10 min", label: "Reflect & rebuild" }
+      { time: "01", label: "Pour vinegar into the bottle" },
+      { time: "02", label: "Hang the baking-soda packet at the mouth" },
+      { time: "03", label: "Seal, invert, and secure the bottle" },
+      { time: "04", label: "Shake, stand 3 m back, observe launch" }
     ],
-    note: "Margin note: do not tell them triangles are strongest. Let the first collapse do the talking.",
+    note: "Margin note: keep the soda dry until the bottle is sealed. Goggles on; observe from the safety line.",
     demoCta: "Enter the Curriculum Library"
   },
   activities: {
