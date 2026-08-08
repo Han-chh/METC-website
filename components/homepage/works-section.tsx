@@ -109,6 +109,7 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
         </div>
 
         <figure ref={carouselRef} className="classroom-stage reveal" aria-roledescription="carousel" aria-label={language === "zh" ? "课堂活动精选照片" : "Featured classroom photographs"}>
+          <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
           <div
             className="classroom-photo-wrap"
             tabIndex={0}
@@ -130,7 +131,6 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
             </> : null}
           </div>
           <figcaption>{photoSource}</figcaption>
-          <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
           <svg className="photo-arrow" viewBox="0 0 170 90" aria-hidden="true"><path d="M7 72 C65 15 111 17 157 48 M143 35 L158 48 L143 59" /></svg>
         </figure>
       </div>
