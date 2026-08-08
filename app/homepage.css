@@ -1114,7 +1114,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* Give the two hero actions enough visual weight to occupy the lower part of
    the enlarged cover while retaining the primary/secondary hierarchy. */
 @media (min-width: 761px) {
-  .hero-actions { gap: 22px; }
-  .hero-actions .button { min-height: 58px; padding: 0 25px; gap: 28px; font-size: .92rem; }
-  .hero-actions .text-link { min-height: 58px; padding: 0; gap: 18px; font-size: .9rem; }
+  .hero-actions { gap: 18px; }
+  .hero-actions .button { min-height: 46px; padding: 0 20px; gap: 21px; font-size: .82rem; }
+  .hero-actions .text-link { min-height: 46px; padding: 0; gap: 16px; font-size: .82rem; }
 }
