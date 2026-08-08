@@ -6,18 +6,37 @@
     "en": "Physics: Light"
   },
   "school": "深圳实验小学",
-  "category": "物理",
+  "category": {
+    "zh": "物理",
+    "en": "Physics"
+  },
   "color": "blue",
   "icon": "light",
-  "summary": "通过观察、实验与绘图，探索光的传播、反射和色彩形成。",
-  "contains": [
-    "光的传播",
-    "反射实验",
-    "彩虹形成"
-  ],
+  "summary": {
+    "zh": "通过观察、实验与绘图，探索光的传播、反射和色彩形成。",
+    "en": "Through observation, experiments, and drawing, students explore how light travels, reflects, and creates colour."
+  },
+  "contains": {
+    "zh": [
+      "光的传播",
+      "反射实验",
+      "彩虹形成"
+    ],
+    "en": [
+      "Light propagation",
+      "Reflection experiments",
+      "Rainbow formation"
+    ]
+  },
   "hasSyllabus": true,
-  "syllabus": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%89%A9%E7%90%86-%E5%85%89/demonstration/syllabus.html",
-  "syllabusSource": "syllabus.docx",
+  "syllabus": {
+    "zh": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%89%A9%E7%90%86-%E5%85%89/demonstration/syllabus.zh.html",
+    "en": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%89%A9%E7%90%86-%E5%85%89/demonstration/syllabus.en.html"
+  },
+  "syllabusSource": {
+    "zh": "syllabus.docx",
+    "en": "syllabus.en.docx"
+  },
   "lessons": [
     {
       "id": "lesson1",

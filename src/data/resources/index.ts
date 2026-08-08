@@ -15,19 +15,29 @@ export type LocalizedCourseTitle = {
   en: string;
 };
 
+export type LocalizedCourseItems = {
+  zh: string[];
+  en: string[];
+};
+
+export type LocalizedResourcePath = {
+  zh: string | null;
+  en: string | null;
+};
+
 export type ResourceCourse = {
   id: string;
   catalog: string;
   title: LocalizedCourseTitle;
   school: string;
-  category: string;
+  category: LocalizedCourseTitle;
   color: "coral" | "blue" | "mint";
   icon: "market" | "light" | "spark";
-  summary: string;
-  contains: string[];
+  summary: LocalizedCourseTitle;
+  contains: LocalizedCourseItems;
   hasSyllabus: boolean;
-  syllabus: string | null;
-  syllabusSource: string | null;
+  syllabus: LocalizedResourcePath;
+  syllabusSource: LocalizedResourcePath;
   lessons: ResourceDeck[];
 };
 

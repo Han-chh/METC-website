@@ -36,6 +36,30 @@ def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
 
+def localized_text(value: object, fallback: str) -> dict[str, str]:
+    if isinstance(value, dict):
+        zh = value.get("zh", fallback)
+        return {"zh": str(zh), "en": str(value.get("en", zh))}
+    text = str(value) if value is not None else fallback
+    return {"zh": text, "en": text}
+
+
+def localized_list(value: object) -> dict[str, list[str]]:
+    if isinstance(value, dict):
+        zh = value.get("zh", [])
+        en = value.get("en", zh)
+        return {
+            "zh": [str(item) for item in zh] if isinstance(zh, list) else [],
+            "en": [str(item) for item in en] if isinstance(en, list) else [],
+        }
+    items = [str(item) for item in value] if isinstance(value, list) else []
+    return {"zh": items, "en": items}
+
+
+def syllabus_language(source: Path) -> str:
+    return "en" if source.stem.lower().endswith(".en") else "zh"
+
+
 def image_shape(path: Path) -> tuple[int | None, int | None, str]:
     if Image is None:
         return None, None, "standard"
@@ -70,7 +94,15 @@ def build_courses() -> list[dict]:
     for position, course_dir in enumerate(course_dirs, start=1):
         config = read_json(course_dir / "course.config.json")
         demonstration = course_dir / "demonstration"
-        syllabus_file = demonstration / "syllabus.html"
+        syllabus: dict[str, str | None] = {"zh": None, "en": None}
+        for language in syllabus:
+            syllabus_file = demonstration / f"syllabus.{language}.html"
+            if syllabus_file.exists():
+                syllabus[language] = url_for(syllabus_file)
+        # Keep existing single-language courses working until their next DOCX conversion.
+        legacy_syllabus = demonstration / "syllabus.html"
+        if legacy_syllabus.exists() and not syllabus["zh"]:
+            syllabus["zh"] = url_for(legacy_syllabus)
         decks: list[dict] = []
         lesson_titles = config.get("lessonTitles", [])
         for deck_position, preview in enumerate(sorted(demonstration.glob("lesson*/preview.json")), start=1):
@@ -84,25 +116,27 @@ def build_courses() -> list[dict]:
                 "slideCount": payload.get("slideCount", 0),
                 "slides": [url_for(folder / slide) for slide in payload.get("slides", [])]
             })
-        source_syllabus = next(iter(sorted((course_dir / "source").glob("*.docx"))), None)
+        syllabus_sources: dict[str, str | None] = {"zh": None, "en": None}
+        for source in sorted((course_dir / "source").glob("*.docx")):
+            language = syllabus_language(source)
+            if syllabus_sources[language]:
+                raise RuntimeError(f"More than one {language} syllabus in {course_dir / 'source'}")
+            syllabus_sources[language] = source.name
         configured_title = config.get("title", course_dir.name)
-        title = configured_title if isinstance(configured_title, dict) else {
-            "zh": configured_title,
-            "en": config.get("titleEn", configured_title),
-        }
+        title = localized_text(configured_title, course_dir.name)
         data = {
             "id": config.get("id", identifier(course_dir.name, "course")),
             "catalog": f"METC · {position:02d}",
             "title": title,
             "school": config.get("school", "METC 合作学校"),
-            "category": config.get("category", "课程设计"),
+            "category": localized_text(config.get("category"), "课程设计"),
             "color": config.get("color", ["coral", "blue", "mint"][min(position - 1, 2)]),
             "icon": config.get("icon", "spark"),
-            "summary": config.get("summary", "METC 课程资源。"),
-            "contains": config.get("contains", []),
-            "hasSyllabus": syllabus_file.exists(),
-            "syllabus": url_for(syllabus_file) if syllabus_file.exists() else None,
-            "syllabusSource": source_syllabus.name if source_syllabus else None,
+            "summary": localized_text(config.get("summary"), "METC 课程资源。"),
+            "contains": localized_list(config.get("contains", [])),
+            "hasSyllabus": any(syllabus.values()),
+            "syllabus": syllabus,
+            "syllabusSource": syllabus_sources,
             "lessons": decks
         }
         (course_dir / "course.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

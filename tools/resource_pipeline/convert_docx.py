@@ -20,10 +20,11 @@ VOID = {"br", "img"}
 
 
 class Sanitiser(HTMLParser):
-    def __init__(self, assets: Path):
+    def __init__(self, assets: Path, asset_prefix: str):
         super().__init__(convert_charrefs=True)
         self.parts: list[str] = []
         self.assets = assets
+        self.asset_prefix = asset_prefix
         self.skip_depth = 0
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]):
@@ -46,7 +47,7 @@ class Sanitiser(HTMLParser):
         if tag == "img" and values.get("src"):
             source = Path(values["src"]).name
             if source and (self.assets / source).exists():
-                safe.append(f' src="syllabus-assets/{html.escape(source, quote=True)}"')
+                safe.append(f' src="{self.asset_prefix}/{html.escape(source, quote=True)}"')
                 safe.append(f' alt="{html.escape(values.get("alt") or "课程大纲图片", quote=True)}"')
             else:
                 return
@@ -70,7 +71,12 @@ def converter() -> str:
     return shutil.which("soffice") or shutil.which("libreoffice") or ""
 
 
-def convert(source: Path, destination: Path) -> None:
+def syllabus_language(source: Path) -> str:
+    """Use `syllabus.en.docx` for English; an unlabelled syllabus is Chinese."""
+    return "en" if source.stem.lower().endswith(".en") else "zh"
+
+
+def convert(source: Path, destination: Path, language: str) -> None:
     office = converter()
     if not office:
         raise RuntimeError("LibreOffice/soffice is required to convert DOCX files.")
@@ -80,20 +86,27 @@ def convert(source: Path, destination: Path) -> None:
         html_files = list(temp.glob("*.html")) + list(temp.glob("*.htm"))
         if not html_files:
             raise RuntimeError(f"LibreOffice did not produce HTML for {source}")
-        assets = destination / "syllabus-assets"
+        output_name = f"syllabus.{language}"
+        assets = destination / f"{output_name}-assets"
         if assets.exists():
             shutil.rmtree(assets)
         assets.mkdir(parents=True, exist_ok=True)
-        for file in temp.iterdir():
+        for file in temp.rglob("*"):
             if file.is_file() and file.suffix.lower() in {".png", ".jpg", ".jpeg", ".gif", ".svg"}:
                 shutil.copy2(file, assets / file.name)
-        parser = Sanitiser(assets)
+        parser = Sanitiser(assets, assets.name)
         parser.feed(html_files[0].read_text(encoding="utf-8", errors="ignore"))
         fragment = re.sub(r"\n{3,}", "\n\n", "".join(parser.parts)).strip()
+        fragment = "\n".join(line.rstrip() for line in fragment.splitlines())
         title_match = re.search(r"<h[1-3][^>]*>(.*?)</h[1-3]>", fragment, re.S)
         title = re.sub(r"<[^>]+>", "", title_match.group(1)).strip() if title_match else source.stem
-        (destination / "syllabus.html").write_text(fragment, encoding="utf-8")
-        (destination / "syllabus.json").write_text(json.dumps({"source": source.name, "title": html.unescape(title), "html": "syllabus.html"}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        (destination / f"{output_name}.html").write_text(fragment, encoding="utf-8")
+        (destination / f"{output_name}.json").write_text(json.dumps({
+            "source": source.name,
+            "title": html.unescape(title),
+            "language": language,
+            "html": f"{output_name}.html",
+        }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def main() -> None:
@@ -103,12 +116,18 @@ def main() -> None:
     roots = [COURSES / args.course] if args.course else sorted(path for path in COURSES.iterdir() if path.is_dir())
     converted = 0
     for course in roots:
+        sources: dict[str, Path] = {}
         for source in sorted((course / "source").glob("*.docx")):
+            language = syllabus_language(source)
+            if language in sources:
+                raise RuntimeError(f"More than one {language} syllabus in {course / 'source'}")
+            sources[language] = source
+        for language, source in sources.items():
             destination = course / "demonstration"
             destination.mkdir(parents=True, exist_ok=True)
-            convert(source, destination)
+            convert(source, destination, language)
             converted += 1
-            print(f"DOCX  {source.relative_to(ROOT)} -> {destination.relative_to(ROOT) / 'syllabus.html'}")
+            print(f"DOCX  {source.relative_to(ROOT)} -> {destination.relative_to(ROOT) / f'syllabus.{language}.html'}")
     print(f"Converted {converted} syllabus document(s).")
 
 

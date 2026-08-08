@@ -26,7 +26,9 @@ python3 tools/resource_pipeline/convert_pptx.py
 python3 tools/resource_pipeline/generate_metadata.py
 ```
 
-DOCX 会转换、清理为 `demonstration/syllabus.html`，保留标题、列表、表格和图片；PPTX 会先转为每课的 `demonstration/lessonN/preview.pdf`，再从这份 PDF 输出每页 PNG。网页只读取 `src/data/resources/generated/{courses,albums}.json`，并只展示 `demonstration/` 下的预览资源，绝不嵌入原始 PPTX。
+DOCX 会转换、清理为语言对应的 `demonstration/syllabus.zh.html` 或 `syllabus.en.html`，保留标题、列表、表格和图片；PPTX 会先转为每课的 `demonstration/lessonN/preview.pdf`，再从这份 PDF 输出每页 PNG。网页只读取 `src/data/resources/generated/{courses,albums}.json`，并只展示 `demonstration/` 下的预览资源，绝不嵌入原始 PPTX。
+
+中英文大纲可并存：中文原件命名为 `source/syllabus.docx`，英文原件命名为 `source/syllabus.en.docx`。前端会随网站语言读取匹配的大纲；若某个语言版本尚未提供，则回退到已有版本。
 
 本项目是静态导出站点，`public/resources` 是对根目录 `resources` 的发布映射，因此这些资源会随 Next.js 导出提供给浏览器。
 

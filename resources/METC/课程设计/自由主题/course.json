@@ -6,18 +6,37 @@
     "en": "Open Topics"
   },
   "school": "乡村小学",
-  "category": "跨学科探索",
+  "category": {
+    "zh": "跨学科探索",
+    "en": "Interdisciplinary exploration"
+  },
   "color": "mint",
   "icon": "spark",
-  "summary": "由志愿者带来的开放主题课程，把数学游戏、工程实验与科学探索带进课堂。",
-  "contains": [
-    "数学游戏",
-    "工程实验",
-    "科学探索"
-  ],
+  "summary": {
+    "zh": "由志愿者带来的开放主题课程，把数学游戏、工程实验与科学探索带进课堂。",
+    "en": "Open-ended lessons led by volunteers bring mathematical games, engineering experiments, and scientific exploration into the classroom."
+  },
+  "contains": {
+    "zh": [
+      "数学游戏",
+      "工程实验",
+      "科学探索"
+    ],
+    "en": [
+      "Mathematical games",
+      "Engineering experiments",
+      "Scientific exploration"
+    ]
+  },
   "hasSyllabus": false,
-  "syllabus": null,
-  "syllabusSource": null,
+  "syllabus": {
+    "zh": null,
+    "en": null
+  },
+  "syllabusSource": {
+    "zh": null,
+    "en": null
+  },
   "lessons": [
     {
       "id": "lesson1",

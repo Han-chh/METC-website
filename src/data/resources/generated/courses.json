@@ -7,19 +7,39 @@
       "en": "Microeconomics"
     },
     "school": "长沙实验小学",
-    "category": "经济",
+    "category": {
+      "zh": "经济",
+      "en": "Economics"
+    },
     "color": "coral",
     "icon": "market",
-    "summary": "从市场、供需与价格形成出发，让学生用身边的选择理解微观经济学。",
-    "contains": [
-      "市场与价格",
-      "供需关系",
-      "价格形成",
-      "经济规律"
-    ],
+    "summary": {
+      "zh": "从市场、供需与价格形成出发，让学生用身边的选择理解微观经济学。",
+      "en": "Starting with markets, supply and demand, and price formation, students use everyday choices to understand microeconomics."
+    },
+    "contains": {
+      "zh": [
+        "市场与价格",
+        "供需关系",
+        "价格形成",
+        "经济规律"
+      ],
+      "en": [
+        "Markets and prices",
+        "Supply and demand",
+        "Price formation",
+        "Economic laws"
+      ]
+    },
     "hasSyllabus": true,
-    "syllabus": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/syllabus.html",
-    "syllabusSource": "syllabus.docx",
+    "syllabus": {
+      "zh": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/syllabus.zh.html",
+      "en": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/syllabus.en.html"
+    },
+    "syllabusSource": {
+      "zh": "syllabus.docx",
+      "en": "syllabus.en.docx"
+    },
     "lessons": [
       {
         "id": "lesson1",
@@ -147,18 +167,37 @@
       "en": "Physics: Light"
     },
     "school": "深圳实验小学",
-    "category": "物理",
+    "category": {
+      "zh": "物理",
+      "en": "Physics"
+    },
     "color": "blue",
     "icon": "light",
-    "summary": "通过观察、实验与绘图，探索光的传播、反射和色彩形成。",
-    "contains": [
-      "光的传播",
-      "反射实验",
-      "彩虹形成"
-    ],
+    "summary": {
+      "zh": "通过观察、实验与绘图，探索光的传播、反射和色彩形成。",
+      "en": "Through observation, experiments, and drawing, students explore how light travels, reflects, and creates colour."
+    },
+    "contains": {
+      "zh": [
+        "光的传播",
+        "反射实验",
+        "彩虹形成"
+      ],
+      "en": [
+        "Light propagation",
+        "Reflection experiments",
+        "Rainbow formation"
+      ]
+    },
     "hasSyllabus": true,
-    "syllabus": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%89%A9%E7%90%86-%E5%85%89/demonstration/syllabus.html",
-    "syllabusSource": "syllabus.docx",
+    "syllabus": {
+      "zh": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%89%A9%E7%90%86-%E5%85%89/demonstration/syllabus.zh.html",
+      "en": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%89%A9%E7%90%86-%E5%85%89/demonstration/syllabus.en.html"
+    },
+    "syllabusSource": {
+      "zh": "syllabus.docx",
+      "en": "syllabus.en.docx"
+    },
     "lessons": [
       {
         "id": "lesson1",
@@ -216,18 +255,37 @@
       "en": "Open Topics"
     },
     "school": "乡村小学",
-    "category": "跨学科探索",
+    "category": {
+      "zh": "跨学科探索",
+      "en": "Interdisciplinary exploration"
+    },
     "color": "mint",
     "icon": "spark",
-    "summary": "由志愿者带来的开放主题课程，把数学游戏、工程实验与科学探索带进课堂。",
-    "contains": [
-      "数学游戏",
-      "工程实验",
-      "科学探索"
-    ],
+    "summary": {
+      "zh": "由志愿者带来的开放主题课程，把数学游戏、工程实验与科学探索带进课堂。",
+      "en": "Open-ended lessons led by volunteers bring mathematical games, engineering experiments, and scientific exploration into the classroom."
+    },
+    "contains": {
+      "zh": [
+        "数学游戏",
+        "工程实验",
+        "科学探索"
+      ],
+      "en": [
+        "Mathematical games",
+        "Engineering experiments",
+        "Scientific exploration"
+      ]
+    },
     "hasSyllabus": false,
-    "syllabus": null,
-    "syllabusSource": null,
+    "syllabus": {
+      "zh": null,
+      "en": null
+    },
+    "syllabusSource": {
+      "zh": null,
+      "en": null
+    },
     "lessons": [
       {
         "id": "lesson1",
