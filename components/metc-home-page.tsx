@@ -111,7 +111,7 @@ export function MetcHomePage() {
       <main className="page-shell">
         <HeroSection language={language} onAnchorClick={handleAnchorClick} />
         <ExploreSection language={language} />
-        <TeachingSection language={language} onNotice={() => setNoticeVisible(true)} onLibraryEnter={enterLibrary} />
+        <TeachingSection language={language} onLibraryEnter={enterLibrary} />
         <ActivitySection language={language} onGalleryEnter={enterGallery} />
         <VoicesSection language={language} onVoicesEnter={enterVoices} />
       </main>

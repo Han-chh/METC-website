@@ -72,11 +72,6 @@ export const en: HomepageCopy = {
       { time: "12 min", label: "Load test" },
       { time: "10 min", label: "Reflect & rebuild" }
     ],
-    resources: [
-      { type: "SYLLABUS", title: "Structure & Load", detail: "4 lessons · PDF" },
-      { type: "SLIDES", title: "Why doesn't a bridge fall?", detail: "32 pages · PPT" },
-      { type: "MATERIALS", title: "Classroom kit", detail: "6 printables · ZIP" }
-    ],
     note: "Margin note: do not tell them triangles are strongest. Let the first collapse do the talking.",
     demoCta: "Enter the Curriculum Library"
   },

@@ -47,7 +47,6 @@ export type HomepageCopy = {
     materials: string;
     materialItems: string[];
     timeline: Array<{ time: string; label: string }>;
-    resources: Array<{ type: string; title: string; detail: string }>;
     note: string;
     demoCta: string;
   };

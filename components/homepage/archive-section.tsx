@@ -3,11 +3,10 @@ import { homepageCopy } from "../../content";
 
 type TeachingSectionProps = {
   language: Language;
-  onNotice: () => void;
   onLibraryEnter: () => void;
 };
 
-export function TeachingSection({ language, onNotice, onLibraryEnter }: TeachingSectionProps) {
+export function TeachingSection({ language, onLibraryEnter }: TeachingSectionProps) {
   const { teaching } = homepageCopy[language];
 
   return (
@@ -19,20 +18,9 @@ export function TeachingSection({ language, onNotice, onLibraryEnter }: Teaching
           <p className="section-body">{teaching.body}</p>
         </div>
 
-        <div className="resource-index resource-index-top reveal">
-          <div className="resource-list">
-            {teaching.resources.map((resource, index) => (
-              <button type="button" onClick={onNotice} key={resource.type}>
-                <span className="resource-number">0{index + 1}</span>
-                <span className="resource-type">{resource.type}</span>
-                <strong>{resource.title}</strong>
-                <small>{resource.detail}</small>
-                <i aria-hidden="true">↗</i>
-              </button>
-            ))}
-          </div>
-          <button type="button" className="button button-coral" onClick={onLibraryEnter}>{teaching.demoCta}<span>→</span></button>
-        </div>
+        <button type="button" className="button button-coral teaching-library-entry reveal" onClick={onLibraryEnter}>
+          {teaching.demoCta}<span>→</span>
+        </button>
 
         <div className="course-manual reveal">
           <div className="manual-spine" aria-hidden="true" />

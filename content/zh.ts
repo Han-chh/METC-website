@@ -72,11 +72,6 @@ export const zh: HomepageCopy = {
       { time: "12 min", label: "压力测试" },
       { time: "10 min", label: "复盘与重做" }
     ],
-    resources: [
-      { type: "SYLLABUS", title: "结构与承重", detail: "4 lessons · PDF" },
-      { type: "SLIDES", title: "为什么桥不会倒？", detail: "32 pages · PPT" },
-      { type: "MATERIALS", title: "课堂材料包", detail: "6 printables · ZIP" }
-    ],
     note: "批注：不要先告诉他们三角形最稳定。让第一次倒塌替我们说话。",
     demoCta: "进入课程大纲图书馆"
   },

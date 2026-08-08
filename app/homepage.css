@@ -426,16 +426,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .lesson-timeline span { color: var(--coral); font-size: .68rem; font-weight: 800; }
 .lesson-timeline p { margin: 0; font-size: .88rem; }
 .manual-note { max-width: 410px; margin: 26px 0 0 auto; font-family: var(--accent); font-size: 1.02rem; line-height: 1.35; color: var(--coral); transform: rotate(-2deg); }
-.resource-index { margin-top: 42px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
-.resource-index-top { margin-top: clamp(30px, 3vw, 42px); }
-.resource-list { border-top: 1px solid var(--ink); }
-.resource-list button { width: 100%; min-height: 76px; padding: 0 8px; display: grid; grid-template-columns: 48px 112px 1fr 160px 24px; gap: 18px; align-items: center; text-align: left; border-bottom: 1px solid rgba(25,55,47,.32); background: transparent; cursor: pointer; transition: padding 180ms ease, background 180ms ease; }
-.resource-list button:hover { padding-left: 16px; background: rgba(255,255,255,.24); }
-.resource-number { font-size: .66rem; }
-.resource-type { color: var(--coral); font-size: .62rem; font-weight: 800; letter-spacing: .08em; }
-.resource-list strong { font-family: var(--display); font-size: 1.1rem; }
-.resource-list small { color: var(--ink-soft); }
-.resource-list i { font-style: normal; }
+.teaching-library-entry { margin-top: clamp(30px, 3vw, 42px); }
 
 /* Activities */
 .activity-section { background: var(--ink-deep); color: var(--chalk); overflow: hidden; }
@@ -549,8 +540,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-lower { grid-template-columns: 1.1fr .8fr; gap: 50px; }
   .section-intro { grid-template-columns: 1fr .65fr; }
   .manual-page { min-height: 610px; padding: 42px; }
-  .resource-index { grid-template-columns: 1fr; }
-  .resource-index > .button { justify-self: start; }
   .voices-heading { grid-template-columns: 1fr; gap: 0; }
   .voices-heading .section-eyebrow { margin-top: 0; }
   .quote-mark { left: -48px; }
@@ -565,7 +554,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .section-title { max-width: 810px; font-size: clamp(2.43rem, 5.04vw, 4.82rem); }.section-body { max-width: 558px; margin-top: 27px; font-size: clamp(.9rem, 1.26vw, 1.04rem); }
   .hero-section { min-height: 100svh; padding: 112px 28px 64px; }.hero-logo-stage { width: min(648px, 60vw); margin-bottom: 20px; }.hero-title-wrap h1 { max-width: 738px; font-size: clamp(2.3rem, 4.5vw, 4.5rem); }.hero-lower { gap: clamp(38px, 7.2vw, 108px); }.hero-topic-tags { margin-top: 20px; }.hero-actions { margin-top: 24px; }.hero-scroll { right: 28px; bottom: 22px; }
   .mission-spread { margin-top: clamp(41px, 4.5vw, 58px); padding: clamp(27px, 3.6vw, 43px); }.principle-line { margin-top: 47px; }.principle-line li { padding-top: 22px; }
-  .course-manual { margin-top: clamp(41px,4.5vw,58px); }.manual-page { min-height: 432px; padding: clamp(27px,3.4vw,45px); }.resource-index { margin-top: 38px; gap: 36px; }.resource-list button { min-height: 68px; }
+  .course-manual { margin-top: clamp(41px,4.5vw,58px); }.manual-page { min-height: 432px; padding: clamp(27px,3.4vw,45px); }
   .classroom-stage { margin-top: clamp(41px,4.5vw,58px); }
   .editorial-quote { margin-top: clamp(41px,4.5vw,60px); }.voice-margins { margin-top: 52px; }.voices-closing { margin-top: 54px; }
   .footer-inner { padding-top: 19px; }.footer-nav { margin-top: 13px; padding-bottom: 11px; }
@@ -632,12 +621,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .manual-page-left, .manual-page-right { border-radius: 7px; transform: none; }
   .manual-page-right { margin-top: 10px; }
   .materials-list { grid-template-columns: 1fr; gap: 16px; }
-  .resource-index { margin-top: 34px; gap: 28px; }.resource-index-top { margin-top: 34px; }
-  .resource-list button { min-height: 86px; grid-template-columns: 36px 1fr 20px; gap: 7px 12px; }
-  .resource-type { grid-column: 2; }
-  .resource-list strong { grid-column: 2; }
-  .resource-list small { grid-column: 2; }
-  .resource-list i { grid-column: 3; grid-row: 1 / 4; }
+  .teaching-library-entry { margin-top: 34px; }
   .classroom-stage { margin-top: 42px; margin-left: -16px; margin-right: -16px; }
   .classroom-photo-wrap { border-radius: 0; }
   .classroom-photo-wrap img { aspect-ratio: 4/5; object-position: 53% center; }
