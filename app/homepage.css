@@ -1110,3 +1110,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .language-toggle { min-width: 108px; font-size: .78rem; }
   .language-toggle span { min-width: 36px; }
 }
+
+/* Give the two hero actions enough visual weight to occupy the lower part of
+   the enlarged cover while retaining the primary/secondary hierarchy. */
+@media (min-width: 761px) {
+  .hero-actions { gap: 22px; }
+  .hero-actions .button { min-height: 58px; padding: 0 25px; gap: 28px; font-size: .92rem; }
+  .hero-actions .text-link { min-height: 58px; padding: 0; gap: 18px; font-size: .9rem; }
+}
