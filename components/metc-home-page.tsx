@@ -17,7 +17,7 @@ export function MetcHomePage() {
   const router = useRouter();
   const [language, setLanguage] = useState<Language>("en");
   const [languageReady, setLanguageReady] = useState(false);
-  const [toastVisible, setToastVisible] = useState(false);
+  const [noticeVisible, setNoticeVisible] = useState(false);
   const [libraryTransition, setLibraryTransition] = useState(false);
   const [galleryTransition, setGalleryTransition] = useState(false);
   const [voicesTransition, setVoicesTransition] = useState(false);
@@ -63,10 +63,10 @@ export function MetcHomePage() {
   }, []);
 
   useEffect(() => {
-    if (!toastVisible) return;
-    const timer = window.setTimeout(() => setToastVisible(false), 2300);
+    if (!noticeVisible) return;
+    const timer = window.setTimeout(() => setNoticeVisible(false), 2300);
     return () => window.clearTimeout(timer);
-  }, [toastVisible]);
+  }, [noticeVisible]);
 
   function handleAnchorClick(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
     event.preventDefault();
@@ -111,13 +111,13 @@ export function MetcHomePage() {
       <main className="page-shell">
         <HeroSection language={language} onAnchorClick={handleAnchorClick} />
         <ExploreSection language={language} />
-        <TeachingSection language={language} onDemoClick={() => setToastVisible(true)} onLibraryEnter={enterLibrary} />
-        <ActivitySection language={language} onDemoClick={() => setToastVisible(true)} onGalleryEnter={enterGallery} />
+        <TeachingSection language={language} onNotice={() => setNoticeVisible(true)} onLibraryEnter={enterLibrary} />
+        <ActivitySection language={language} onNotice={() => setNoticeVisible(true)} onGalleryEnter={enterGallery} />
         <VoicesSection language={language} onVoicesEnter={enterVoices} />
       </main>
-      <SiteFooter language={language} onDemoClick={() => setToastVisible(true)} />
-      <div className={`prototype-toast${toastVisible ? " show" : ""}`} role="status" aria-live="polite">
-        {homepageCopy[language].demoMessage}
+      <SiteFooter language={language} />
+      <div className={`site-notice${noticeVisible ? " show" : ""}`} role="status" aria-live="polite">
+        {homepageCopy[language].noticeMessage}
       </div>
       {(libraryTransition || galleryTransition || voicesTransition) && <div className="library-entry-flash" aria-hidden="true" />}
     </>

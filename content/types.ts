@@ -61,12 +61,12 @@ export type HomepageCopy = {
     eyebrow: string;
     title: string;
     body: string;
-    aboutLabel: string;
     statementLabel: string;
-    aboutLinks: string[];
-    statementLinks: string[];
+    statements: Record<
+      "privacy" | "copyright" | "website",
+      { label: string; title: string; body: string[] }
+    >;
     copyright: string;
-    demo: string;
   };
-  demoMessage: string;
+  noticeMessage: string;
 };

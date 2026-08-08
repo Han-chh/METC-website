@@ -188,7 +188,7 @@ export function VoicesPage() {
         <p className="voices-sea-note" aria-hidden="true">METC · {copy.archive}</p>
       </section>
     </main>
-    <SiteFooter language={language} onDemoClick={() => undefined} />
+    <SiteFooter language={language} />
     {selectedFeedback && <FeedbackViewer feedback={selectedFeedback} index={selectedIndex} language={language} onClose={closeViewer} onPrevious={() => goToFeedback(selectedIndex - 1)} onNext={() => goToFeedback(selectedIndex + 1)} closeRef={closeRef} />}
   </>;
 }

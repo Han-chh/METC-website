@@ -87,12 +87,34 @@ export const zh: HomepageCopy = {
     eyebrow: "Keep the question open.",
     title: "下一堂课，从一个好问题开始",
     body: "METC · Math and Engineering Teaching Club\nStudent-created. Student-centered.",
-    aboutLabel: "About METC",
-    statementLabel: "Statements",
-    aboutLinks: ["社团介绍", "联系我们", "加入我们"],
-    statementLinks: ["隐私声明", "版权信息", "网站声明"],
-    copyright: "© 2026 METC. All classroom stories shown are prototype content.",
-    demo: "Frontend visual demo · No backend connected"
+    statementLabel: "声明",
+    statements: {
+      privacy: {
+        label: "隐私声明",
+        title: "隐私声明",
+        body: [
+          "浏览本网站无需创建账户或提交个人信息。",
+          "如未来新增联系或报名服务，METC 会在收集前说明信息用途与处理方式。"
+        ]
+      },
+      copyright: {
+        label: "版权信息",
+        title: "版权信息",
+        body: [
+          "© 2026 METC。除非另有说明，网站设计、文字内容及原创教学材料均受版权保护。",
+          "如需转载、传播或改编本站内容，请先取得授权。"
+        ]
+      },
+      website: {
+        label: "网站声明",
+        title: "网站声明",
+        body: [
+          "本网站为 METC（Math and Engineering Teaching Club）官方网站。",
+          "教学资源与课堂记录用于教育分享，并会随着资料归档持续更新。"
+        ]
+      }
+    },
+    copyright: "© 2026 METC。保留所有权利。"
   },
-  demoMessage: "这是前端视觉 Demo，该入口将在后续内容阶段开放。"
+  noticeMessage: "更多课堂记录正在整理归档。"
 };

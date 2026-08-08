@@ -44,6 +44,6 @@ export function TeachingPage() {
     <main className={`teaching-page${course ? " course-is-open" : ""}`}><LibraryHero language={language} /><Bookshelf courses={resourceCourses} language={language} onOpen={openCourse} /></main>
     {course && <OpenBook course={course} language={language} phase={bookPhase} onClose={closeCourse} onOpenDeck={openDeck} />}
     {deck && course && <PptPreview deck={deck} language={language} color={course.color} currentSlide={slideIndex} onPrevious={() => setSlideIndex((index) => Math.max(index - 1, 0))} onNext={() => setSlideIndex((index) => Math.min(index + 1, deck.slides.length - 1))} onSelect={setSlideIndex} onClose={() => setDeck(null)} />}
-    <SiteFooter language={language} onDemoClick={() => undefined} />
+    <SiteFooter language={language} />
   </>;
 }

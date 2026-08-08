@@ -3,11 +3,11 @@ import { homepageCopy } from "../../content";
 
 type TeachingSectionProps = {
   language: Language;
-  onDemoClick: () => void;
+  onNotice: () => void;
   onLibraryEnter: () => void;
 };
 
-export function TeachingSection({ language, onDemoClick, onLibraryEnter }: TeachingSectionProps) {
+export function TeachingSection({ language, onNotice, onLibraryEnter }: TeachingSectionProps) {
   const { teaching } = homepageCopy[language];
 
   return (
@@ -22,7 +22,7 @@ export function TeachingSection({ language, onDemoClick, onLibraryEnter }: Teach
         <div className="resource-index resource-index-top reveal">
           <div className="resource-list">
             {teaching.resources.map((resource, index) => (
-              <button type="button" onClick={onDemoClick} key={resource.type}>
+              <button type="button" onClick={onNotice} key={resource.type}>
                 <span className="resource-number">0{index + 1}</span>
                 <span className="resource-type">{resource.type}</span>
                 <strong>{resource.title}</strong>

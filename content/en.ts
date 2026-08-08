@@ -87,12 +87,34 @@ export const en: HomepageCopy = {
     eyebrow: "Keep the question open.",
     title: "The next class begins with a good question",
     body: "METC · Math and Engineering Teaching Club\nStudent-created. Student-centered.",
-    aboutLabel: "About METC",
     statementLabel: "Statements",
-    aboutLinks: ["Club introduction", "Contact", "Join us"],
-    statementLinks: ["Privacy", "Copyright", "Website statement"],
-    copyright: "© 2026 METC. All classroom stories shown are prototype content.",
-    demo: "Frontend visual demo · No backend connected"
+    statements: {
+      privacy: {
+        label: "Privacy",
+        title: "Privacy statement",
+        body: [
+          "METC does not require visitors to create an account or submit personal information to browse this website.",
+          "If a future contact or registration service collects information, its purpose and handling will be stated before submission."
+        ]
+      },
+      copyright: {
+        label: "Copyright",
+        title: "Copyright notice",
+        body: [
+          "© 2026 METC. Unless stated otherwise, the website design, written content, and original teaching materials are protected by copyright.",
+          "Please request permission before reproducing, distributing, or adapting content from this website."
+        ]
+      },
+      website: {
+        label: "Website statement",
+        title: "Website statement",
+        body: [
+          "This is the official website of METC — Math and Engineering Teaching Club.",
+          "Teaching resources and classroom records are published for educational sharing and may be updated as the archive grows."
+        ]
+      }
+    },
+    copyright: "© 2026 METC. All rights reserved."
   },
-  demoMessage: "This is a frontend visual demo. The doorway will open in a future content phase."
+  noticeMessage: "Additional classroom records are being added to the archive."
 };

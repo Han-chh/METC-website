@@ -4,7 +4,7 @@ import { resourceAlbums } from "../../src/data/resources";
 
 type ActivitySectionProps = {
   language: Language;
-  onDemoClick: () => void;
+  onNotice: () => void;
   onGalleryEnter: () => void;
 };
 
@@ -13,7 +13,7 @@ const homepageFeaturePhoto = resourceAlbums
   .flatMap((album) => album.photos.filter((photo) => photo.id === album.homepageFeaturePhotoId))
   .at(0);
 
-export function ActivitySection({ language, onDemoClick, onGalleryEnter }: ActivitySectionProps) {
+export function ActivitySection({ language, onNotice, onGalleryEnter }: ActivitySectionProps) {
   const { activities } = homepageCopy[language];
   const photoSrc = homepageFeaturePhoto?.src ?? `${BASE_PATH}/images/metc-classroom-workshop.png`;
   const photoAlt = language === "zh" ? "上步小学学生课堂活动" : "Students taking part in a Shangbu Primary School classroom activity";
@@ -48,7 +48,7 @@ export function ActivitySection({ language, onDemoClick, onGalleryEnter }: Activ
           </div>
           <div className="project-rows">
             {activities.projects.map((project) => (
-              <button type="button" onClick={onDemoClick} key={project.number}>
+              <button type="button" onClick={onNotice} key={project.number}>
                 <span className="project-letter">{project.number}</span>
                 <small>{project.type}</small>
                 <h3>{project.title}</h3>
