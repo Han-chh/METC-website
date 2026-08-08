@@ -43,7 +43,7 @@ export function TeachingSection({ language, onLibraryEnter }: TeachingSectionPro
                 <path className="sketch-trajectory" d="M303 123c32-17 61-43 79-79" />
                 <path className="sketch-trajectory" d="m370 49 13-6-3 14" />
               </svg>
-              <span>CO₂ pushes ↓</span>
+              <span>CO₂ pushes ↑</span>
             </div>
           </div>
 
