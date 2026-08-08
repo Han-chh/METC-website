@@ -433,7 +433,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .rocket-sketch .sketch-liquid { fill: rgba(167,199,173,.72); stroke: none; }
 .rocket-sketch .sketch-pressure, .rocket-sketch .sketch-trajectory { stroke: var(--coral); }
 .rocket-sketch .sketch-bubble { fill: var(--chalk); stroke: var(--ink); stroke-width: 1.5; }
-.rocket-sketch > span { position: absolute; right: 6%; top: 20%; font-family: var(--accent); color: var(--coral); transform: rotate(-7deg); }
+.rocket-sketch > span { position: absolute; z-index: 1; right: 3%; top: 1%; padding: 0 4px; background: #fffaf0; color: var(--coral); font-family: var(--accent); line-height: 1.2; transform: rotate(-7deg); }
 .manual-rule { height: 1px; margin-bottom: 34px; background: var(--ink); }
 .materials-list { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; }
 .materials-list ul { margin: 0; padding: 0; list-style: none; font-size: .85rem; }
