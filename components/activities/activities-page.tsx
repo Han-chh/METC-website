@@ -88,10 +88,11 @@ function PhotoTile({ photo, language, onOpen }: { photo: GalleryPhoto; language:
 
 function ExpandedAlbum({ album, language, phase, onClose, onOpenPhoto }: { album: ActivityAlbum; language: Language; phase: "opening" | "open" | "closing"; onClose: () => void; onOpenPhoto: (index: number, trigger: HTMLButtonElement) => void }) {
   const copy = activitiesCopy[language].viewer;
+  const useHorizontalSpread = album.id === "school-6bc17c17";
   return <section className={`expanded-album-layer expanded-album-${phase}`} role="dialog" aria-modal="true" aria-label={localized(language, album.title)}>
     <div className="expanded-album-backdrop" onClick={onClose} aria-hidden="true" />
     <button className="album-back-button" type="button" onClick={onClose}>← {copy.back}</button>
-    <article className={`expanded-album expanded-album-${album.accent}`}>
+    <article className={`expanded-album expanded-album-${album.accent}${useHorizontalSpread ? " expanded-album-horizontal" : ""}`}>
       <div className="expanded-album-cover" aria-hidden="true"><span>{copy.archive}</span><strong>{localized(language, album.title)}</strong><i>{album.year}</i></div>
       <div className="expanded-album-paper">
         <header className="album-viewer-header">
