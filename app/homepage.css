@@ -204,6 +204,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
   outline: 2px solid var(--sun);
   outline-offset: 3px;
 }
+
+.voices-section .button-coral {
+  background: var(--ink-deep);
+  color: var(--chalk);
+  box-shadow: 0 14px 30px rgba(16, 37, 31, 0.18);
+}
+
+.voices-section .button-coral span { color: var(--sun); }
+
+.voices-section .button-coral:hover,
+.voices-section .button-coral:focus-visible {
+  background: var(--ink);
+  box-shadow: 0 18px 38px rgba(16, 37, 31, 0.26);
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+}
 .text-link {
   display: inline-flex;
   align-items: center;
