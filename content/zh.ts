@@ -30,7 +30,27 @@ export const zh: HomepageCopy = {
       { number: "02", title: "Discovery", detail: "允许猜测、试错与重新观察" },
       { number: "03", title: "Teaching", detail: "把理解转化为能分享的表达" },
       { number: "04", title: "Connection", detail: "让同伴、学科与真实世界相遇" }
-    ]
+    ],
+    community: {
+      joinLabel: "加入我们",
+      contactLabel: "联系我们",
+      join: {
+        title: "加入 METC",
+        body: "扫描微信二维码，与社团取得联系。",
+        qrAlt: "METC 微信二维码",
+        qrUnavailable: "社团联系二维码即将在这里提供。"
+      },
+      contact: {
+        title: "联系 METC",
+        body: "如需咨询 METC 相关事项，欢迎通过邮件联系学生管理团队成员。",
+        officers: [
+          { role: "社长", name: "Gloria Wu", email: "s24634.wu@stu.scie.com.cn" },
+          { role: "副社长", name: "Leo Zhao", email: "s23178.zhao@stu.scie.com.cn" },
+          { role: "副社长", name: "Sheryl Xu", email: "s24670.xu@stu.scie.com.cn" }
+        ]
+      },
+      close: "关闭"
+    }
   },
   teaching: {
     eyebrow: "02 — 教学设计",

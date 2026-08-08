@@ -30,7 +30,27 @@ export const en: HomepageCopy = {
       { number: "02", title: "Discovery", detail: "Make room for guesses, failure, and another look" },
       { number: "03", title: "Teaching", detail: "Turn understanding into something shareable" },
       { number: "04", title: "Connection", detail: "Bring peers, disciplines, and the real world together" }
-    ]
+    ],
+    community: {
+      joinLabel: "Join us",
+      contactLabel: "Contact us",
+      join: {
+        title: "Join METC",
+        body: "Scan the WeChat QR code to connect with the club.",
+        qrAlt: "METC WeChat QR code",
+        qrUnavailable: "The club contact code will be available here soon."
+      },
+      contact: {
+        title: "Contact METC",
+        body: "For questions about METC, please write to a member of the student leadership team.",
+        officers: [
+          { role: "President", name: "Gloria Wu", email: "s24634.wu@stu.scie.com.cn" },
+          { role: "Vice President", name: "Leo Zhao", email: "s23178.zhao@stu.scie.com.cn" },
+          { role: "Vice President", name: "Sheryl Xu", email: "s24670.xu@stu.scie.com.cn" }
+        ]
+      },
+      close: "Close"
+    }
   },
   teaching: {
     eyebrow: "02 — Teaching Design",

@@ -21,6 +21,17 @@ export type HomepageCopy = {
     philosophy: string;
     principle: string;
     steps: Array<{ number: string; title: string; detail: string }>;
+    community: {
+      joinLabel: string;
+      contactLabel: string;
+      join: { title: string; body: string; qrAlt: string; qrUnavailable: string };
+      contact: {
+        title: string;
+        body: string;
+        officers: Array<{ role: string; name: string; email: string }>;
+      };
+      close: string;
+    };
   };
   teaching: {
     eyebrow: string;

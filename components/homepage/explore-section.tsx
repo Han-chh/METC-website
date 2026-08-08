@@ -1,5 +1,6 @@
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
+import { CommunityActions } from "./community-actions";
 
 type ExploreSectionProps = { language: Language };
 
@@ -24,6 +25,7 @@ export function ExploreSection({ language }: ExploreSectionProps) {
           </nav>
           <h2 className="section-title preserve-lines">{explore.title}</h2>
           <p className="section-body">{explore.body}</p>
+          <CommunityActions language={language} />
         </div>
 
         <div className="mission-spread reveal">
