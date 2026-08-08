@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
 import { localizedSchoolName } from "../../content/activities/albums";
@@ -12,6 +12,7 @@ type ActivitySectionProps = {
 };
 
 const BASE_PATH = "/METC-website";
+const AUTOPLAY_DELAY = 5500;
 const activityEntranceFocus: Record<string, string> = {
   "school-760d99a4-004": "50% 75%"
 };
@@ -35,6 +36,11 @@ const fallbackFeaturePhoto = {
 export function ActivitySection({ language, onGalleryEnter }: ActivitySectionProps) {
   const { activities } = homepageCopy[language];
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+  const [isCarouselVisible, setIsCarouselVisible] = useState(false);
+  const [isCarouselHovered, setIsCarouselHovered] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [autoplayGeneration, setAutoplayGeneration] = useState(0);
+  const carouselRef = useRef<HTMLElement | null>(null);
   const touchStartX = useRef<number | null>(null);
   const featurePhotos = homepageFeaturePhotos.length ? homepageFeaturePhotos : [fallbackFeaturePhoto];
   const activePhoto = featurePhotos[activePhotoIndex] ?? featurePhotos[0];
@@ -42,8 +48,44 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
   const photoSource = language === "zh"
     ? `${activePhoto.school.zh} · 课堂活动`
     : `${activePhoto.school.en} · Classroom activity`;
-  const previousPhoto = () => setActivePhotoIndex((index) => (index - 1 + totalPhotos) % totalPhotos);
-  const nextPhoto = () => setActivePhotoIndex((index) => (index + 1) % totalPhotos);
+  const previousPhoto = () => {
+    setActivePhotoIndex((index) => (index - 1 + totalPhotos) % totalPhotos);
+    setAutoplayGeneration((generation) => generation + 1);
+  };
+  const nextPhoto = () => {
+    setActivePhotoIndex((index) => (index + 1) % totalPhotos);
+    setAutoplayGeneration((generation) => generation + 1);
+  };
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncPreference = () => setPrefersReducedMotion(mediaQuery.matches);
+    syncPreference();
+    mediaQuery.addEventListener("change", syncPreference);
+    return () => mediaQuery.removeEventListener("change", syncPreference);
+  }, []);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+    if (!("IntersectionObserver" in window)) {
+      setIsCarouselVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => setIsCarouselVisible(entry.isIntersecting), { threshold: 0.25 });
+    observer.observe(carousel);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (totalPhotos < 2 || !isCarouselVisible || isCarouselHovered || prefersReducedMotion) return;
+    const timer = window.setTimeout(() => {
+      setActivePhotoIndex((index) => (index + 1) % totalPhotos);
+      setAutoplayGeneration((generation) => generation + 1);
+    }, AUTOPLAY_DELAY);
+    return () => window.clearTimeout(timer);
+  }, [autoplayGeneration, isCarouselHovered, isCarouselVisible, prefersReducedMotion, totalPhotos]);
 
   const finishSwipe = (event: React.TouchEvent<HTMLDivElement>) => {
     if (touchStartX.current === null) return;
@@ -67,10 +109,12 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
           </div>
         </div>
 
-        <figure className="classroom-stage reveal" aria-roledescription="carousel" aria-label={language === "zh" ? "课堂活动精选照片" : "Featured classroom photographs"}>
+        <figure ref={carouselRef} className="classroom-stage reveal" aria-roledescription="carousel" aria-label={language === "zh" ? "课堂活动精选照片" : "Featured classroom photographs"}>
           <div
             className="classroom-photo-wrap"
             tabIndex={0}
+            onMouseEnter={() => setIsCarouselHovered(true)}
+            onMouseLeave={() => setIsCarouselHovered(false)}
             onTouchStart={(event) => { touchStartX.current = event.touches[0].clientX; }}
             onTouchEnd={finishSwipe}
             onKeyDown={(event) => {
