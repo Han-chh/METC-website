@@ -1005,25 +1005,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
    cover's visual map intact rather than cropping the lower row. */
 @media (min-width: 761px) {
   .hero-section {
-    height: 29.17svh;
-    min-height: 250px;
-    max-height: 325px;
-    padding: 91px 56px 14px;
+    height: 37.92svh;
+    min-height: 325px;
+    max-height: 423px;
+    padding: 106px 56px 18px;
   }
-  .hero-logo-stage { width: min(185px, 18vw); margin-bottom: 3px; }
-  .hero-title-wrap h1 { max-width: 355px; font-size: clamp(1.2rem, 1.75vw, 1.8rem); line-height: 1.02; }
-  .hero-actions { gap: 14px; }
-  .hero-actions .button { min-height: 33px; padding: 0 14px; gap: 14px; font-size: .68rem; }
-  .hero-actions .text-link { font-size: .68rem; }
+  .hero-logo-stage { width: min(205px, 20vw); margin-bottom: 5px; }
+  .hero-title-wrap h1 { max-width: 400px; font-size: clamp(1.3rem, 1.9vw, 2.1rem); line-height: 1.02; }
+  .hero-actions { gap: 16px; }
+  .hero-actions .button { min-height: 36px; padding: 0 16px; gap: 16px; font-size: .72rem; }
+  .hero-actions .text-link { font-size: .72rem; }
 
-  .hero-cell { top: 38%; left: 38%; width: min(116px, 9.1vw); }
-  .hero-note-strip { top: 38%; left: 49%; width: min(131px, 10.3vw); }
-  .hero-books { top: 36%; left: 72%; right: auto; width: min(165px, 12.9vw); }
-  .hero-bridge-lab { top: 61%; left: 59%; width: min(139px, 10.9vw); }
-  .hero-rocket { top: 61%; right: .5%; left: auto; width: min(86px, 6.7vw); }
-  .hero-supplies { bottom: 10%; left: 38%; width: min(131px, 10.3vw); }
-  .hero-economy { bottom: 6%; left: 50%; width: min(112px, 8.8vw); }
-  .hero-optics { right: auto; bottom: 8%; left: 79%; width: min(105px, 8.2vw); }
+  .hero-cell { top: 31%; left: 38%; width: min(128px, 10vw); }
+  .hero-note-strip { top: 31%; left: 49%; width: min(145px, 11.3vw); }
+  .hero-books { top: 29%; left: 72%; right: auto; width: min(182px, 14.2vw); }
+  .hero-bridge-lab { top: 58%; left: 59%; width: min(153px, 12vw); }
+  .hero-rocket { top: 58%; right: .5%; left: auto; width: min(95px, 7.4vw); }
+  .hero-supplies { bottom: 10%; left: 38%; width: min(144px, 11.3vw); }
+  .hero-economy { bottom: 7%; left: 50%; width: min(123px, 9.6vw); }
+  .hero-optics { right: auto; bottom: 9%; left: 79%; width: min(115px, 9vw); }
 }
 
 /* Refreshing the page redraws the illustrations in a short, staggered
@@ -1056,25 +1056,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (max-width: 760px) {
   .hero-section {
-    height: 28.5svh;
-    min-height: 240px;
-    max-height: 270px;
-    padding: 106px 20px 12px;
+    height: 37.05svh;
+    min-height: 312px;
+    max-height: 351px;
+    padding: 116px 20px 18px;
   }
-  .hero-logo-stage { width: min(145px, 42vw); margin-bottom: 2px; }
-  .hero-title-wrap h1 { max-width: 235px; font-size: clamp(1.16rem, 5.1vw, 1.45rem); }
-  .hero-actions { gap: 12px; }
-  .hero-actions .button { min-height: 31px; padding: 0 12px; gap: 11px; font-size: .64rem; }
-  .hero-actions .text-link { font-size: .63rem; }
+  .hero-logo-stage { width: min(160px, 46vw); margin-bottom: 3px; }
+  .hero-title-wrap h1 { max-width: 255px; font-size: clamp(1.22rem, 5.4vw, 1.55rem); }
+  .hero-actions { gap: 13px; }
+  .hero-actions .button { min-height: 33px; padding: 0 13px; gap: 12px; font-size: .67rem; }
+  .hero-actions .text-link { font-size: .66rem; }
 
-  .hero-cell { top: 45%; left: 54%; width: 44px; }
-  .hero-note-strip { top: 43%; left: 68%; width: 59px; }
-  .hero-books { top: 42%; right: 3%; left: auto; width: 84px; }
-  .hero-bridge-lab { top: 66%; left: 54%; width: 68px; }
-  .hero-optics { top: auto; right: 19%; bottom: 6%; left: auto; width: 50px; }
-  .hero-rocket { top: 65%; right: 3%; bottom: auto; left: auto; width: 39px; }
-  .hero-economy { bottom: 4%; left: 62%; width: 57px; }
-  .hero-supplies { bottom: 4%; left: 48%; width: 62px; }
+  .hero-cell { top: 39%; left: 54%; width: 48px; }
+  .hero-note-strip { top: 38%; left: 68%; width: 65px; }
+  .hero-books { top: 36%; right: 3%; left: auto; width: 92px; }
+  .hero-bridge-lab { top: 63%; left: 54%; width: 75px; }
+  .hero-optics { top: auto; right: 19%; bottom: 7%; left: auto; width: 55px; }
+  .hero-rocket { top: 62%; right: 3%; bottom: auto; left: auto; width: 43px; }
+  .hero-economy { bottom: 5%; left: 62%; width: 63px; }
+  .hero-supplies { bottom: 5%; left: 48%; width: 68px; }
 }
 
 /* Navigation returns to the editorial underline cue: the coral rule grows
