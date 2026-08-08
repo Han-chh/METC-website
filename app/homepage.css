@@ -926,3 +926,31 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-bridge-lab { left: 55%; }.hero-rocket { right: 3%; }
   .hero-supplies { left: 42%; }.hero-economy { left: 57%; }.hero-optics { right: 18%; }
 }
+
+/* A four-column visual rhythm uses the full middle/right field instead of
+   leaving the bottom sketches clustered beneath the bridge. */
+.hero-cell { top: 25%; left: 39%; width: min(155px, 12vw); }
+.hero-note-strip { top: 23%; left: 54%; width: min(175px, 13.7vw); }
+.hero-books { top: 21%; left: 70%; right: auto; width: min(250px, 19.5vw); }
+.hero-rocket { top: 32%; right: auto; left: 90%; width: min(115px, 9vw); }
+.hero-supplies { bottom: 8%; left: 39%; width: min(175px, 13.7vw); }
+.hero-economy { bottom: 8%; left: 54%; width: min(150px, 11.7vw); }
+.hero-bridge-lab { top: 55%; left: 67%; width: min(210px, 16.4vw); }
+.hero-optics { right: auto; bottom: 10%; left: 85%; width: min(140px, 10.9vw); }
+
+@media (max-width: 1020px) and (min-width: 761px) {
+  .hero-cell { left: 43%; }.hero-note-strip { left: 55%; }.hero-books { left: 69%; }
+  .hero-rocket { left: 90%; }.hero-supplies { left: 39%; }.hero-economy { left: 53%; }
+  .hero-bridge-lab { left: 66%; }.hero-optics { left: 84%; }
+}
+
+@media (max-width: 760px) {
+  .hero-cell { top: 34%; left: 54%; width: 58px; }
+  .hero-note-strip { top: 30%; left: 68%; width: 78px; }
+  .hero-books { top: 28%; right: 4%; left: auto; width: 112px; }
+  .hero-bridge-lab { top: 47%; left: 55%; width: 90px; }
+  .hero-optics { right: 20%; bottom: auto; left: auto; top: 62%; width: 66px; }
+  .hero-rocket { top: 48%; right: 4%; bottom: auto; left: auto; width: 52px; }
+  .hero-economy { bottom: 4%; left: 62%; width: 76px; }
+  .hero-supplies { bottom: 4%; left: 48%; width: 82px; }
+}
