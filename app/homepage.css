@@ -171,6 +171,39 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-dark { background: var(--ink-deep); color: white; box-shadow: 0 14px 30px rgba(16,37,31,.18); }
 .button-dark:hover { box-shadow: 0 18px 38px rgba(16,37,31,.25); }
 .button-coral { background: var(--coral); color: #fff; }
+
+/* Entry CTAs inherit the visual temperature of their sections. */
+.teaching-section .button-coral {
+  background: var(--ink-deep);
+  color: var(--chalk);
+  box-shadow: 0 14px 30px rgba(16, 37, 31, 0.16);
+}
+
+.teaching-section .button-coral span { color: var(--sun); }
+
+.teaching-section .button-coral:hover,
+.teaching-section .button-coral:focus-visible {
+  background: var(--ink);
+  box-shadow: 0 18px 38px rgba(16, 37, 31, 0.23);
+  outline: 2px solid var(--sun);
+  outline-offset: 3px;
+}
+
+.activity-section .button-coral {
+  background: var(--chalk);
+  color: var(--ink-deep);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.activity-section .button-coral span { color: var(--coral); }
+
+.activity-section .button-coral:hover,
+.activity-section .button-coral:focus-visible {
+  background: #fffdf4;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+  outline: 2px solid var(--sun);
+  outline-offset: 3px;
+}
 .text-link {
   display: inline-flex;
   align-items: center;
