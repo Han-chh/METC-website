@@ -61,7 +61,7 @@ export const zh: HomepageCopy = {
     eyebrow: "03 — 课堂活动",
     title: "知识不是被展示，而是在桌面上发生",
     body: "教学者和学生围在同一张桌子边。每一次讨论、每一个歪掉的模型、每一轮重新测试，都是课堂真正的内容。",
-    photoCaption: "Bridge Lab · 结构设计工作坊 · 2026",
+    photoCaption: "上步小学 · 课堂活动",
     projectLabel: "Student Works / 学生作品",
     projects: [
       { number: "A", type: "ENGINEERING DESIGN", title: "纸桥承重模型", detail: "从 120g 到 2.4kg，第四版终于撑住。" },

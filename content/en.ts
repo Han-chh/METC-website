@@ -61,7 +61,7 @@ export const en: HomepageCopy = {
     eyebrow: "03 — Classroom Activities",
     title: "Knowledge is not displayed — it happens on the table",
     body: "Teachers and students gather around the same table. Every conversation, tilted model, and round of retesting is part of the real class.",
-    photoCaption: "Bridge Lab · Structural design workshop · 2026",
+    photoCaption: "Shangbu Primary School · Classroom activity",
     projectLabel: "Student Works / 学生作品",
     projects: [
       { number: "A", type: "ENGINEERING DESIGN", title: "Paper bridge load model", detail: "From 120g to 2.4kg — version four finally held." },

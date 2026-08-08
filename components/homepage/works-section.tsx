@@ -1,5 +1,6 @@
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
+import { resourceAlbums } from "../../src/data/resources";
 
 type ActivitySectionProps = {
   language: Language;
@@ -8,9 +9,14 @@ type ActivitySectionProps = {
 };
 
 const BASE_PATH = "/METC-website";
+const homepageFeaturePhoto = resourceAlbums
+  .flatMap((album) => album.photos.filter((photo) => photo.id === album.homepageFeaturePhotoId))
+  .at(0);
 
 export function ActivitySection({ language, onDemoClick, onGalleryEnter }: ActivitySectionProps) {
   const { activities } = homepageCopy[language];
+  const photoSrc = homepageFeaturePhoto?.src ?? `${BASE_PATH}/images/metc-classroom-workshop.png`;
+  const photoAlt = language === "zh" ? "上步小学学生课堂活动" : "Students taking part in a Shangbu Primary School classroom activity";
 
   return (
     <section className="activity-section section-pad" id="activities">
@@ -28,7 +34,7 @@ export function ActivitySection({ language, onDemoClick, onGalleryEnter }: Activ
 
         <figure className="classroom-stage reveal">
           <div className="classroom-photo-wrap">
-            <img src={`${BASE_PATH}/images/metc-classroom-workshop.png`} alt="Students and teaching assistants testing a handmade bridge in a classroom workshop" />
+            <img src={photoSrc} alt={photoAlt} />
             <span className="photo-counter">01 / 04</span>
           </div>
           <figcaption>{activities.photoCaption}</figcaption>

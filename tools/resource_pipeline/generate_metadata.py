@@ -151,6 +151,7 @@ def build_albums() -> list[dict]:
         config = read_json(folder / "album.config.json")
         existing = read_json(folder / "album.json")
         cover_source = config.get("coverPhoto")
+        feature_source = config.get("homepageFeaturePhoto")
         photos: list[dict] = []
         candidates = (path for path in folder.rglob("*") if path.is_file() and "demonstration" not in path.relative_to(folder).parts)
         for original in sorted(path for path in candidates if path.suffix.lower() in MEDIA_EXTENSIONS | {".heic"}):
@@ -169,6 +170,7 @@ def build_albums() -> list[dict]:
                 "size": shape
             })
         cover = next((photo for photo in photos if photo["sourceFile"] == cover_source), None)
+        feature = next((photo for photo in photos if photo["sourceFile"] == feature_source), None)
         for photo in photos:
             photo.pop("sourceFile")
         data = {
@@ -181,6 +183,8 @@ def build_albums() -> list[dict]:
             "coverPhotoId": cover["id"] if cover else photos[0]["id"] if photos else None,
             "photos": photos
         }
+        if feature:
+            data["homepageFeaturePhotoId"] = feature["id"]
         (folder / "album.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         albums.append(data)
     return albums

@@ -59,6 +59,7 @@ export type ResourceAlbum = {
   description: string;
   accent: "coral" | "sky" | "mint";
   coverPhotoId: string | null;
+  homepageFeaturePhotoId?: string;
   photos: ResourcePhoto[];
 };
 
