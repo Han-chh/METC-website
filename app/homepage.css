@@ -909,3 +909,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-economy { display: block; bottom: 4%; left: 62%; width: 76px; }
   .hero-supplies { display: block; bottom: 4%; left: 48%; width: 82px; }
 }
+
+/* Compact-cover illustration map: a calm three-row rhythm keeps every
+   sketch inside the right-hand field and clear of both copy and its peers. */
+.hero-cell { top: 26%; left: 46%; width: min(120px, 9.4vw); }
+.hero-note-strip { top: 24%; left: 59%; width: min(150px, 11.7vw); }
+.hero-books { top: 23%; right: 9%; width: min(230px, 18vw); }
+.hero-bridge-lab { top: 52%; left: 54%; width: min(185px, 14.5vw); }
+.hero-rocket { top: 54%; right: 9%; width: min(95px, 7.4vw); }
+.hero-supplies { bottom: 8%; left: 39%; width: min(155px, 12.1vw); }
+.hero-economy { bottom: 7%; left: 51%; width: min(128px, 10vw); }
+.hero-optics { top: auto; bottom: 11%; right: 24%; width: min(120px, 9.4vw); }
+
+@media (max-width: 1020px) and (min-width: 761px) {
+  .hero-cell { left: 50%; }.hero-note-strip { left: 61%; }.hero-books { right: 3%; }
+  .hero-bridge-lab { left: 55%; }.hero-rocket { right: 3%; }
+  .hero-supplies { left: 42%; }.hero-economy { left: 57%; }.hero-optics { right: 18%; }
+}
