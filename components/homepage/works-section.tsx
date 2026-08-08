@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
+import { localizedSchoolName } from "../../content/activities/albums";
 import { resourceAlbums } from "../../src/data/resources";
 
 type ActivitySectionProps = {
@@ -14,13 +15,13 @@ type ActivitySectionProps = {
 const BASE_PATH = "/METC-website";
 const homepageFeaturePhotos = resourceAlbums.flatMap((album) => {
   const photo = album.photos.find((item) => item.id === album.homepageFeaturePhotoId);
-  return photo ? [{ ...photo, school: album.school }] : [];
+  return photo ? [{ ...photo, school: localizedSchoolName(album.id, album.school) }] : [];
 });
 
 const fallbackFeaturePhoto = {
   src: `${BASE_PATH}/images/metc-classroom-workshop.png`,
   alt: "METC classroom activity",
-  school: "METC"
+  school: { zh: "METC", en: "METC" }
 };
 
 export function ActivitySection({ language, onNotice, onGalleryEnter }: ActivitySectionProps) {
@@ -30,7 +31,9 @@ export function ActivitySection({ language, onNotice, onGalleryEnter }: Activity
   const featurePhotos = homepageFeaturePhotos.length ? homepageFeaturePhotos : [fallbackFeaturePhoto];
   const activePhoto = featurePhotos[activePhotoIndex] ?? featurePhotos[0];
   const totalPhotos = featurePhotos.length;
-  const photoSource = language === "zh" ? `${activePhoto.school} · 课堂活动` : `${activePhoto.school} · Classroom activity`;
+  const photoSource = language === "zh"
+    ? `${activePhoto.school.zh} · 课堂活动`
+    : `${activePhoto.school.en} · Classroom activity`;
   const previousPhoto = () => setActivePhotoIndex((index) => (index - 1 + totalPhotos) % totalPhotos);
   const nextPhoto = () => setActivePhotoIndex((index) => (index + 1) % totalPhotos);
 
