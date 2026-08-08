@@ -999,3 +999,80 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .primary-nav { gap: 5px; }.primary-nav a { padding: 7px 10px; }.primary-nav span { font-size: .93rem; }
   .language-toggle { min-width: 104px; min-height: 36px; padding: 3px 4px; font-size: .72rem; }.language-toggle span { min-width: 34px; padding: 5px 6px; }.language-toggle i { height: 15px; }
 }
+
+/* The title page now uses three quarters of its former vertical budget.  The
+   copy and every hand-drawn lesson mark scale down together, keeping the
+   cover's visual map intact rather than cropping the lower row. */
+@media (min-width: 761px) {
+  .hero-section {
+    height: 29.17svh;
+    min-height: 250px;
+    max-height: 325px;
+    padding: 91px 56px 14px;
+  }
+  .hero-logo-stage { width: min(185px, 18vw); margin-bottom: 3px; }
+  .hero-title-wrap h1 { max-width: 355px; font-size: clamp(1.2rem, 1.75vw, 1.8rem); line-height: 1.02; }
+  .hero-actions { gap: 14px; }
+  .hero-actions .button { min-height: 33px; padding: 0 14px; gap: 14px; font-size: .68rem; }
+  .hero-actions .text-link { font-size: .68rem; }
+
+  .hero-cell { top: 38%; left: 38%; width: min(116px, 9.1vw); }
+  .hero-note-strip { top: 38%; left: 49%; width: min(131px, 10.3vw); }
+  .hero-books { top: 36%; left: 72%; right: auto; width: min(165px, 12.9vw); }
+  .hero-bridge-lab { top: 61%; left: 59%; width: min(139px, 10.9vw); }
+  .hero-rocket { top: 61%; right: .5%; left: auto; width: min(86px, 6.7vw); }
+  .hero-supplies { bottom: 10%; left: 38%; width: min(131px, 10.3vw); }
+  .hero-economy { bottom: 6%; left: 50%; width: min(112px, 8.8vw); }
+  .hero-optics { right: auto; bottom: 8%; left: 79%; width: min(105px, 8.2vw); }
+}
+
+/* Refreshing the page redraws the illustrations in a short, staggered
+   sequence.  A clipping reveal preserves the original strokes, fills, and
+   dashed marks while making each SVG read as a hand-drawn sketch. */
+.hero-section .hero-illustration { opacity: 1; clip-path: none; transform: none; }
+.hero-cell { --illustration-delay: .08s; }
+.hero-note-strip { --illustration-delay: .18s; }
+.hero-books { --illustration-delay: .3s; }
+.hero-bridge-lab { --illustration-delay: .42s; }
+.hero-rocket { --illustration-delay: .54s; }
+.hero-supplies { --illustration-delay: .66s; }
+.hero-economy { --illustration-delay: .78s; }
+.hero-optics { --illustration-delay: .9s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-section .hero-illustration {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transform: translateY(4px) scale(.98);
+    animation: compactSketchDraw 460ms cubic-bezier(.22,.72,.22,1) var(--illustration-delay) both;
+  }
+}
+
+@keyframes compactSketchDraw {
+  0% { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateY(4px) scale(.98); }
+  18% { opacity: 1; }
+  100% { opacity: 1; clip-path: inset(0 0 0 0); transform: none; }
+}
+
+@media (max-width: 760px) {
+  .hero-section {
+    height: 28.5svh;
+    min-height: 240px;
+    max-height: 270px;
+    padding: 106px 20px 12px;
+  }
+  .hero-logo-stage { width: min(145px, 42vw); margin-bottom: 2px; }
+  .hero-title-wrap h1 { max-width: 235px; font-size: clamp(1.16rem, 5.1vw, 1.45rem); }
+  .hero-actions { gap: 12px; }
+  .hero-actions .button { min-height: 31px; padding: 0 12px; gap: 11px; font-size: .64rem; }
+  .hero-actions .text-link { font-size: .63rem; }
+
+  .hero-cell { top: 45%; left: 54%; width: 44px; }
+  .hero-note-strip { top: 43%; left: 68%; width: 59px; }
+  .hero-books { top: 42%; right: 3%; left: auto; width: 84px; }
+  .hero-bridge-lab { top: 66%; left: 54%; width: 68px; }
+  .hero-optics { top: auto; right: 19%; bottom: 6%; left: auto; width: 50px; }
+  .hero-rocket { top: 65%; right: 3%; bottom: auto; left: auto; width: 39px; }
+  .hero-economy { bottom: 4%; left: 62%; width: 57px; }
+  .hero-supplies { bottom: 4%; left: 48%; width: 62px; }
+}
