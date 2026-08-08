@@ -954,3 +954,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-economy { bottom: 4%; left: 62%; width: 76px; }
   .hero-supplies { bottom: 4%; left: 48%; width: 82px; }
 }
+
+/* Release the upper-middle whitespace and separate the book from the bridge
+   with a deliberate vertical gutter. */
+@media (min-width: 761px) {
+  .hero-note-strip { top: 37%; }
+  .hero-books { top: 22%; width: min(220px, 17.2vw); }
+  .hero-bridge-lab { top: 61%; left: 68%; width: min(185px, 14.5vw); }
+}
