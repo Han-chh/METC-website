@@ -56,8 +56,6 @@ export type HomepageCopy = {
     title: string;
     body: string;
     photoCaption: string;
-    projectLabel: string;
-    projects: Array<{ number: string; type: string; title: string; detail: string }>;
     demoCta: string;
   };
   voices: {

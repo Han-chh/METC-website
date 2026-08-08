@@ -112,7 +112,7 @@ export function MetcHomePage() {
         <HeroSection language={language} onAnchorClick={handleAnchorClick} />
         <ExploreSection language={language} />
         <TeachingSection language={language} onNotice={() => setNoticeVisible(true)} onLibraryEnter={enterLibrary} />
-        <ActivitySection language={language} onNotice={() => setNoticeVisible(true)} onGalleryEnter={enterGallery} />
+        <ActivitySection language={language} onGalleryEnter={enterGallery} />
         <VoicesSection language={language} onVoicesEnter={enterVoices} />
       </main>
       <SiteFooter language={language} />

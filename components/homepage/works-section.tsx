@@ -8,7 +8,6 @@ import { resourceAlbums } from "../../src/data/resources";
 
 type ActivitySectionProps = {
   language: Language;
-  onNotice: () => void;
   onGalleryEnter: () => void;
 };
 
@@ -33,7 +32,7 @@ const fallbackFeaturePhoto = {
   objectPosition: "center"
 };
 
-export function ActivitySection({ language, onNotice, onGalleryEnter }: ActivitySectionProps) {
+export function ActivitySection({ language, onGalleryEnter }: ActivitySectionProps) {
   const { activities } = homepageCopy[language];
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
@@ -90,23 +89,6 @@ export function ActivitySection({ language, onNotice, onGalleryEnter }: Activity
           <div className="photo-note" aria-hidden="true">test → fail → discuss → rebuild</div>
           <svg className="photo-arrow" viewBox="0 0 170 90" aria-hidden="true"><path d="M7 72 C65 15 111 17 157 48 M143 35 L158 48 L143 59" /></svg>
         </figure>
-
-        <div className="student-work-index reveal">
-          <div className="work-index-heading">
-            <p>{activities.projectLabel}</p>
-          </div>
-          <div className="project-rows">
-            {activities.projects.map((project) => (
-              <button type="button" onClick={onNotice} key={project.number}>
-                <span className="project-letter">{project.number}</span>
-                <small>{project.type}</small>
-                <h3>{project.title}</h3>
-                <p>{project.detail}</p>
-                <i aria-hidden="true">↗</i>
-              </button>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

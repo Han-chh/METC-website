@@ -85,12 +85,6 @@ export const en: HomepageCopy = {
     title: "Knowledge is not displayed — it happens on the table",
     body: "Teachers and students gather around the same table. Every conversation, tilted model, and round of retesting is part of the real class.",
     photoCaption: "Shangbu Primary School · Classroom activity",
-    projectLabel: "Student Works / 学生作品",
-    projects: [
-      { number: "A", type: "ENGINEERING DESIGN", title: "Paper bridge load model", detail: "From 120g to 2.4kg — version four finally held." },
-      { number: "B", type: "MATH EXPLORATION", title: "Curves & shortest paths", detail: "Thread, pins, and one accidental detour made optimization visible." },
-      { number: "C", type: "PROJECT", title: "Light that turns a corner", detail: "Lenses, cardboard, and a blueprint covered in revisions." }
-    ],
     demoCta: "Enter the exhibition"
   },
   voices: {
