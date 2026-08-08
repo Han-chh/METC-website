@@ -1076,3 +1076,37 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-economy { bottom: 4%; left: 62%; width: 57px; }
   .hero-supplies { bottom: 4%; left: 48%; width: 62px; }
 }
+
+/* Navigation returns to the editorial underline cue: the coral rule grows
+   from left to right instead of surrounding the label with a filled box. */
+@media (min-width: 761px) {
+  .header-inner { grid-template-columns: 188px 1fr 128px; }
+  .header-brand-mark { font-size: 1.66rem; }
+  .primary-nav { gap: clamp(20px, 2.25vw, 38px); }
+  .primary-nav a { padding: 16px 18px 13px; background: transparent; transition: color 180ms ease; }
+  .primary-nav span { font-size: 1.34rem; font-weight: 650; }
+  .language-toggle { min-width: 118px; font-size: .86rem; }
+  .language-toggle span { min-width: 41px; }
+}
+
+.primary-nav a::after {
+  display: block;
+  left: 18px;
+  right: calc(100% - 18px);
+  bottom: 7px;
+  height: 2px;
+  background: var(--coral);
+  transition: right 260ms cubic-bezier(.22,.72,.22,1);
+}
+.primary-nav a:hover, .primary-nav a:focus-visible { background: transparent; color: var(--ink-deep); outline: none; }
+.primary-nav a:hover::after, .primary-nav a:focus-visible::after { right: 18px; }
+
+@media (max-width: 760px) {
+  .primary-nav { gap: 7px; }
+  .primary-nav a { padding: 9px 11px 12px; background: transparent; }
+  .primary-nav span { font-size: 1.03rem; }
+  .primary-nav a::after { left: 11px; right: calc(100% - 11px); bottom: 6px; }
+  .primary-nav a:hover::after, .primary-nav a:focus-visible::after { right: 11px; }
+  .language-toggle { min-width: 108px; font-size: .78rem; }
+  .language-toggle span { min-width: 36px; }
+}
