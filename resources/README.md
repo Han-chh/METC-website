@@ -41,3 +41,5 @@ DOCX 会转换、清理为语言对应的 `demonstration/syllabus.zh.html` 或 `
 ## 新增活动照片
 
 在 `活动成果展览/<学校名>/` 中放入照片（可按课次建立子目录）。文件夹名就是页面显示的学校名称。运行 `generate_metadata.py` 后，学校相册会自动出现在活动成果展览页；照片使用懒加载、masonry 排列和灯箱查看。HEIC 原图会保持不变，并由脚本在该学校的 `demonstration/` 中生成浏览器可用的 JPEG 预览。
+
+如需指定相册封面，可在学校文件夹创建 `album.config.json`，并填写相对于该学校文件夹的原始照片路径：`{"coverPhoto": "L3 activity/example.heic"}`。重新运行 `generate_metadata.py` 后，封面会自动更新。

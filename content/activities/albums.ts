@@ -20,7 +20,7 @@ export const albums: ActivityAlbum[] = resourceAlbums.filter((album) => album.ph
   description: local(album.description),
   year: "METC",
   category: local("活动成果"),
-  coverPhotoId: album.photos[0].id,
+  coverPhotoId: album.coverPhotoId ?? album.photos[0].id,
   accent: album.accent,
   photos: album.photos.map(toPhoto)
 }));

@@ -58,6 +58,7 @@ export type ResourceAlbum = {
   subtitle: string;
   description: string;
   accent: "coral" | "sky" | "mint";
+  coverPhotoId: string | null;
   photos: ResourcePhoto[];
 };
 

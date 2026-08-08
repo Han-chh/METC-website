@@ -148,6 +148,8 @@ def build_albums() -> list[dict]:
     albums: list[dict] = []
     accents = ["coral", "sky", "mint"]
     for position, folder in enumerate(sorted(path for path in EXHIBITION.iterdir() if path.is_dir()), start=1):
+        config = read_json(folder / "album.config.json")
+        cover_source = config.get("coverPhoto")
         photos: list[dict] = []
         candidates = (path for path in folder.rglob("*") if path.is_file() and "demonstration" not in path.relative_to(folder).parts)
         for original in sorted(path for path in candidates if path.suffix.lower() in MEDIA_EXTENSIONS | {".heic"}):
@@ -157,6 +159,7 @@ def build_albums() -> list[dict]:
             width, height, shape = image_shape(item)
             photos.append({
                 "id": f"{identifier(folder.name, 'school')}-{len(photos) + 1:03d}",
+                "sourceFile": original.relative_to(folder).as_posix(),
                 "src": url_for(item),
                 "alt": f"{folder.name}课程活动",
                 "caption": original.parent.name if original.parent != folder else None,
@@ -164,6 +167,9 @@ def build_albums() -> list[dict]:
                 "height": height,
                 "size": shape
             })
+        cover = next((photo for photo in photos if photo["sourceFile"] == cover_source), None)
+        for photo in photos:
+            photo.pop("sourceFile")
         data = {
             "id": identifier(folder.name, "school"),
             "school": folder.name,
@@ -171,6 +177,7 @@ def build_albums() -> list[dict]:
             "subtitle": "METC 课堂活动成果",
             "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
             "accent": accents[(position - 1) % len(accents)],
+            "coverPhotoId": cover["id"] if cover else photos[0]["id"] if photos else None,
             "photos": photos
         }
         (folder / "album.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
