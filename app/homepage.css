@@ -1115,6 +1115,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
    the enlarged cover while retaining the primary/secondary hierarchy. */
 @media (min-width: 761px) {
   .hero-actions { gap: 18px; }
-  .hero-actions .button { min-height: 46px; padding: 0 20px; gap: 21px; font-size: .82rem; }
-  .hero-actions .text-link { min-height: 46px; padding: 0; gap: 16px; font-size: .82rem; }
+  .hero-actions .button { min-height: 42px; padding: 0 20px; gap: 21px; font-size: .86rem; }
+  .hero-actions .text-link { min-height: 42px; padding: 0; gap: 16px; font-size: .86rem; }
 }
