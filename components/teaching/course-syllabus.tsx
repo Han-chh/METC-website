@@ -1,22 +1,26 @@
-import type { Course } from "../../content/teaching";
+"use client";
+
+import { useEffect, useState } from "react";
 import type { Language } from "../../content";
+import type { ResourceCourse } from "../../src/data/resources";
 
-type CourseSyllabusProps = { course: Course; language: Language };
+type Props = { course: ResourceCourse; language: Language };
 
-export function CourseSyllabus({ course, language }: CourseSyllabusProps) {
-  const copy = language === "zh"
-    ? { about: "关于这门课", objectives: "学习目标", syllabus: "课程大纲", explore: "我们会探索", challenge: "课堂挑战", page: "课程档案" }
-    : { about: "About this course", objectives: "Learning objectives", syllabus: "Course syllabus", explore: "What we explore", challenge: "Class challenge", page: "Course archive" };
-  return (
-    <div className="book-left-content" tabIndex={0} aria-label={language === "zh" ? "课程介绍与大纲，可独立滚动" : "Course introduction and syllabus, independently scrollable"}>
-      <div className="book-page-meta"><span>{copy.page}</span><span>{course.catalog}</span></div>
-      <p className="book-course-category">{course.category[language]} · {course.year}</p>
-      <h2>{course.title[language]}</h2>
-      <p className="book-subtitle">{course.subtitle[language]}</p>
-      <dl className="book-metadata"><div><dt>{language === "zh" ? "学科" : "Subject"}</dt><dd>{course.category[language]}</dd></div><div><dt>{language === "zh" ? "年级" : "Grades"}</dt><dd>{course.grades}</dd></div><div><dt>{language === "zh" ? "时长" : "Duration"}</dt><dd>{course.duration[language]}</dd></div></dl>
-      <section className="book-copy-section"><h3>{copy.about}</h3><p>{course.description[language]}</p></section>
-      <section className="book-copy-section book-objectives"><h3>{copy.objectives}</h3><ol>{course.objectives.map((objective, index) => <li key={objective[language]}><b>{String(index + 1).padStart(2, "0")}</b><span>{objective[language]}</span></li>)}</ol></section>
-      <section className="book-copy-section course-syllabus"><h3>{copy.syllabus}</h3>{course.lessons.map((lesson) => <article key={lesson.id}><span className="lesson-number">{lesson.number}</span><div><p className="lesson-time">{lesson.duration}</p><h4>{lesson.title[language]}</h4><p>{lesson.description[language]}</p><strong>{copy.explore}</strong><ul>{lesson.topics.map((topic) => <li key={topic[language]}>{topic[language]}</li>)}</ul><aside><span>{copy.challenge}</span><q>{lesson.challenge[language]}</q></aside></div></article>)}</section>
-    </div>
-  );
+export function CourseSyllabus({ course, language }: Props) {
+  const title = course.title[language];
+  const [syllabus, setSyllabus] = useState("");
+  const [loadFailed, setLoadFailed] = useState(false);
+  useEffect(() => {
+    setSyllabus(""); setLoadFailed(false);
+    if (!course.syllabus) return;
+    fetch(course.syllabus).then((response) => response.ok ? response.text() : Promise.reject()).then(setSyllabus).catch(() => setLoadFailed(true));
+  }, [course.syllabus]);
+  const copy = language === "zh" ? { archive: "课程档案", school: "授课学校", category: "课程领域", about: "课程介绍", contains: "包含课程", syllabus: "课程大纲预览", loading: "正在打开课程大纲…", unavailable: "课程大纲暂时无法加载。" } : { archive: "Course archive", school: "School", category: "Subject", about: "About this course", contains: "Included topics", syllabus: "Syllabus preview", loading: "Opening the syllabus…", unavailable: "The syllabus preview is unavailable." };
+  return <div className="book-left-content" tabIndex={0} aria-label={copy.archive}>
+    <div className="book-page-meta"><span>{copy.archive}</span><span>{course.catalog}</span></div><p className="book-course-category">{course.category}</p><h2>{title}</h2><p className="book-subtitle">{course.summary}</p>
+    <dl className="book-metadata"><div><dt>{copy.school}</dt><dd>{course.school}</dd></div><div><dt>{copy.category}</dt><dd>{course.category}</dd></div><div><dt>{language === "zh" ? "课件" : "Decks"}</dt><dd>{course.lessons.length}</dd></div></dl>
+    <section className="book-copy-section"><h3>{copy.about}</h3><p>{course.summary}</p></section>
+    <section className="book-copy-section book-objectives"><h3>{copy.contains}</h3><ol>{course.contains.map((item, index) => <li key={item}><b>{String(index + 1).padStart(2, "0")}</b><span>{item}</span></li>)}</ol></section>
+    {course.hasSyllabus && <section className="book-copy-section rendered-syllabus"><h3>{copy.syllabus}</h3>{syllabus ? <div className="syllabus-preview" dangerouslySetInnerHTML={{ __html: syllabus }} /> : <p className="syllabus-loading">{loadFailed ? copy.unavailable : copy.loading}</p>}</section>}
+  </div>;
 }

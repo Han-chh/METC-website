@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+"""Build course.json, album.json, and the frontend's generated resource indexes."""
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+import shutil
+import subprocess
+from pathlib import Path
+from urllib.parse import quote
+
+try:
+    from PIL import Image
+except ImportError:  # The index remains useful even without optional image dimensions.
+    Image = None
+
+ROOT = Path(__file__).resolve().parents[2]
+METC = ROOT / "resources" / "METC"
+COURSES = METC / "课程设计"
+EXHIBITION = METC / "活动成果展览"
+GENERATED = ROOT / "src" / "data" / "resources" / "generated"
+MEDIA_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"}
+
+
+def url_for(path: Path) -> str:
+    return "/METC-website/" + quote(path.relative_to(ROOT).as_posix(), safe="/")
+
+
+def identifier(label: str, prefix: str) -> str:
+    normal = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
+    return normal or f"{prefix}-{hashlib.sha1(label.encode()).hexdigest()[:8]}"
+
+
+def read_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def image_shape(path: Path) -> tuple[int | None, int | None, str]:
+    if Image is None:
+        return None, None, "standard"
+    try:
+        with Image.open(path) as image:
+            width, height = image.size
+        ratio = width / height if height else 1
+        return width, height, "wide" if ratio > 1.35 else "portrait" if ratio < .78 else "standard"
+    except Exception:
+        return None, None, "standard"
+
+
+def web_photo(path: Path, album_root: Path) -> Path | None:
+    """Return a browser-ready photo while retaining the original HEIC unchanged."""
+    if path.suffix.lower() != ".heic":
+        return path
+    sips = shutil.which("sips")
+    if not sips:
+        print(f"Skipping HEIC without macOS sips: {path.relative_to(ROOT)}")
+        return None
+    destination = album_root / "demonstration" / f"{hashlib.sha1(path.relative_to(album_root).as_posix().encode()).hexdigest()[:12]}.jpg"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    if not destination.exists() or destination.stat().st_mtime < path.stat().st_mtime:
+        subprocess.run([sips, "-s", "format", "jpeg", str(path), "--out", str(destination)], check=True, capture_output=True, text=True)
+    return destination
+
+
+def build_courses() -> list[dict]:
+    entries: list[dict] = []
+    course_dirs = [path for path in COURSES.iterdir() if path.is_dir()]
+    course_dirs.sort(key=lambda path: (read_json(path / "course.config.json").get("order", 999), path.name))
+    for position, course_dir in enumerate(course_dirs, start=1):
+        config = read_json(course_dir / "course.config.json")
+        demonstration = course_dir / "demonstration"
+        syllabus_file = demonstration / "syllabus.html"
+        decks: list[dict] = []
+        lesson_titles = config.get("lessonTitles", [])
+        for deck_position, preview in enumerate(sorted(demonstration.glob("lesson*/preview.json")), start=1):
+            payload = read_json(preview)
+            folder = preview.parent
+            decks.append({
+                "id": payload.get("id", folder.name),
+                "title": lesson_titles[deck_position - 1] if deck_position <= len(lesson_titles) else payload.get("title", folder.name),
+                "source": payload.get("source", ""),
+                "pdf": url_for(folder / payload["pdf"]) if payload.get("pdf") else None,
+                "slideCount": payload.get("slideCount", 0),
+                "slides": [url_for(folder / slide) for slide in payload.get("slides", [])]
+            })
+        source_syllabus = next(iter(sorted((course_dir / "source").glob("*.docx"))), None)
+        configured_title = config.get("title", course_dir.name)
+        title = configured_title if isinstance(configured_title, dict) else {
+            "zh": configured_title,
+            "en": config.get("titleEn", configured_title),
+        }
+        data = {
+            "id": config.get("id", identifier(course_dir.name, "course")),
+            "catalog": f"METC · {position:02d}",
+            "title": title,
+            "school": config.get("school", "METC 合作学校"),
+            "category": config.get("category", "课程设计"),
+            "color": config.get("color", ["coral", "blue", "mint"][min(position - 1, 2)]),
+            "icon": config.get("icon", "spark"),
+            "summary": config.get("summary", "METC 课程资源。"),
+            "contains": config.get("contains", []),
+            "hasSyllabus": syllabus_file.exists(),
+            "syllabus": url_for(syllabus_file) if syllabus_file.exists() else None,
+            "syllabusSource": source_syllabus.name if source_syllabus else None,
+            "lessons": decks
+        }
+        (course_dir / "course.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        entries.append(data)
+    return entries
+
+
+def build_albums() -> list[dict]:
+    albums: list[dict] = []
+    accents = ["coral", "sky", "mint"]
+    for position, folder in enumerate(sorted(path for path in EXHIBITION.iterdir() if path.is_dir()), start=1):
+        photos: list[dict] = []
+        candidates = (path for path in folder.rglob("*") if path.is_file() and "demonstration" not in path.relative_to(folder).parts)
+        for original in sorted(path for path in candidates if path.suffix.lower() in MEDIA_EXTENSIONS | {".heic"}):
+            item = web_photo(original, folder)
+            if item is None:
+                continue
+            width, height, shape = image_shape(item)
+            photos.append({
+                "id": f"{identifier(folder.name, 'school')}-{len(photos) + 1:03d}",
+                "src": url_for(item),
+                "alt": f"{folder.name}课程活动",
+                "caption": original.parent.name if original.parent != folder else None,
+                "width": width,
+                "height": height,
+                "size": shape
+            })
+        data = {
+            "id": identifier(folder.name, "school"),
+            "school": folder.name,
+            "title": f"{folder.name}课程活动",
+            "subtitle": "METC 课堂活动成果",
+            "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+            "accent": accents[(position - 1) % len(accents)],
+            "photos": photos
+        }
+        (folder / "album.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        albums.append(data)
+    return albums
+
+
+def main() -> None:
+    GENERATED.mkdir(parents=True, exist_ok=True)
+    courses = build_courses()
+    albums = build_albums()
+    (GENERATED / "courses.json").write_text(json.dumps(courses, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (GENERATED / "albums.json").write_text(json.dumps(albums, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Generated {len(courses)} course.json file(s), {len(albums)} album.json file(s), and frontend indexes in {GENERATED.relative_to(ROOT)}.")
+
+
+if __name__ == "__main__":
+    main()

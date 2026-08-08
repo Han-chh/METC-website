@@ -1,0 +1,19 @@
+{
+  "id": "lesson3",
+  "source": "L5-Money and Bank.pdf",
+  "pdf": "preview.pdf",
+  "title": "Money and Bank",
+  "slides": [
+    "slides/001.png",
+    "slides/002.png",
+    "slides/003.png",
+    "slides/004.png",
+    "slides/005.png",
+    "slides/006.png",
+    "slides/007.png",
+    "slides/008.png",
+    "slides/009.png",
+    "slides/010.png"
+  ],
+  "slideCount": 10
+}

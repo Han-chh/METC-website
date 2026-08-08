@@ -1,0 +1,12 @@
+{
+  "id": "light",
+  "order": 2,
+  "title": {"zh": "物理-光", "en": "Physics: Light"},
+  "school": "深圳实验小学",
+  "category": "物理",
+  "color": "blue",
+  "icon": "light",
+  "summary": "通过观察、实验与绘图，探索光的传播、反射和色彩形成。",
+  "contains": ["光的传播", "反射实验", "彩虹形成"],
+  "lessonTitles": ["光的传播", "反射实验", "彩虹形成"]
+}

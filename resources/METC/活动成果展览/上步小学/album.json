@@ -1,0 +1,163 @@
+{
+  "id": "school-98ccc29e",
+  "school": "上步小学",
+  "title": "上步小学课程活动",
+  "subtitle": "METC 课堂活动成果",
+  "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+  "accent": "coral",
+  "photos": [
+    {
+      "id": "school-98ccc29e-001",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473194246.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L1 波",
+      "width": 1702,
+      "height": 1276,
+      "size": "standard"
+    },
+    {
+      "id": "school-98ccc29e-002",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473198808.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L1 波",
+      "width": 4034,
+      "height": 2689,
+      "size": "wide"
+    },
+    {
+      "id": "school-98ccc29e-003",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473205928.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L1 波",
+      "width": 1702,
+      "height": 1276,
+      "size": "standard"
+    },
+    {
+      "id": "school-98ccc29e-004",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473218827.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L1 波",
+      "width": 1707,
+      "height": 1280,
+      "size": "standard"
+    },
+    {
+      "id": "school-98ccc29e-005",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L2%20%E6%B3%A2%E8%B0%B1/mmexport1784473352319.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L2 波谱",
+      "width": 1702,
+      "height": 1276,
+      "size": "standard"
+    },
+    {
+      "id": "school-98ccc29e-006",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L2%20%E6%B3%A2%E8%B0%B1/mmexport1784473354749.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L2 波谱",
+      "width": 1702,
+      "height": 1276,
+      "size": "standard"
+    },
+    {
+      "id": "school-98ccc29e-007",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L2%20%E6%B3%A2%E8%B0%B1/mmexport1784473356996.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L2 波谱",
+      "width": 1702,
+      "height": 1276,
+      "size": "standard"
+    },
+    {
+      "id": "school-98ccc29e-008",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/8fb4e0536239.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-009",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/3ef3b5a52297.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 4284,
+      "height": 5712,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-010",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/852862d8ec87.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-011",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/c76c149a69d3.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 5712,
+      "height": 4284,
+      "size": "standard"
+    },
+    {
+      "id": "school-98ccc29e-012",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/ad0bcf0b7bfb.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-013",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/89108811b41b.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-014",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/862a6c3c7b53.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-015",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/ce478cdf85a8.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-016",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/9961479b3408.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    },
+    {
+      "id": "school-98ccc29e-017",
+      "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/dd1008fc9453.jpg",
+      "alt": "上步小学课程活动",
+      "caption": "L3 activity",
+      "width": 3024,
+      "height": 4032,
+      "size": "portrait"
+    }
+  ]
+}

@@ -1,0 +1,817 @@
+[
+  {
+    "id": "school-98ccc29e",
+    "school": "上步小学",
+    "title": "上步小学课程活动",
+    "subtitle": "METC 课堂活动成果",
+    "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+    "accent": "coral",
+    "photos": [
+      {
+        "id": "school-98ccc29e-001",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473194246.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L1 波",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      },
+      {
+        "id": "school-98ccc29e-002",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473198808.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L1 波",
+        "width": 4034,
+        "height": 2689,
+        "size": "wide"
+      },
+      {
+        "id": "school-98ccc29e-003",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473205928.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L1 波",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      },
+      {
+        "id": "school-98ccc29e-004",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L1%20%E6%B3%A2/mmexport1784473218827.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L1 波",
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-98ccc29e-005",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L2%20%E6%B3%A2%E8%B0%B1/mmexport1784473352319.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L2 波谱",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      },
+      {
+        "id": "school-98ccc29e-006",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L2%20%E6%B3%A2%E8%B0%B1/mmexport1784473354749.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L2 波谱",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      },
+      {
+        "id": "school-98ccc29e-007",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/L2%20%E6%B3%A2%E8%B0%B1/mmexport1784473356996.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L2 波谱",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      },
+      {
+        "id": "school-98ccc29e-008",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/8fb4e0536239.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-009",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/3ef3b5a52297.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 4284,
+        "height": 5712,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-010",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/852862d8ec87.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-011",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/c76c149a69d3.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 5712,
+        "height": 4284,
+        "size": "standard"
+      },
+      {
+        "id": "school-98ccc29e-012",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/ad0bcf0b7bfb.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-013",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/89108811b41b.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-014",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/862a6c3c7b53.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-015",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/ce478cdf85a8.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-016",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/9961479b3408.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-98ccc29e-017",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E4%B8%8A%E6%AD%A5%E5%B0%8F%E5%AD%A6/demonstration/dd1008fc9453.jpg",
+        "alt": "上步小学课程活动",
+        "caption": "L3 activity",
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      }
+    ]
+  },
+  {
+    "id": "school-b3dc235f",
+    "school": "普林云海",
+    "title": "普林云海课程活动",
+    "subtitle": "METC 课堂活动成果",
+    "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+    "accent": "sky",
+    "photos": [
+      {
+        "id": "school-b3dc235f-001",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L1%20%E7%81%AB%E7%AE%AD%E6%8E%A8%E8%BF%9B%E5%AE%9E%E9%AA%8C/mmexport1784470464925.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L1 火箭推进实验",
+        "width": 1280,
+        "height": 1707,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-002",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L1%20%E7%81%AB%E7%AE%AD%E6%8E%A8%E8%BF%9B%E5%AE%9E%E9%AA%8C/mmexport1784470467534.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L1 火箭推进实验",
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-003",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L1%20%E7%81%AB%E7%AE%AD%E6%8E%A8%E8%BF%9B%E5%AE%9E%E9%AA%8C/mmexport1784470469934.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L1 火箭推进实验",
+        "width": 1280,
+        "height": 1707,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-004",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L1%20%E7%81%AB%E7%AE%AD%E6%8E%A8%E8%BF%9B%E5%AE%9E%E9%AA%8C/mmexport1784470479956.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L1 火箭推进实验",
+        "width": 1280,
+        "height": 1707,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-005",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L1%20%E7%81%AB%E7%AE%AD%E6%8E%A8%E8%BF%9B%E5%AE%9E%E9%AA%8C/mmexport1784470483759.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L1 火箭推进实验",
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-006",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L1%20%E7%81%AB%E7%AE%AD%E6%8E%A8%E8%BF%9B%E5%AE%9E%E9%AA%8C/mmexport1784470486527.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L1 火箭推进实验",
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-007",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471095851.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-008",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471103952.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1536,
+        "height": 1152,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-009",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471109051.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-010",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471113535.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-011",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471120698.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1492,
+        "height": 1120,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-012",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471123406.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1492,
+        "height": 1120,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-013",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471127652.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-014",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471137650.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-015",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L2%20%E5%AF%86%E7%A0%81%E5%AD%A6/mmexport1784471143533.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L2 密码学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-016",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470326703.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-017",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470332289.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-018",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470336319.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-019",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470339353.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-020",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470343109.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-021",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470346100.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-022",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470348432.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1492,
+        "height": 1120,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-023",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470350990.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1492,
+        "height": 1120,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-024",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470353324.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-025",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470355469.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-026",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L3%20%E7%BB%86%E8%83%9E%E5%AD%A6/mmexport1784470357607.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L3 细胞学",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-027",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470774070.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-028",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470776713.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1536,
+        "height": 1152,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-029",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470779524.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-030",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470784798.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-031",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470789676.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-032",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470794740.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1492,
+        "height": 1120,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-033",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470800262.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-034",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470802647.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-035",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470804635.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-036",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470806772.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-037",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470808953.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-038",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470811030.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-039",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L4%20%E8%B4%A7%E5%B8%81/mmexport1784470813339.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L4 货币",
+        "width": 1120,
+        "height": 1494,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-040",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L5%20summary/mmexport1784470891522.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L5 summary",
+        "width": 1280,
+        "height": 1707,
+        "size": "portrait"
+      },
+      {
+        "id": "school-b3dc235f-041",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L5%20summary/mmexport1784470895840.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L5 summary",
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-b3dc235f-042",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%99%AE%E6%9E%97%E4%BA%91%E6%B5%B7/L5%20summary/mmexport1784470898612.jpg",
+        "alt": "普林云海课程活动",
+        "caption": "L5 summary",
+        "width": 1280,
+        "height": 1707,
+        "size": "portrait"
+      }
+    ]
+  },
+  {
+    "id": "school-025a2992",
+    "school": "梅丽小学",
+    "title": "梅丽小学课程活动",
+    "subtitle": "METC 课堂活动成果",
+    "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+    "accent": "mint",
+    "photos": [
+      {
+        "id": "school-025a2992-001",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L1/mmexport1784472337855.JPG",
+        "alt": "梅丽小学课程活动",
+        "caption": "L1",
+        "width": 2048,
+        "height": 1536,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-002",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L1/mmexport1784472422416.JPG",
+        "alt": "梅丽小学课程活动",
+        "caption": "L1",
+        "width": 2048,
+        "height": 1536,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-003",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L1/mmexport1784472429567.JPG",
+        "alt": "梅丽小学课程活动",
+        "caption": "L1",
+        "width": 2048,
+        "height": 1536,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-004",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L1/mmexport1784472434669.JPG",
+        "alt": "梅丽小学课程活动",
+        "caption": "L1",
+        "width": 1536,
+        "height": 2048,
+        "size": "portrait"
+      },
+      {
+        "id": "school-025a2992-005",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L1/mmexport1784472440976.JPG",
+        "alt": "梅丽小学课程活动",
+        "caption": "L1",
+        "width": 1536,
+        "height": 2048,
+        "size": "portrait"
+      },
+      {
+        "id": "school-025a2992-006",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L2%2B3%2B4/mmexport1784471315936.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L2+3+4",
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-007",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L2%2B3%2B4/mmexport1784471323961.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L2+3+4",
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-008",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L2%2B3%2B4/mmexport1784472200776.JPG",
+        "alt": "梅丽小学课程活动",
+        "caption": "L2+3+4",
+        "width": 2048,
+        "height": 1536,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-009",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L2%2B3%2B4/mmexport1784472521409.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L2+3+4",
+        "width": 3456,
+        "height": 4608,
+        "size": "portrait"
+      },
+      {
+        "id": "school-025a2992-010",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L2%2B3%2B4/mmexport1784472523489.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L2+3+4",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-011",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L2%2B3%2B4/mmexport1784472528872.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L2+3+4",
+        "width": 4608,
+        "height": 3456,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-012",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L2%2B3%2B4/mmexport1784472583818.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L2+3+4",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-013",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L5/mmexport1784472877639.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L5",
+        "width": 4032,
+        "height": 3024,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-014",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L5/mmexport1784472882195.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L5",
+        "width": 4032,
+        "height": 3024,
+        "size": "standard"
+      },
+      {
+        "id": "school-025a2992-015",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E6%A2%85%E4%B8%BD%E5%B0%8F%E5%AD%A6/L5/mmexport1784472885415.jpg",
+        "alt": "梅丽小学课程活动",
+        "caption": "L5",
+        "width": 1702,
+        "height": 1276,
+        "size": "standard"
+      }
+    ]
+  },
+  {
+    "id": "school-1a60436e",
+    "school": "绿洲",
+    "title": "绿洲课程活动",
+    "subtitle": "METC 课堂活动成果",
+    "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+    "accent": "coral",
+    "photos": [
+      {
+        "id": "school-1a60436e-001",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E7%BB%BF%E6%B4%B2/The%20money%20mystery/mmexport1784473927711.jpg",
+        "alt": "绿洲课程活动",
+        "caption": "The money mystery",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-1a60436e-002",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E7%BB%BF%E6%B4%B2/The%20money%20mystery/mmexport1784473930908.jpg",
+        "alt": "绿洲课程活动",
+        "caption": "The money mystery",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-1a60436e-003",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E7%BB%BF%E6%B4%B2/The%20money%20mystery/mmexport1784473933282.jpg",
+        "alt": "绿洲课程活动",
+        "caption": "The money mystery",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      },
+      {
+        "id": "school-1a60436e-004",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E7%BB%BF%E6%B4%B2/The%20money%20mystery/mmexport1784473935636.jpg",
+        "alt": "绿洲课程活动",
+        "caption": "The money mystery",
+        "width": 1706,
+        "height": 1279,
+        "size": "standard"
+      }
+    ]
+  },
+  {
+    "id": "school-760d99a4",
+    "school": "靖轩小学",
+    "title": "靖轩小学课程活动",
+    "subtitle": "METC 课堂活动成果",
+    "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+    "accent": "sky",
+    "photos": [
+      {
+        "id": "school-760d99a4-001",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E9%9D%96%E8%BD%A9%E5%B0%8F%E5%AD%A6/083edbdd8c7db59f063829d1b8da4277.jpg",
+        "alt": "靖轩小学课程活动",
+        "caption": null,
+        "width": 1279,
+        "height": 1706,
+        "size": "portrait"
+      },
+      {
+        "id": "school-760d99a4-002",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E9%9D%96%E8%BD%A9%E5%B0%8F%E5%AD%A6/2226ba1809b4fbae542008a98df1f552.jpg",
+        "alt": "靖轩小学课程活动",
+        "caption": null,
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      },
+      {
+        "id": "school-760d99a4-003",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E9%9D%96%E8%BD%A9%E5%B0%8F%E5%AD%A6/5e6647a175cb97f0825f345d64693b6f.jpg",
+        "alt": "靖轩小学课程活动",
+        "caption": null,
+        "width": 1280,
+        "height": 960,
+        "size": "standard"
+      },
+      {
+        "id": "school-760d99a4-004",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E9%9D%96%E8%BD%A9%E5%B0%8F%E5%AD%A6/6c4d5258b81333e6f498d26e2d16f2fa.jpg",
+        "alt": "靖轩小学课程活动",
+        "caption": null,
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-760d99a4-005",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E9%9D%96%E8%BD%A9%E5%B0%8F%E5%AD%A6/6e91b76daf0aea74ef646e5be4c94ca9.jpg",
+        "alt": "靖轩小学课程活动",
+        "caption": null,
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      },
+      {
+        "id": "school-760d99a4-006",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E9%9D%96%E8%BD%A9%E5%B0%8F%E5%AD%A6/9046d752d4f39577a8958bb05a236136.jpg",
+        "alt": "靖轩小学课程活动",
+        "caption": null,
+        "width": 4032,
+        "height": 3024,
+        "size": "standard"
+      },
+      {
+        "id": "school-760d99a4-007",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E9%9D%96%E8%BD%A9%E5%B0%8F%E5%AD%A6/fc8970832857637aa473c55d046c7e97.jpg",
+        "alt": "靖轩小学课程活动",
+        "caption": null,
+        "width": 3024,
+        "height": 4032,
+        "size": "portrait"
+      }
+    ]
+  }
+]
