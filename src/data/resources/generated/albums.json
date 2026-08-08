@@ -164,6 +164,35 @@
     ]
   },
   {
+    "id": "school-6bc17c17",
+    "school": "太阳村小学（线上）",
+    "title": "太阳村小学（线上）课程活动",
+    "subtitle": "METC 课堂活动成果",
+    "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
+    "accent": "sky",
+    "coverPhotoId": "school-6bc17c17-001",
+    "photos": [
+      {
+        "id": "school-6bc17c17-001",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E5%A4%AA%E9%98%B3%E6%9D%91%E5%B0%8F%E5%AD%A6%EF%BC%88%E7%BA%BF%E4%B8%8A%EF%BC%89/669.JPG",
+        "alt": "太阳村小学（线上）课程活动",
+        "caption": null,
+        "width": 1280,
+        "height": 960,
+        "size": "standard"
+      },
+      {
+        "id": "school-6bc17c17-002",
+        "src": "/METC-website/resources/METC/%E6%B4%BB%E5%8A%A8%E6%88%90%E6%9E%9C%E5%B1%95%E8%A7%88/%E5%A4%AA%E9%98%B3%E6%9D%91%E5%B0%8F%E5%AD%A6%EF%BC%88%E7%BA%BF%E4%B8%8A%EF%BC%89/671.JPG",
+        "alt": "太阳村小学（线上）课程活动",
+        "caption": null,
+        "width": 1707,
+        "height": 1280,
+        "size": "standard"
+      }
+    ]
+  },
+  {
     "id": "school-b3dc235f",
     "school": "普林云海",
     "title": "普林云海课程活动",

@@ -149,6 +149,7 @@ def build_albums() -> list[dict]:
     accents = ["coral", "sky", "mint"]
     for position, folder in enumerate(sorted(path for path in EXHIBITION.iterdir() if path.is_dir()), start=1):
         config = read_json(folder / "album.config.json")
+        existing = read_json(folder / "album.json")
         cover_source = config.get("coverPhoto")
         photos: list[dict] = []
         candidates = (path for path in folder.rglob("*") if path.is_file() and "demonstration" not in path.relative_to(folder).parts)
@@ -176,7 +177,7 @@ def build_albums() -> list[dict]:
             "title": f"{folder.name}课程活动",
             "subtitle": "METC 课堂活动成果",
             "description": "记录学生在讨论、实验、创作与分享中的课堂瞬间。",
-            "accent": accents[(position - 1) % len(accents)],
+            "accent": config.get("accent", existing.get("accent", accents[(position - 1) % len(accents)])),
             "coverPhotoId": cover["id"] if cover else photos[0]["id"] if photos else None,
             "photos": photos
         }
