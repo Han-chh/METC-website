@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
 import { localizedSchoolName } from "../../content/activities/albums";
@@ -12,7 +12,7 @@ type ActivitySectionProps = {
 };
 
 const BASE_PATH = "/METC-website";
-const AUTOPLAY_DELAY = 5500;
+const AUTOPLAY_DELAY = 2750;
 const activityEntranceFocus: Record<string, string> = {
   "school-760d99a4-004": "50% 75%"
 };
@@ -39,7 +39,8 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
   const [isCarouselVisible, setIsCarouselVisible] = useState(false);
   const [isCarouselHovered, setIsCarouselHovered] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [autoplayGeneration, setAutoplayGeneration] = useState(0);
+  const [leavingPhotoIndex, setLeavingPhotoIndex] = useState<number | null>(null);
+  const [slideDirection, setSlideDirection] = useState<"next" | "previous">("next");
   const carouselRef = useRef<HTMLElement | null>(null);
   const touchStartX = useRef<number | null>(null);
   const featurePhotos = homepageFeaturePhotos.length ? homepageFeaturePhotos : [fallbackFeaturePhoto];
@@ -48,14 +49,13 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
   const photoSource = language === "zh"
     ? `${activePhoto.school.zh} · 课堂活动`
     : `${activePhoto.school.en} · Classroom activity`;
-  const previousPhoto = () => {
-    setActivePhotoIndex((index) => (index - 1 + totalPhotos) % totalPhotos);
-    setAutoplayGeneration((generation) => generation + 1);
-  };
-  const nextPhoto = () => {
-    setActivePhotoIndex((index) => (index + 1) % totalPhotos);
-    setAutoplayGeneration((generation) => generation + 1);
-  };
+  const changePhoto = useCallback((direction: "next" | "previous") => {
+    setLeavingPhotoIndex(activePhotoIndex);
+    setSlideDirection(direction);
+    setActivePhotoIndex((index) => direction === "next" ? (index + 1) % totalPhotos : (index - 1 + totalPhotos) % totalPhotos);
+  }, [activePhotoIndex, totalPhotos]);
+  const previousPhoto = () => changePhoto("previous");
+  const nextPhoto = () => changePhoto("next");
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -80,12 +80,9 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
 
   useEffect(() => {
     if (totalPhotos < 2 || !isCarouselVisible || isCarouselHovered || prefersReducedMotion) return;
-    const timer = window.setTimeout(() => {
-      setActivePhotoIndex((index) => (index + 1) % totalPhotos);
-      setAutoplayGeneration((generation) => generation + 1);
-    }, AUTOPLAY_DELAY);
+    const timer = window.setTimeout(() => changePhoto("next"), AUTOPLAY_DELAY);
     return () => window.clearTimeout(timer);
-  }, [autoplayGeneration, isCarouselHovered, isCarouselVisible, prefersReducedMotion, totalPhotos]);
+  }, [changePhoto, isCarouselHovered, isCarouselVisible, prefersReducedMotion, totalPhotos]);
 
   const finishSwipe = (event: React.TouchEvent<HTMLDivElement>) => {
     if (touchStartX.current === null) return;
@@ -94,6 +91,8 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
     if (Math.abs(offset) < 36) return;
     offset > 0 ? previousPhoto() : nextPhoto();
   };
+
+  const leavingPhoto = leavingPhotoIndex === null ? null : featurePhotos[leavingPhotoIndex];
 
   return (
     <section className="activity-section section-pad" id="activities">
@@ -122,7 +121,8 @@ export function ActivitySection({ language, onGalleryEnter }: ActivitySectionPro
               if (event.key === "ArrowRight") nextPhoto();
             }}
           >
-            <img key={activePhoto.src} src={activePhoto.src} alt={activePhoto.alt} style={{ objectPosition: activePhoto.objectPosition }} />
+            {leavingPhoto ? <img key={`leaving-${leavingPhoto.src}`} className={`classroom-photo classroom-photo-leaving classroom-photo-${slideDirection}`} src={leavingPhoto.src} alt="" aria-hidden="true" style={{ objectPosition: leavingPhoto.objectPosition }} onAnimationEnd={() => setLeavingPhotoIndex(null)} /> : null}
+            <img key={`active-${activePhoto.src}`} className={`classroom-photo${leavingPhoto ? ` classroom-photo-entering classroom-photo-${slideDirection}` : " classroom-photo-static"}`} src={activePhoto.src} alt={activePhoto.alt} style={{ objectPosition: activePhoto.objectPosition }} />
             <span className="photo-counter">{String(activePhotoIndex + 1).padStart(2, "0")} / {String(totalPhotos).padStart(2, "0")}</span>
             {totalPhotos > 1 ? <>
               <button className="classroom-carousel-control classroom-carousel-previous" type="button" onClick={previousPhoto} aria-label={language === "zh" ? "上一张照片" : "Previous photo"}>←</button>
