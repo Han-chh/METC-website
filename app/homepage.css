@@ -828,3 +828,52 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-intro { margin-top: 22px; }.hero-intro > p { font-size: .88rem; }.hero-actions { margin-top: 20px; }.button { min-height: 47px; }
   .hero-scroll { right: 20px; bottom: 16px; }
 }
+
+/* Compact cover: the opening functions as a 35%-viewport title strip, then
+   deliberately hands the screen to the first content chapter. */
+.hero-section {
+  height: 35svh;
+  min-height: 300px;
+  max-height: 390px;
+  padding: 102px 56px 22px;
+  overflow: hidden;
+}
+.hero-inner { justify-content: flex-start; }
+.hero-eyebrow { display: none; }
+.hero-logo-stage { width: min(250px, 24vw); margin: 0 0 5px; }
+.hero-logo-stage .logo-note { display: none; }
+.hero-lower { max-width: 460px; }
+.hero-title-wrap h1 { max-width: 460px; font-size: clamp(1.5rem, 2.2vw, 2.45rem); line-height: 1.03; }
+.hero-topic-tags, .hero-intro > p { display: none; }
+.hero-intro { max-width: none; margin-top: 10px; padding-top: 0; border-top: 0; }
+.hero-actions { margin-top: 0; gap: 18px; }
+.hero-actions .button { min-height: 39px; padding: 0 17px; gap: 18px; font-size: .8rem; }
+.hero-actions .text-link { padding: 3px 0; font-size: .78rem; }
+.hero-scroll { display: none; }
+.hero-cell { top: 31%; left: 61%; width: min(125px, 10vw); }
+.hero-note-strip { top: 25%; left: 69%; width: min(155px, 13vw); }
+.hero-books { top: 19%; right: 7%; width: min(245px, 19vw); }
+.hero-bridge-lab { top: 57%; left: 65%; width: min(180px, 15vw); }
+.hero-optics, .hero-rocket, .hero-economy, .hero-supplies { display: none; }
+.explore-section { position: relative; border-top: 5px solid var(--ink-deep); }
+.explore-section.section-pad { padding-top: clamp(42px, 4vw, 56px); }
+
+@media (min-width: 761px) {
+  .hero-section { height: 38.89svh; min-height: 333px; max-height: 433px; padding: 102px 56px 22px; }
+  .hero-logo-stage { width: min(250px, 24vw); margin-bottom: 5px; }
+  .hero-title-wrap h1 { max-width: 460px; font-size: clamp(1.5rem, 2.2vw, 2.45rem); }
+}
+
+@media (max-width: 1020px) and (min-width: 761px) {
+  .hero-section { padding-inline: 36px; }
+  .hero-cell { left: 55%; }.hero-note-strip { left: 64%; }.hero-bridge-lab { left: 58%; }.hero-books { right: 3%; }
+}
+
+@media (max-width: 760px) {
+  .hero-section { height: 38svh; min-height: 320px; max-height: 360px; padding: 118px 24px 18px; }
+  .hero-logo-stage { width: min(190px, 56vw); margin-bottom: 4px; }
+  .hero-title-wrap h1 { max-width: 295px; font-size: clamp(1.42rem, 6.4vw, 1.9rem); }
+  .hero-actions { gap: 16px; }.hero-actions .button { min-height: 36px; padding: 0 14px; font-size: .74rem; }.hero-actions .text-link { font-size: .72rem; }
+  .hero-graphic-set { opacity: .23; }.hero-books { display: block; top: 12%; right: -18%; width: 185px; }.hero-cell, .hero-note-strip, .hero-bridge-lab { display: none; }
+  .explore-section.section-pad { padding-top: 38px; }
+}
