@@ -10,3 +10,4 @@
 *.heic binary
 *.mp4 binary
 resources/METC/课程设计/自由主题/source/Arithmetic[[:space:]]and[[:space:]]Geometric[[:space:]]Series.pptx filter=lfs diff=lfs merge=lfs -text
+*.pptx filter=lfs diff=lfs merge=lfs -text

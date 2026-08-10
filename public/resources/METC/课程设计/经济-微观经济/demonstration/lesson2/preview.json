@@ -1,0 +1,22 @@
+{
+  "id": "lesson2",
+  "source": "L2+3+4 Price.pdf",
+  "pdf": "preview.pdf",
+  "title": "+3+4 Price",
+  "slides": [
+    "slides/001.png",
+    "slides/002.png",
+    "slides/003.png",
+    "slides/004.png",
+    "slides/005.png",
+    "slides/006.png",
+    "slides/007.png",
+    "slides/008.png",
+    "slides/009.png",
+    "slides/010.png",
+    "slides/011.png",
+    "slides/012.png",
+    "slides/013.png"
+  ],
+  "slideCount": 13
+}

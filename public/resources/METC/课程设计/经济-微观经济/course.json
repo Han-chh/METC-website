@@ -1,0 +1,160 @@
+{
+  "id": "microeconomics",
+  "catalog": "METC · 01",
+  "title": {
+    "zh": "经济-微观经济",
+    "en": "Microeconomics"
+  },
+  "school": "长沙实验小学",
+  "category": {
+    "zh": "经济",
+    "en": "Economics"
+  },
+  "color": "coral",
+  "icon": "market",
+  "summary": {
+    "zh": "从市场、供需与价格形成出发，让学生用身边的选择理解微观经济学。",
+    "en": "Starting with markets, supply and demand, and price formation, students use everyday choices to understand microeconomics."
+  },
+  "contains": {
+    "zh": [
+      "市场与价格",
+      "供需关系",
+      "价格形成",
+      "经济规律"
+    ],
+    "en": [
+      "Markets and prices",
+      "Supply and demand",
+      "Price formation",
+      "Economic laws"
+    ]
+  },
+  "hasSyllabus": true,
+  "syllabus": {
+    "zh": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/syllabus.zh.html",
+    "en": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/syllabus.en.html"
+  },
+  "syllabusSource": {
+    "zh": "syllabus.docx",
+    "en": "syllabus.en.docx"
+  },
+  "lessons": [
+    {
+      "id": "lesson1",
+      "title": "什么是市场",
+      "source": "L1-The nature of economics problems.pptx",
+      "pdf": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/preview.pdf",
+      "slideCount": 16,
+      "slides": [
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/001.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/002.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/003.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/004.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/005.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/006.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/007.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/008.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/009.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/010.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/011.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/012.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/013.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/014.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/015.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson1/slides/016.png"
+      ]
+    },
+    {
+      "id": "lesson2",
+      "title": "供需关系",
+      "source": "L2+3+4 Price.pdf",
+      "pdf": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/preview.pdf",
+      "slideCount": 13,
+      "slides": [
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/001.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/002.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/003.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/004.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/005.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/006.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/007.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/008.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/009.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/010.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/011.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/012.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson2/slides/013.png"
+      ]
+    },
+    {
+      "id": "lesson3",
+      "title": "价格形成",
+      "source": "L5-Money and Bank.pdf",
+      "pdf": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/preview.pdf",
+      "slideCount": 10,
+      "slides": [
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/001.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/002.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/003.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/004.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/005.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/006.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/007.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/008.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/009.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson3/slides/010.png"
+      ]
+    },
+    {
+      "id": "lesson4",
+      "title": "货币与银行",
+      "source": "L6-Workers and Wages.pdf",
+      "pdf": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/preview.pdf",
+      "slideCount": 12,
+      "slides": [
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/001.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/002.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/003.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/004.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/005.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/006.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/007.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/008.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/009.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/010.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/011.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson4/slides/012.png"
+      ]
+    },
+    {
+      "id": "lesson5",
+      "title": "企业与市场",
+      "source": "L7-Firms.pptx",
+      "pdf": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/preview.pdf",
+      "slideCount": 20,
+      "slides": [
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/001.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/002.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/003.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/004.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/005.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/006.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/007.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/008.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/009.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/010.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/011.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/012.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/013.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/014.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/015.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/016.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/017.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/018.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/019.png",
+        "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/lesson5/slides/020.png"
+      ]
+    }
+  ]
+}

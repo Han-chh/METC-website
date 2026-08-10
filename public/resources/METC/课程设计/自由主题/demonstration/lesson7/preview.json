@@ -1,0 +1,21 @@
+{
+  "id": "lesson7",
+  "source": "密码学.pptx",
+  "pdf": "preview.pdf",
+  "title": "密码学",
+  "slides": [
+    "slides/001.png",
+    "slides/002.png",
+    "slides/003.png",
+    "slides/004.png",
+    "slides/005.png",
+    "slides/006.png",
+    "slides/007.png",
+    "slides/008.png",
+    "slides/009.png",
+    "slides/010.png",
+    "slides/011.png",
+    "slides/012.png"
+  ],
+  "slideCount": 12
+}

@@ -1,0 +1,21 @@
+{
+  "id": "lesson1",
+  "source": "1.波的基础属性.pptx",
+  "pdf": "preview.pdf",
+  "title": "波的基础属性",
+  "slides": [
+    "slides/001.png",
+    "slides/002.png",
+    "slides/003.png",
+    "slides/004.png",
+    "slides/005.png",
+    "slides/006.png",
+    "slides/007.png",
+    "slides/008.png",
+    "slides/009.png",
+    "slides/010.png",
+    "slides/011.png",
+    "slides/012.png"
+  ],
+  "slideCount": 12
+}
