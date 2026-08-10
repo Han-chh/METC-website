@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const siteBasePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim().replace(/\/+$/, "") || "";
+
 const nextConfig: NextConfig = {
   // Vercel 静态部署
   output: "export",
@@ -17,6 +19,21 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+
+  ...(siteBasePath ? { basePath: siteBasePath } : {}),
+
+  ...(siteBasePath && process.env.NODE_ENV === "development" ? {
+    async redirects() {
+      return [
+        {
+          source: "/",
+          destination: siteBasePath,
+          permanent: false,
+          basePath: false,
+        },
+      ];
+    },
+  } : {}),
 };
 
 export default nextConfig;

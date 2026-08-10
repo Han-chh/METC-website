@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
 import { localizedSchoolName } from "../../content/activities/albums";
+import { withSiteBasePath } from "../../lib/site-path";
 import { resourceAlbums } from "../../src/data/resources";
 
 type ActivitySectionProps = {
@@ -11,7 +12,6 @@ type ActivitySectionProps = {
   onGalleryEnter: () => void;
 };
 
-const BASE_PATH = "/METC-website";
 const AUTOPLAY_DELAY = 2750;
 const activityEntranceFocus: Record<string, string> = {
   "school-760d99a4-004": "50% 75%"
@@ -27,7 +27,7 @@ const homepageFeaturePhotos = resourceAlbums.flatMap((album) => {
 });
 
 const fallbackFeaturePhoto = {
-  src: `${BASE_PATH}/images/metc-classroom-workshop.png`,
+  src: withSiteBasePath("/images/metc-classroom-workshop.png"),
   alt: "METC classroom activity",
   school: { zh: "METC", en: "METC" },
   objectPosition: "center"

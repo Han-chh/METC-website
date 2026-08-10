@@ -1,6 +1,7 @@
 import type { StudentFeedback } from "./types";
+import { withSiteBasePath } from "../../lib/site-path";
 
-const basePath = "/METC-website/images/voices";
+const basePath = withSiteBasePath("/images/voices");
 
 export const feedbacks: StudentFeedback[] = [
   { id: "feedback-01", imageSrc: `${basePath}/demo-note-01.svg`, imageAlt: { zh: "原型学生反馈留存一：纸桥课堂留言", en: "Prototype feedback note one: paper bridge class reflection" }, year: "2026", grade: { zh: "Grade 7", en: "Grade 7" }, accent: "coral", variant: "petal" },
