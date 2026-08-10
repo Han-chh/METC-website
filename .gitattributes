@@ -1,13 +1,12 @@
 # Teaching sources and generated previews are binary assets, not text diffs.
 *.docx binary
 *.ppt binary
-*.pptx binary
-*.pdf binary
+*.pptx filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.JPG binary
 *.heic binary
-*.mp4 binary
+*.mp4 filter=lfs diff=lfs merge=lfs -text
 resources/METC/课程设计/自由主题/source/Arithmetic[[:space:]]and[[:space:]]Geometric[[:space:]]Series.pptx filter=lfs diff=lfs merge=lfs -text
-*.pptx filter=lfs diff=lfs merge=lfs -text
