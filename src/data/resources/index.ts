@@ -1,5 +1,6 @@
 import courseData from "./generated/courses.json";
 import albumData from "./generated/albums.json";
+import { withResourceBaseUrl } from "../../../lib/site-path";
 
 export type ResourceDeck = {
   id: string;
@@ -63,5 +64,25 @@ export type ResourceAlbum = {
   photos: ResourcePhoto[];
 };
 
-export const resourceCourses = courseData as ResourceCourse[];
-export const resourceAlbums = albumData as ResourceAlbum[];
+const normalizeResourcePath = withResourceBaseUrl;
+
+export const resourceCourses = (courseData as ResourceCourse[]).map((course) => ({
+  ...course,
+  syllabus: {
+    zh: normalizeResourcePath(course.syllabus.zh),
+    en: normalizeResourcePath(course.syllabus.en),
+  },
+  lessons: course.lessons.map((lesson) => ({
+    ...lesson,
+    pdf: normalizeResourcePath(lesson.pdf),
+    slides: lesson.slides.map((slide) => withResourceBaseUrl(slide) ?? slide),
+  })),
+}));
+
+export const resourceAlbums = (albumData as ResourceAlbum[]).map((album) => ({
+  ...album,
+  photos: album.photos.map((photo) => ({
+    ...photo,
+    src: withResourceBaseUrl(photo.src) ?? photo.src,
+  })),
+}));

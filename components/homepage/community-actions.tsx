@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { homepageCopy, type Language } from "../../content";
+import { withSiteBasePath } from "../../lib/site-path";
 
 type CommunityAction = "join" | "contact";
 
-const JOIN_QR_CODE_SRC = "/METC-website/images/contact/wechat-join-qr.png";
+const JOIN_QR_CODE_SRC = withSiteBasePath("/images/contact/wechat-join-qr.png");
 const JOIN_QR_CODE_IS_CONFIGURED = false;
 
 export function CommunityActions({ language }: { language: Language }) {

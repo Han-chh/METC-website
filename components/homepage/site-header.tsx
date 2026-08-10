@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Language } from "../../content";
 import { homepageCopy } from "../../content";
+import { withSiteBasePath } from "../../lib/site-path";
 
 type SiteHeaderProps = {
   language: Language;
@@ -19,12 +20,12 @@ export function SiteHeader({ language, onToggleLanguage, onAnchorClick, variant 
       <div className="header-inner">
         {isSecondary ? <Link className="header-brand" href="/" aria-label="METC home">
           <span className="header-brand-emblem" aria-hidden="true">
-            <img src="/METC-website/images/metc-graduation-logo.jpg" alt="" />
+            <img src={withSiteBasePath("/images/metc-graduation-logo.jpg")} alt="" />
           </span>
           <span className="header-brand-mark">METC</span>
           <span className="header-brand-dot" aria-hidden="true" />
         </Link> : <a className="header-brand" href="#top" onClick={(event) => onAnchorClick?.(event, "#top")} aria-label="METC home">
-          <span className="header-brand-emblem" aria-hidden="true"><img src="/METC-website/images/metc-graduation-logo.jpg" alt="" /></span><span className="header-brand-mark">METC</span><span className="header-brand-dot" aria-hidden="true" />
+          <span className="header-brand-emblem" aria-hidden="true"><img src={withSiteBasePath("/images/metc-graduation-logo.jpg")} alt="" /></span><span className="header-brand-mark">METC</span><span className="header-brand-dot" aria-hidden="true" />
         </a>}
 
         <nav className="primary-nav" aria-label="Primary navigation">
