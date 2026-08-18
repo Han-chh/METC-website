@@ -25,7 +25,7 @@ MEDIA_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"}
 # Pilot scope for the jpg->webp rollout. Empty set = convert every album;
 # a non-empty set = only these album folder names emit WebP (others keep their
 # original jpg so the live site is never broken mid-rollout).
-WEBP_PILOT_ALBUMS: set[str] = {"上步小学"}
+WEBP_PILOT_ALBUMS: set[str] = set()
 
 
 def url_for(path: Path) -> str:
