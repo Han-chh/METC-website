@@ -22,6 +22,11 @@ EXHIBITION = METC / "活动成果展览"
 GENERATED = ROOT / "src" / "data" / "resources" / "generated"
 MEDIA_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"}
 
+# Pilot scope for the jpg->webp rollout. Empty set = convert every album;
+# a non-empty set = only these album folder names emit WebP (others keep their
+# original jpg so the live site is never broken mid-rollout).
+WEBP_PILOT_ALBUMS: set[str] = {"上步小学"}
+
 
 def url_for(path: Path) -> str:
     return "/METC-website/" + quote(path.relative_to(ROOT).as_posix(), safe="/")
@@ -84,6 +89,24 @@ def web_photo(path: Path, album_root: Path) -> Path | None:
     destination.parent.mkdir(parents=True, exist_ok=True)
     if not destination.exists() or destination.stat().st_mtime < path.stat().st_mtime:
         subprocess.run([sips, "-s", "format", "jpeg", str(path), "--out", str(destination)], check=True, capture_output=True, text=True)
+    return destination
+
+
+def to_webp(original: Path, album_root: Path) -> Path | None:
+    """Convert a raster original (jpg/png) to a WebP copy inside demonstration/.
+
+    The original file is never modified. Returns the WebP path, or None when
+    Pillow is unavailable or the source is not a convertible raster image.
+    """
+    if original.suffix.lower() not in {".jpg", ".jpeg", ".png"}:
+        return None
+    if Image is None:
+        return None
+    destination = album_root / "demonstration" / f"{hashlib.sha1(original.relative_to(album_root).as_posix().encode()).hexdigest()[:12]}.webp"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    if not destination.exists() or destination.stat().st_mtime < original.stat().st_mtime:
+        with Image.open(original) as im:
+            im.convert("RGB").save(destination, format="WEBP", quality=80)
     return destination
 
 
@@ -153,9 +176,12 @@ def build_albums() -> list[dict]:
         cover_source = config.get("coverPhoto")
         feature_source = config.get("homepageFeaturePhoto")
         photos: list[dict] = []
+        pilot = not WEBP_PILOT_ALBUMS or folder.name in WEBP_PILOT_ALBUMS
         candidates = (path for path in folder.rglob("*") if path.is_file() and "demonstration" not in path.relative_to(folder).parts)
         for original in sorted(path for path in candidates if path.suffix.lower() in MEDIA_EXTENSIONS | {".heic"}):
-            item = web_photo(original, folder)
+            item = to_webp(original, folder) if pilot else None
+            if item is None:
+                item = web_photo(original, folder)
             if item is None:
                 continue
             width, height, shape = image_shape(item)
