@@ -37,8 +37,8 @@
       "en": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E/demonstration/syllabus.en.html"
     },
     "syllabusSource": {
-      "zh": "syllabus.docx",
-      "en": "syllabus.en.docx"
+      "zh": null,
+      "en": null
     },
     "lessons": [
       {
@@ -195,8 +195,8 @@
       "en": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%89%A9%E7%90%86-%E5%85%89/demonstration/syllabus.en.html"
     },
     "syllabusSource": {
-      "zh": "syllabus.docx",
-      "en": "syllabus.en.docx"
+      "zh": null,
+      "en": null
     },
     "lessons": [
       {
@@ -248,8 +248,55 @@
     ]
   },
   {
-    "id": "free-topics",
+    "id": "macroeconomics",
     "catalog": "METC · 03",
+    "title": {
+      "zh": "经济-宏观经济",
+      "en": "Macroeconomics"
+    },
+    "school": "长沙实验小学",
+    "category": {
+      "zh": "经济",
+      "en": "Economics"
+    },
+    "color": "blue",
+    "icon": "market",
+    "summary": {
+      "zh": "从政府、政策与整体经济出发，让学生理解宏观经济学如何塑造就业、物价与生活水平。",
+      "en": "Starting with government, policy, and the economy as a whole, students learn how macroeconomics shapes employment, prices, and living standards."
+    },
+    "contains": {
+      "zh": [
+        "政府与经济组织",
+        "宏观经济目标",
+        "财政政策",
+        "货币政策",
+        "供给侧政策",
+        "生活水平与贫困"
+      ],
+      "en": [
+        "Government & economic agents",
+        "Macroeconomic aims",
+        "Fiscal policy",
+        "Monetary policy",
+        "Supply-side policy",
+        "Living standards & poverty"
+      ]
+    },
+    "hasSyllabus": true,
+    "syllabus": {
+      "zh": null,
+      "en": "/METC-website/resources/METC/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/%E7%BB%8F%E6%B5%8E-%E5%AE%8F%E8%A7%82/demonstration/syllabus.en.html"
+    },
+    "syllabusSource": {
+      "zh": null,
+      "en": null
+    },
+    "lessons": []
+  },
+  {
+    "id": "free-topics",
+    "catalog": "METC · 04",
     "title": {
       "zh": "自由主题",
       "en": "Open Topics"
