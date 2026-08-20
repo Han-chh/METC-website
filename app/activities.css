@@ -230,6 +230,6 @@
   .photo-lightbox figure img { max-width: 100%; height: min(62svh, 520px); }
   .photo-lightbox figcaption { min-height: 84px; padding: 10px 11px; grid-template-columns: minmax(0, 1fr) auto; }
   .photo-lightbox figcaption strong { overflow-wrap: anywhere; }
-  .lightbox-close { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); width: 44px; height: 44px; }
+  .lightbox-close { top: 8px; right: max(8px, env(safe-area-inset-right)); width: 44px; height: 44px; }
   .lightbox-nav { width: 44px; height: 44px; }
 }
