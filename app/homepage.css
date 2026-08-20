@@ -1118,3 +1118,54 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-actions .button { min-height: 42px; padding: 0 20px; gap: 21px; font-size: .86rem; }
   .hero-actions .text-link { min-height: 42px; padding: 0; gap: 16px; font-size: .86rem; }
 }
+
+/*
+ * Responsive foundation (appended after the 522861a baseline rules).
+ * The baseline keeps its existing min-width: 761px, max-width: 1020px,
+ * max-width: 1180px, max-width: 920px, and max-width: 700px blocks. These
+ * shared guards only apply to phone/tablet widths and leave the navigation's
+ * own horizontal scrolling intact.
+ */
+@media (max-width: 1100px) {
+  :where(.site-header, .page-shell, .site-footer, [role="dialog"]) {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  :where(.site-header, .page-shell, .site-footer, [role="dialog"]) > *,
+  :where(.header-inner, .hero-lower, .section-intro, .activity-intro,
+    .mission-spread, .principle-line, .course-manual, .materials-list,
+    .voices-heading, .voice-margins, .footer-lead, .footer-nav > div,
+    .footer-bottom, .voices-viewer-content, .photo-lightbox-frame,
+    .ppt-stage, .ppt-controls, .expanded-album, .album-exhibition-grid,
+    .scrapbook-grid) > * {
+    min-width: 0;
+  }
+
+  :where(.site-header, .page-shell, .site-footer, [role="dialog"]) :where(img, video, canvas, iframe) {
+    max-width: 100%;
+  }
+
+  :where(.community-dialog-layer, .statement-dialog-layer) {
+    padding-top: max(24px, env(safe-area-inset-top));
+    padding-right: max(24px, env(safe-area-inset-right));
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+    padding-left: max(24px, env(safe-area-inset-left));
+  }
+
+  .site-notice {
+    margin-inline: max(8px, env(safe-area-inset-left)) max(8px, env(safe-area-inset-right));
+  }
+}
+
+@media (max-width: 760px) {
+  .site-notice {
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .site-notice {
+    bottom: max(28px, env(safe-area-inset-bottom));
+  }
+}
