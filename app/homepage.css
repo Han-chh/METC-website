@@ -1225,6 +1225,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-illustration { max-width: 45%; }
 
   .section-intro, .activity-intro { min-width: 0; }
+  .section-title { white-space: normal; }
   .explore-topline { gap: 20px; }
   .explore-community-actions button, .footer-nav button { min-height: 44px; }
   .explore-jumps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1241,6 +1242,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .classroom-carousel-control { width: 44px; height: 44px; }
   .voices-heading { grid-template-columns: minmax(0, .5fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 56px); }
   .voices-heading-main .section-title { min-width: 0; white-space: normal; font-size: clamp(2rem, 4vw, 3rem); }
+  .community-dialog-close, .statement-dialog-close { width: 44px; height: 44px; }
   .voice-margins { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 5vw, 56px); }
   .voice-margins article { min-width: 0; grid-template-columns: 34px minmax(0, 1fr); column-gap: 14px; }
   .footer-lead { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(24px, 5vw, 56px); }
