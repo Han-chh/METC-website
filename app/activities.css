@@ -56,3 +56,180 @@
   .expanded-album-open .expanded-album { grid-template-columns: 0 minmax(0, 1fr); }
   .expanded-album-open .expanded-album-paper { border-radius: 12px; }
 }
+
+/* Final responsive overrides: keep the desktop gallery composition unchanged above 1100px. */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .gallery-hero {
+    min-height: clamp(420px, 58svh, 570px);
+    padding: 126px clamp(24px, 5vw, 54px) 70px;
+  }
+  .gallery-hero-content { max-width: min(720px, 100%); }
+  .gallery-hero-corner { width: min(21vw, 190px); }
+  .gallery-hero-ruler { width: min(30vw, 270px); right: -26px; }
+  .gallery-hero-stars { width: min(20vw, 180px); right: 24%; }
+  .gallery-browse { min-height: 44px; padding-bottom: 8px; }
+
+  .album-exhibition { padding-inline: clamp(18px, 4vw, 48px); }
+  .album-exhibition-grid {
+    --shelf-row: 430px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 clamp(18px, 3vw, 44px);
+    padding-inline: clamp(16px, 4vw, 48px);
+  }
+  .album-exhibition-grid > [role="listitem"] { min-width: 0; }
+  .album-slot { width: min(100%, 300px); }
+  .wooden-album { height: 320px; padding-inline: 25px 16px; }
+  .album-cover-photos { height: 190px; }
+  .album-plaque { padding-inline: 17px; }
+
+  .expanded-album-layer {
+    padding: max(24px, env(safe-area-inset-top)) clamp(16px, 3vw, 32px) max(24px, env(safe-area-inset-bottom));
+  }
+  .album-back-button {
+    top: max(8px, env(safe-area-inset-top));
+    left: max(16px, env(safe-area-inset-left));
+    min-height: 44px;
+    padding: 10px 8px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .expanded-album {
+    width: min(94vw, 1060px);
+    height: min(88svh, 900px);
+    min-height: min(560px, calc(100svh - 48px));
+    grid-template-columns: minmax(220px, .32fr) minmax(0, 1fr);
+  }
+  .expanded-album-cover { padding: 24px 28px; }
+  .expanded-album-paper { padding-inline: clamp(20px, 3vw, 36px); }
+  .album-viewer-header button { width: 44px; height: 44px; }
+  .album-viewer-intro h2,
+  .album-viewer-description { overflow-wrap: anywhere; }
+
+  .scrapbook-grid {
+    display: block;
+    columns: 3 150px;
+    column-gap: clamp(12px, 2vw, 18px);
+  }
+  .expanded-album-horizontal .scrapbook-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 18px);
+  }
+  .scrapbook-photo,
+  .scrapbook-photo-featured,
+  .scrapbook-photo-wide,
+  .scrapbook-photo-portrait { min-width: 0; }
+  .scrapbook-caption { overflow-wrap: anywhere; }
+
+  .photo-lightbox { padding: max(20px, env(safe-area-inset-top)) clamp(12px, 3vw, 32px) max(20px, env(safe-area-inset-bottom)); }
+  .photo-lightbox-frame { width: min(94vw, 1060px); grid-template-columns: 52px minmax(0, 1fr) 52px; }
+  .lightbox-close,
+  .lightbox-nav { width: 44px; height: 44px; }
+  .photo-lightbox figure,
+  .photo-lightbox figure img { max-width: 100%; }
+  .photo-lightbox figure img { height: min(70svh, 650px); }
+}
+
+@media (max-width: 760px) {
+  .gallery-hero {
+    min-height: clamp(450px, 72svh, 560px);
+    padding: max(110px, calc(88px + env(safe-area-inset-top))) 20px max(72px, calc(56px + env(safe-area-inset-bottom)));
+  }
+  .gallery-hero-content { max-width: 100%; }
+  .gallery-hero h1 { overflow-wrap: anywhere; }
+  .gallery-hero-stats { max-width: 100%; overflow-wrap: anywhere; }
+  .gallery-hero-ruler,
+  .gallery-hero-stars { display: none; }
+  .gallery-hero-corner { width: 132px; right: -20px; bottom: 74px; }
+  .gallery-browse { left: 20px; min-height: 44px; padding-bottom: 8px; }
+
+  .album-exhibition { padding: 44px 14px calc(76px + env(safe-area-inset-bottom)); }
+  .album-exhibition-intro { margin-bottom: 27px; }
+  .album-exhibition-intro h2 { overflow-wrap: anywhere; }
+  .album-exhibition-grid {
+    --shelf-row: 386px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 14px 18px 0;
+  }
+  .album-exhibition-grid > [role="listitem"] { min-width: 0; padding-bottom: 32px; }
+  .album-slot { width: min(100%, 295px); }
+  .wooden-album { min-width: 0; height: 296px; padding-inline: 22px 14px; }
+  .album-cover-photos { height: 176px; }
+  .album-plaque { min-height: 84px; padding-inline: 15px; }
+  .album-plaque strong,
+  .album-plaque em { overflow-wrap: anywhere; }
+  .album-open-cta { display: none; }
+  .shelf-decoration-ruler { left: 10px; }
+  .shelf-decoration-pencil { right: 12px; }
+
+  .expanded-album-layer {
+    padding: calc(70px + env(safe-area-inset-top)) 8px calc(12px + env(safe-area-inset-bottom));
+    overscroll-behavior: contain;
+  }
+  .album-back-button {
+    top: max(8px, env(safe-area-inset-top));
+    left: max(12px, env(safe-area-inset-left));
+    min-height: 44px;
+    padding: 10px 6px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .expanded-album {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 46px;
+    height: auto;
+    min-height: 0;
+    display: block;
+    overflow: visible;
+  }
+  .expanded-album-cover {
+    min-width: 0;
+    min-height: 142px;
+    padding: 20px;
+    border-radius: 10px 10px 2px 2px;
+    transform: none !important;
+    animation: none !important;
+  }
+  .expanded-album-cover strong { overflow-wrap: anywhere; }
+  .expanded-album-paper {
+    min-width: 0;
+    max-width: 100%;
+    padding: 20px 14px calc(28px + env(safe-area-inset-bottom));
+    border-radius: 2px 2px 10px 10px;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .album-viewer-header button { width: 44px; height: 44px; }
+  .album-viewer-intro { padding: 25px 4px 21px; }
+  .album-viewer-intro h2,
+  .album-viewer-description { overflow-wrap: anywhere; }
+  .album-viewer-intro small { position: static; display: block; margin-top: 15px; overflow-wrap: anywhere; }
+
+  .scrapbook-grid {
+    display: block;
+    columns: 2 120px;
+    column-gap: 10px;
+  }
+  .expanded-album-horizontal .scrapbook-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .scrapbook-photo,
+  .scrapbook-photo-featured,
+  .scrapbook-photo-wide,
+  .scrapbook-photo-portrait { min-width: 0; margin-bottom: 10px; }
+  .scrapbook-caption { font-size: .72rem; overflow-wrap: anywhere; }
+
+  .photo-lightbox { padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom); }
+  .photo-lightbox-frame { width: 100%; height: 100%; min-height: 0; grid-template-columns: 48px minmax(0, 1fr) 48px; }
+  .photo-lightbox figure { max-width: 100%; border-width: 4px; }
+  .photo-lightbox figure img { max-width: 100%; height: min(62svh, 520px); }
+  .photo-lightbox figcaption { min-height: 84px; padding: 10px 11px; grid-template-columns: minmax(0, 1fr) auto; }
+  .photo-lightbox figcaption strong { overflow-wrap: anywhere; }
+  .lightbox-close { top: 8px; right: max(8px, env(safe-area-inset-right)); width: 44px; height: 44px; }
+  .lightbox-nav { width: 44px; height: 44px; }
+}
