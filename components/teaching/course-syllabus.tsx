@@ -46,12 +46,16 @@ export function CourseSyllabus({ course, language }: Props) {
     return () => media.removeEventListener("change", handleChange);
   }, []);
   function toggleSection(key: CourseSectionKey) {
+    const closingMobileSection = isMobile && openSections.has(key);
     setOpenSections((current) => {
       if (isMobile) return current.has(key) ? new Set() : new Set([key]);
       const next = new Set(current);
       if (next.has(key)) next.delete(key); else next.add(key);
       return next;
     });
+    if (closingMobileSection) {
+      window.requestAnimationFrame(() => document.getElementById(`course-${course.id}-${key}-toggle`)?.focus());
+    }
   }
   function renderDisclosure(key: CourseSectionKey, title: string, children: React.ReactNode) {
     const open = openSections.has(key);
