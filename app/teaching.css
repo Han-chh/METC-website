@@ -347,3 +347,16 @@
   .book-disclosure-lesson-slides .book-disclosure-panel { height: auto; padding-top: 0; }
   .book-disclosure-lesson-slides .book-disclosure-trigger { padding-inline: 22px; }
 }
+
+/* Two-column phone shelf: the books remain tall and tactile, but the archive
+   no longer forces one full viewport of scrolling per course. */
+@media (max-width: 700px) {
+  .bookshelf-wall { min-height: 650px; padding: 64px 14px 0; }
+  .bookshelf-books { height: auto; min-height: 540px; padding: 12px 8px 63px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: end; justify-items: center; gap: 18px 12px; }
+  .bookshelf-books .decorative-book { display: none; }
+  .course-book { width: min(100%, 104px); height: 242px; }
+  .course-book-blue { height: 254px; }
+  .course-book-spine { inset-inline: 9px; }
+  .course-book-icon { width: 35px; margin-block: 19px 10px; }
+  .course-book-spine strong { font-size: 1.08rem; }
+}
