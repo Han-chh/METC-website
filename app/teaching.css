@@ -337,8 +337,10 @@
 .book-disclosure-floating-trigger { display: none; }
 
 @media (max-width: 700px) {
-  .open-book-layer { perspective: none; }
-  .open-book { filter: none; }
+  .open-book-layer { perspective: none; overflow: hidden; }
+  .open-book { filter: none; height: min(720px, calc(100svh - max(78px, calc(68px + env(safe-area-inset-top))) - 48px - max(16px, env(safe-area-inset-bottom)))); min-height: 440px; }
+  .open-book-cover { position: absolute; inset: 0 0 auto; height: 142px; }
+  .open-book-spread { position: absolute; inset: 142px 0 0; display: block; overflow-y: auto; overscroll-behavior: contain; }
   .book-disclosure { margin-top: 18px; }
   .book-disclosure-heading { display: none; }
   .book-disclosure-trigger { position: static; z-index: 6; width: 100%; min-height: 48px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid rgba(25,55,47,.22); border-bottom: 1px solid rgba(25,55,47,.12); background: #fffaf0; color: var(--ink); cursor: pointer; outline: none; text-align: left; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
