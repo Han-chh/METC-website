@@ -334,10 +334,9 @@
 .book-disclosure-contains .book-objectives-list b { color: var(--coral); font-size: .59rem; letter-spacing: .08em; }
 .book-disclosure-lesson-slides,
 .book-disclosure-lesson-slides .book-disclosure-panel { height: 100%; }
-.book-disclosure-floating-trigger { display: none; }
 
 @media (max-width: 700px) {
-  .open-book-layer { perspective: none; overflow: hidden; }
+  .open-book-layer { perspective: none; overflow: clip; }
   .open-book { filter: none; height: min(720px, calc(100svh - max(78px, calc(68px + env(safe-area-inset-top))) - 48px - max(16px, env(safe-area-inset-bottom)))); min-height: 440px; }
   .open-book-cover { position: absolute; inset: 0 0 auto; height: 142px; }
   .open-book-spread { position: absolute; inset: 142px 0 0; display: block; overflow-y: auto; overscroll-behavior: contain; }
@@ -348,15 +347,11 @@
   .book-disclosure-trigger b { color: var(--coral); font-size: 1.25rem; font-weight: 500; line-height: 1; }
   .book-disclosure-panel { padding-top: 12px; }
   .book-disclosure-panel[hidden] { display: none; }
-  .book-disclosure[data-open="true"] .book-disclosure-panel { padding-bottom: max(96px, calc(env(safe-area-inset-bottom) + 74px)); }
   .book-disclosure-contains .book-objectives-list li { grid-template-columns: 26px minmax(0, 1fr); gap: 7px; }
   .book-disclosure-lesson-slides { height: auto; margin: 0; }
   .book-disclosure-lesson-slides .book-disclosure-panel { height: auto; padding-top: 0; }
   .book-disclosure-lesson-slides .book-disclosure-trigger { padding-inline: 22px; }
-  .book-disclosure[data-open="true"] .book-disclosure-trigger-inline { display: none; }
-  .book-disclosure-floating-trigger { position: fixed; left: 78px; right: 22px; bottom: max(20px, calc(env(safe-area-inset-bottom) + 14px)); z-index: 420; width: auto; min-height: 48px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 14px; border: 1px solid rgba(25,55,47,.2); border-radius: 3px; background: #fffaf0; box-shadow: 0 8px 18px rgba(25,55,47,.16); color: var(--ink); cursor: pointer; outline: none; text-align: left; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-  .book-disclosure-floating-trigger:focus-visible { outline: 2px solid var(--coral); outline-offset: 2px; }
-  .book-disclosure-floating-trigger b { color: var(--coral); font-size: 1.25rem; font-weight: 500; line-height: 1; }
+  .book-disclosure[data-open="true"] > .book-disclosure-trigger-inline { position: sticky; top: 0; z-index: 12; background: #fffaf0; box-shadow: 0 5px 12px rgba(25,55,47,.1); }
 }
 
 /* Two-column phone shelf: the books remain tall and tactile, but the archive

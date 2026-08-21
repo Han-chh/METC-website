@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
 import type { Language } from "../../content";
 import type { ResourceCourse } from "../../src/data/resources";
 
@@ -48,7 +47,6 @@ export function CourseSyllabus({ course, language }: Props) {
   function toggleSection(key: CourseSectionKey) {
     const closingMobileSection = isMobile && openSections.has(key);
     setOpenSections((current) => {
-      if (isMobile) return current.has(key) ? new Set() : new Set([key]);
       const next = new Set(current);
       if (next.has(key)) next.delete(key); else next.add(key);
       return next;
@@ -70,11 +68,7 @@ export function CourseSyllabus({ course, language }: Props) {
     </section>;
   }
   const copy = language === "zh" ? { archive: "课程档案", category: "课程领域", about: "课程介绍", contains: "包含课程", syllabus: "课程大纲预览", loading: "正在打开课程大纲…", unavailable: "课程大纲暂时无法加载。" } : { archive: "Course archive", category: "Subject", about: "About this course", contains: "Included topics", syllabus: "Syllabus preview", loading: "Opening the syllabus…", unavailable: "The syllabus preview is unavailable." };
-  const activeSectionKey = isMobile ? courseSectionKeys.find((key) => openSections.has(key)) : undefined;
-  const activeSectionTitle = activeSectionKey ? { about: copy.about, contains: copy.contains, syllabus: copy.syllabus }[activeSectionKey] : undefined;
-  const activePanelId = activeSectionKey ? `course-${course.id}-${activeSectionKey}-panel` : undefined;
   return <div className="book-left-content" tabIndex={0} aria-label={copy.archive} data-mobile-disclosures={isMobile}>
-    {activeSectionKey && activeSectionTitle && activePanelId && typeof document !== "undefined" ? createPortal(<button className="book-disclosure-floating-trigger" type="button" aria-expanded="true" aria-controls={activePanelId} onClick={() => toggleSection(activeSectionKey)}><span>{activeSectionTitle}</span><b aria-hidden="true">−</b></button>, document.body) : null}
     <div className="book-page-meta"><span>{copy.archive}</span><span>{course.catalog}</span></div><p className="book-course-category">{category}</p><h2>{title}</h2><p className="book-subtitle">{summary}</p>
     <dl className="book-metadata"><div><dt>{copy.category}</dt><dd>{category}</dd></div><div><dt>{language === "zh" ? "课件" : "Decks"}</dt><dd>{course.lessons.length}</dd></div></dl>
     {renderDisclosure("about", copy.about, <p>{summary}</p>)}
