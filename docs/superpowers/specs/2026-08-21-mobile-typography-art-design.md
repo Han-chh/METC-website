@@ -14,8 +14,8 @@ Improve the already-compact phone layout by keeping short English section titles
 
 ## Acceptance criteria
 
-- English homepage/Teaching/Activities/Voices titles stay on one line when their text width permits; otherwise they wrap without overflow.
+- Only short English labels such as `Explore METC`, `Teaching Design`, `Classroom Activities`, and `Student Voices` may use a one-line rule; long editorial headlines continue to wrap naturally without overflow.
 - Chinese titles remain readable and do not overflow at 360px and 390px.
 - The rocket sketch is visible in the compact course-manual preview.
-- Teaching hero sketches are visible on phone/tablet without covering the heading or body copy.
+- Teaching hero sketches are visible at 360x800, 390x844, 768x1024, 820x1180, and 1024x768 without covering the heading, body copy, navigation, or CTA.
 - No horizontal page overflow; desktop remains unchanged; typecheck/build pass.

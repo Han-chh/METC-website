@@ -16,13 +16,14 @@
 - Modify: `app/homepage.css`
 - Modify: `app/teaching.css`
 
-- [ ] Keep short English headings on one line with a responsive font size and safe overflow behavior.
+- [ ] Keep only the short English section labels on one line with a responsive font size; leave long editorial headlines naturally wrapped.
 - [ ] Restore `.rocket-sketch` on the phone course-manual preview at a reduced height.
 - [ ] Restore and position Teaching hero sketches at low opacity on phone/tablet.
 
 ### Task 2: Responsive verification
 
 - [ ] Test English and Chinese at 360x800 and 390x844.
+- [ ] Test Teaching hero sketches at 768x1024, 820x1180, and 1024x768.
 - [ ] Confirm sketches do not cover text and no horizontal overflow exists.
 - [ ] Confirm desktop 1440px geometry is unchanged.
 
