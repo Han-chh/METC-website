@@ -249,3 +249,20 @@
   .gallery-hero-ruler { right: -76px; bottom: 5%; width: 220px; }
   .gallery-hero-stars { right: 12%; bottom: 5%; width: 118px; opacity: .13; }
 }
+
+/* Two-column phone exhibition: keep the album-cover interaction intact while
+   shortening the archive shelf itself. The opened photo wall has its own
+   approved two-column rules and is intentionally untouched here. */
+@media (max-width: 700px) {
+  .album-exhibition-grid { --shelf-row: 340px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; padding: 14px 14px 0; }
+  .album-exhibition-grid > [role="listitem"] { min-width: 0; padding-bottom: 28px; }
+  .album-slot { width: 100%; }
+  .wooden-album { height: 250px; padding: 12px 11px 12px 19px; }
+  .album-cover-photos { height: 137px; }
+  .album-main-photo { border-width: 5px; }
+  .tape-left, .tape-right { width: 30px; height: 9px; }
+  .album-plaque { bottom: -27px; min-height: 72px; width: calc(100% - 8px); padding: 8px 7px 7px; }
+  .album-plaque small { font-size: .46rem; }
+  .album-plaque strong { font-size: .86rem; }
+  .album-plaque em { font-size: .49rem; }
+}
