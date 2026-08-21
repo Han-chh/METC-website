@@ -338,14 +338,14 @@
 @media (max-width: 700px) {
   .book-disclosure { margin-top: 18px; }
   .book-disclosure-heading { display: none; }
-  .book-disclosure-trigger { width: 100%; min-height: 48px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid rgba(25,55,47,.22); border-bottom: 1px solid rgba(25,55,47,.12); background: transparent; color: var(--ink); cursor: pointer; text-align: left; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .book-disclosure-trigger { position: sticky; top: 0; z-index: 6; width: 100%; min-height: 48px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid rgba(25,55,47,.22); border-bottom: 1px solid rgba(25,55,47,.12); background: rgba(255,250,240,.94); box-shadow: 0 5px 12px rgba(25,55,47,.08); backdrop-filter: blur(6px); color: var(--ink); cursor: pointer; text-align: left; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
   .book-disclosure-trigger b { color: var(--coral); font-size: 1.25rem; font-weight: 500; line-height: 1; }
   .book-disclosure-panel { padding-top: 12px; }
   .book-disclosure-panel[hidden] { display: none; }
   .book-disclosure-contains .book-objectives-list li { grid-template-columns: 26px minmax(0, 1fr); gap: 7px; }
   .book-disclosure-lesson-slides { height: auto; margin: 0; }
   .book-disclosure-lesson-slides .book-disclosure-panel { height: auto; padding-top: 0; }
-  .book-disclosure-lesson-slides .book-disclosure-trigger { padding-inline: 22px; }
+  .book-disclosure-lesson-slides .book-disclosure-trigger { top: max(58px, calc(46px + env(safe-area-inset-top))); padding-inline: 22px; }
 }
 
 /* Two-column phone shelf: the books remain tall and tactile, but the archive
