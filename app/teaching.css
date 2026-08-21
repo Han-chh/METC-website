@@ -301,3 +301,24 @@
   .ppt-thumbnails { max-width: 100%; overflow-x: auto; }
   .ppt-thumbnails button { width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
 }
+
+/* Restore the existing teaching sketches as a quiet background layer on
+   narrow screens. The content stays above them and the drawings are bounded
+   so they never compete with the heading or CTA. */
+@media (min-width: 761px) and (max-width: 1100px) {
+  .library-hero-content { z-index: 1; }
+  .library-hero-sketch { z-index: 0; display: block; opacity: .2; pointer-events: none; }
+  .hero-sketch-ruler { right: -42px; bottom: 7%; width: min(250px, 29vw); }
+  .hero-sketch-bridge { right: 1%; bottom: 4%; width: min(360px, 39vw); opacity: .14; }
+  .hero-sketch-compass { left: 2%; bottom: 5%; width: min(100px, 12vw); opacity: .16; }
+}
+
+@media (max-width: 760px) {
+  :lang(en) .library-hero h1 { max-width: none; font-size: clamp(1.62rem, 7vw, 2.2rem); letter-spacing: -.075em; white-space: nowrap; }
+  :lang(zh) .library-hero h1 { white-space: normal; }
+  .library-hero-content { z-index: 1; }
+  .library-hero-sketch { z-index: 0; display: block; opacity: .17; pointer-events: none; }
+  .hero-sketch-ruler { right: -58px; bottom: 7%; width: 205px; }
+  .hero-sketch-bridge { right: -100px; bottom: 5%; width: 330px; opacity: .12; }
+  .hero-sketch-compass { left: -18px; bottom: 8%; width: 74px; opacity: .14; }
+}

@@ -1477,4 +1477,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .footer-nav p { margin-bottom: 4px; font-size: .6rem; }
   .footer-nav button { min-height: 44px; padding: 4px 0; font-size: .68rem; }
   .footer-bottom { gap: 4px; font-size: .58rem; }
+
+  /* Keep the short English chapter labels on one line; editorial headlines
+     below them remain free to wrap naturally. */
+  :lang(en) .explore-section .section-eyebrow { font-size: clamp(1.85rem, 8vw, 2.6rem); white-space: nowrap; }
+  :lang(en) .teaching-section .section-eyebrow { font-size: clamp(1.7rem, 7.5vw, 2.45rem); white-space: nowrap; }
+  :lang(en) .activity-section .section-eyebrow { font-size: clamp(1.48rem, 6.5vw, 2.2rem); white-space: nowrap; }
+  :lang(en) .voices-section .section-eyebrow { font-size: clamp(1.75rem, 7.5vw, 2.45rem); white-space: nowrap; }
+
+  /* The rocket is part of the course-note visual language, not disposable
+     decoration; keep it small enough for the two-column mobile spread. */
+  .rocket-sketch { display: block; margin-top: 7px; }
+  .rocket-sketch svg { max-height: 92px; }
+  .rocket-sketch > span { font-size: .52rem; }
 }
