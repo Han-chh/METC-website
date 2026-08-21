@@ -18,11 +18,12 @@ On phone-sized screens, make the homepage read as a sequence of compact modules:
 3. Compress Teaching by keeping the course-manual preview compact and using a two-column mini-spread rather than two full-width stacked pages.
 4. Compress Activities by shortening the mobile photo frame and tightening intro/action spacing.
 5. Compress Voices by reducing quote scale and arranging side stories into two columns.
-6. Keep touch targets at least 44px where they remain interactive; hide only decorative artwork, never actionable content.
+6. Keep touch targets at least 44px where they remain interactive. Decorative artwork may be hidden, but text, course content, buttons, and interactive media must not be removed, line-clamped, or clipped to meet the height target.
 
 ## Acceptance criteria
 
-- At 360x800, each homepage section after the header is approximately 800–950px tall, with no section exceeding two viewport heights.
-- At 390x844, the same sections have no horizontal overflow and remain readable.
+- Measure each section with `getBoundingClientRect().height`, including padding and excluding the fixed header overlay; use both English and Chinese content.
+- At 360x800 and 390x844, each homepage section after the header should be approximately 1.0–1.2 viewport heights where the complete content can fit, and no section should exceed two viewport heights.
 - Desktop (1440px) section geometry is unchanged by the new rules.
 - Existing routes still build successfully and the homepage has no failed image loads.
+- Homepage anchor links, dialogs, section entry buttons, carousel controls/touch gestures, and language switching remain usable.

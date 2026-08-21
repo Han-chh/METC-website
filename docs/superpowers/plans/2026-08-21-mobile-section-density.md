@@ -15,7 +15,7 @@
 **Files:**
 - Modify: `app/homepage.css` (final `@media (max-width: 760px)` override block)
 
-- [ ] Reduce shared section padding and heading/body type sizes while retaining 44px controls.
+- [ ] Reduce shared section padding and heading/body type sizes while retaining 44px controls; do not use line clamping or content clipping.
 - [ ] Convert Explore mission/principle content to compact two-column grids and shorten jump rows.
 - [ ] Reduce Teaching manual preview padding and visual scale without removing content.
 - [ ] Shorten Activities media height and tighten intro/action spacing.
@@ -28,8 +28,9 @@
 - Test: local browser at `/`
 
 - [ ] Run the local dev server from the responsive worktree.
-- [ ] Measure section heights and document/body widths at 360x800 and 390x844.
+- [ ] Measure section heights with `getBoundingClientRect().height` and document/body widths at 360x800 and 390x844 for both English and Chinese.
 - [ ] Confirm no horizontal overflow and that interactive controls remain at least 44px.
+- [ ] Smoke-test homepage anchors, dialogs, entry buttons, carousel controls/touch behavior, and language switching.
 - [ ] Repeat a smoke check at 768x1024 and 1440x900 to ensure tablet/desktop are not regressed.
 
 ### Task 3: Run project verification and commit
