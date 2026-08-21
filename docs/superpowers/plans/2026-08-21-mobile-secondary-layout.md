@@ -4,7 +4,7 @@
 
 **Goal:** Reduce mobile scroll length by making the teaching shelf and activity exhibition two-column layouts and collapsing secondary course-manual sections on phones, without changing tablet or desktop composition.
 
-**Architecture:** Keep the existing React page structure and CSS breakpoints. Add a small responsive disclosure state to `CourseSyllabus`; use CSS-only grid overrides for the bookshelf and album exhibition. The existing course, album, photo, and slide viewer interaction code remains the source of truth.
+**Architecture:** Keep the existing React page structure and CSS breakpoints. Add a small responsive disclosure state to `CourseSyllabus`, and wrap the existing `PptArchive` right-hand book page in a mobile-only disclosure from `OpenBook`; use CSS-only grid overrides for the bookshelf and album exhibition. The existing course, album, photo, and slide viewer interaction code remains the source of truth.
 
 **Tech Stack:** Next.js App Router, React client components, TypeScript, CSS media queries, existing browser smoke checks.
 
@@ -14,15 +14,16 @@
 
 **Files:**
 - Modify: `components/teaching/course-syllabus.tsx`
+- Modify: `components/teaching/open-book.tsx`
 - Modify: `app/teaching.css`
 
 - [ ] **Step 1: Add section keys and responsive open state**
 
-  In `CourseSyllabus`, define stable keys for `about`, `contains`, `syllabus`, and `lessonSlides`. Initialize the state to all keys open, then in an effect use `window.matchMedia("(max-width: 700px)")` to collapse those keys on phones. Subscribe to media-query changes so entering tablet/desktop forces all panels visible with `aria-expanded="true"`; entering phone collapses the panels unless the user has already explicitly opened one in the current manual.
+  In `CourseSyllabus`, define stable keys for `about`, `contains`, and `syllabus`. In `OpenBook`, add a separate `lessonSlides` disclosure state around the existing `PptArchive` right-hand page. Initialize all four sections open for tablet/desktop and collapsed for phones. Subscribe to the media query so entering tablet/desktop forces all panels visible with `aria-expanded="true"`; entering phone collapses the panels unless the user has already explicitly opened one in the current manual.
 
 - [ ] **Step 2: Render accessible disclosure controls**
 
-  Keep the identity block, summary, metadata, and first short description outside disclosures. For each of the four secondary sections—About this course, Included topics, Syllabus preview, and Lesson slides—render a native button with `aria-expanded`, `aria-controls`, and a stable panel id. Add `data-open`/`hidden` state to each corresponding content region. Keep the existing slide-card entry behavior unchanged inside the Lesson slides panel.
+  Keep the identity block, summary, metadata, and first short description outside disclosures. In `CourseSyllabus`, render native disclosure buttons for About this course, Included topics, and Syllabus preview. In `OpenBook`, render the same disclosure pattern around the existing PptArchive for Lesson slides. Every button gets `aria-expanded`, `aria-controls`, and a stable panel id; keep the existing slide-card entry behavior unchanged inside the Lesson slides panel.
 
 - [ ] **Step 3: Add narrow-screen disclosure styling**
 

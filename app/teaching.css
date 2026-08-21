@@ -322,3 +322,28 @@
   .hero-sketch-bridge { right: -100px; bottom: 5%; width: 330px; opacity: .12; }
   .hero-sketch-compass { left: -18px; bottom: 8%; width: 74px; opacity: .14; }
 }
+
+/* Course-manual disclosures: desktop keeps the original open-book spread;
+   phones get compact, independently expandable reading sections. */
+.book-disclosure-trigger { display: none; }
+.book-disclosure-heading { margin: 0 0 12px; font-size: .71rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.book-disclosure-panel { min-width: 0; }
+.book-disclosure-panel > p { margin: 0; color: var(--ink-soft); font-size: .86rem; line-height: 1.72; }
+.book-disclosure-contains .book-objectives-list { margin: 0; padding: 0; list-style: none; }
+.book-disclosure-contains .book-objectives-list li { display: grid; grid-template-columns: 30px 1fr; gap: 9px; padding: 8px 0; border-bottom: 1px solid rgba(25,55,47,.11); font-size: .78rem; line-height: 1.45; }
+.book-disclosure-contains .book-objectives-list b { color: var(--coral); font-size: .59rem; letter-spacing: .08em; }
+.book-disclosure-lesson-slides,
+.book-disclosure-lesson-slides .book-disclosure-panel { height: 100%; }
+
+@media (max-width: 700px) {
+  .book-disclosure { margin-top: 18px; }
+  .book-disclosure-heading { display: none; }
+  .book-disclosure-trigger { width: 100%; min-height: 48px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid rgba(25,55,47,.22); border-bottom: 1px solid rgba(25,55,47,.12); background: transparent; color: var(--ink); cursor: pointer; text-align: left; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .book-disclosure-trigger b { color: var(--coral); font-size: 1.25rem; font-weight: 500; line-height: 1; }
+  .book-disclosure-panel { padding-top: 12px; }
+  .book-disclosure-panel[hidden] { display: none; }
+  .book-disclosure-contains .book-objectives-list li { grid-template-columns: 26px minmax(0, 1fr); gap: 7px; }
+  .book-disclosure-lesson-slides { height: auto; margin: 0; }
+  .book-disclosure-lesson-slides .book-disclosure-panel { height: auto; padding-top: 0; }
+  .book-disclosure-lesson-slides .book-disclosure-trigger { padding-inline: 22px; }
+}
