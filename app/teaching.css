@@ -338,7 +338,8 @@
 @media (max-width: 700px) {
   .book-disclosure { margin-top: 18px; }
   .book-disclosure-heading { display: none; }
-  .book-disclosure-trigger { position: sticky; top: 0; z-index: 6; width: 100%; min-height: 48px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid rgba(25,55,47,.22); border-bottom: 1px solid rgba(25,55,47,.12); background: rgba(255,250,240,.94); box-shadow: 0 5px 12px rgba(25,55,47,.08); backdrop-filter: blur(6px); color: var(--ink); cursor: pointer; text-align: left; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .book-disclosure-trigger { position: sticky; top: 0; z-index: 6; width: 100%; min-height: 48px; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; border-top: 1px solid rgba(25,55,47,.22); border-bottom: 1px solid rgba(25,55,47,.12); background: #fffaf0; box-shadow: 0 5px 12px rgba(25,55,47,.08); color: var(--ink); cursor: pointer; outline: none; text-align: left; font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .book-disclosure-trigger:focus-visible { outline: 2px solid var(--coral); outline-offset: -2px; }
   .book-disclosure-trigger b { color: var(--coral); font-size: 1.25rem; font-weight: 500; line-height: 1; }
   .book-disclosure-panel { padding-top: 12px; }
   .book-disclosure-panel[hidden] { display: none; }
