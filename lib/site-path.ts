@@ -1,5 +1,5 @@
 const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim() ?? "";
-const defaultResourceBaseUrl = "https://pub-620425b2c5d3430ca480ab9c8f71dea4.r2.dev";
+const defaultResourceBaseUrl = "https://assets.sciemetc.com";
 const configuredResourceBaseUrl = process.env.NEXT_PUBLIC_RESOURCE_BASE_URL?.trim()
   || defaultResourceBaseUrl;
 
